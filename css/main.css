@@ -2,12 +2,27 @@ body {
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: #F8F5E9;
 }
 
-header p {
-  font-family: 'Quicksand', sans-serif;
+header {
   font-size: 1em;
+  text-align: right;
+}
+
+header a {
+  color: rgb(248, 245, 233);
+}
+
+i.fa-stack-1x {
+  font-size: larger;
+}
+
+i.fa-stack-1x.dark {
+  color: rgb(99, 99, 108);
+}
+
+.fa-slides {
+  font-weight: bold;
 }
 
 section {
@@ -21,11 +36,11 @@ section {
 }
 
 section h1 {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Poiret One', cursive;
   font-size: 10em;
-  font-weight: 300;
   margin: 0;
   margin-bottom: 1em;
+  color: rgb(248, 245, 233);
 }
 
 footer {
@@ -43,12 +58,13 @@ footer span {
   font-size: 1.5em;
   text-transform: uppercase;
   text-align: center;
+  color: rgb(248, 245, 233);
 }
 
 footer span a {
   padding: 10px;
-  border: 2px solid #F8F5E9;
+  border: 2px solid rgb(248, 245, 233);
   text-decoration: none;
-  color: #F8F5E9;
+  color: rgb(248, 245, 233);
 }
 
