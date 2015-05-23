@@ -5,6 +5,11 @@ body {
   color: #F8F5E9;
 }
 
+header p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+}
+
 section {
   display: block;
   width: 80%;
@@ -18,7 +23,32 @@ section {
 section h1 {
   font-family: 'Comfortaa', cursive;
   font-size: 10em;
+  font-weight: 300;
   margin: 0;
   margin-bottom: 1em;
+}
+
+footer {
+  display: table;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 3em 0;
+}
+
+footer span {
+  display: table-cell;
+  width: 25%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer span a {
+  padding: 10px;
+  border: 2px solid #F8F5E9;
+  text-decoration: none;
+  color: #F8F5E9;
 }
 
