@@ -1,4 +1,10 @@
-.main-page { background-image: url('../img/background.jpg'); }
+html {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .social-media-buttons {
   padding: 1em;

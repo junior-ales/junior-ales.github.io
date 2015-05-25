@@ -1,4 +1,10 @@
-.not-found-page { background-image: url('../img/background-404.jpg'); }
+html {
+  background: url(../img/background-404.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .not-found-content { width: 70%; }
 
