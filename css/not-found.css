@@ -1,25 +1,20 @@
-body {
-  background-image: url('../img/background-404.jpg');
-}
+.not-found-page { background-image: url('../img/background-404.jpg'); }
 
-.main {
-  width: 70%;
-}
+.not-found-content { width: 70%; }
 
-.main h1 {
+.not-found-content h1 {
   margin: 0.25em 0;
   font-size: 7em;
 }
 
-footer {
-  display: block;
-  padding: 1em 0;
+.not-found-footer {
+  right: 0;
+  padding: 2em;
 }
 
-.footer-content {
-  display: block;
-  text-transform: none;
-  text-align: right;
-  width: 100%;
+.not-found-footer p {
+  padding: 0;
+  margin: 0;
+  margin-right: 2em;
 }
 
