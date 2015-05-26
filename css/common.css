@@ -1,4 +1,11 @@
+html {
+  /* workaround for full image background */
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
+  min-height: 100%;
   width: 100%;
   margin: 0;
   color: rgb(248, 245, 233);
@@ -29,22 +36,3 @@ footer {
 }
 
 .content h1 { font-family: 'Poiret One', cursive; }
-
-img.full-background {
-  min-height: 100%;
-  min-width: 1440px;
-
-  width: 100%;
-  height: auto;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 1440px) {
-  img.full-background {
-    left: 50%;
-    margin-left: -720px;
-  }
-}
