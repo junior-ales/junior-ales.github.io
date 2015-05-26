@@ -3,8 +3,6 @@ body {
   margin: 0;
   color: rgb(248, 245, 233);
   background-color: rgba(99, 99, 108, 0.1);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 a {
