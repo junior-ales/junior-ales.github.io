@@ -27,12 +27,18 @@ i.fa-stack-1x.dark { color: rgb(99, 99, 108); }
 
 .main-footer {
   left: 0;
-  display: flex;
   width: 100%;
   padding: 2em 0;
 }
 
-.main-footer span {
+.main-footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer ul li {
   width: 25%;
   text-transform: uppercase;
   text-align: center;
