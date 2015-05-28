@@ -28,23 +28,20 @@ i.fa-stack-1x.dark { color: rgb(99, 99, 108); }
 .main-footer {
   left: 0;
   width: 100%;
-  padding: 2em 0;
-}
-
-.main-footer ul {
-  display: flex;
-  list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.main-footer ul li {
-  width: 25%;
-  text-transform: uppercase;
-  text-align: center;
+.main-footer p {
+  padding: 0;
+  margin: 1em;
 }
 
-@media screen and (max-width: 600px) {
+/*
+ * Responsive
+ *
+ */
+
+@media screen and (max-width: 550px) {
   .hide-small { display: none; }
   .main-content h1 { font-size: 2.75em; }
   .fa-stack { font-size: 1em; }
@@ -63,4 +60,9 @@ i.fa-stack-1x.dark { color: rgb(99, 99, 108); }
     padding: inherit;
     padding-bottom: 1em;
   }
+}
+
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  .main-content h1 { font-size: 4em; }
+  .main-footer { font-size: 1em; }
 }
