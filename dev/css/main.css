@@ -1,0 +1,116 @@
+html {
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* workaround for full image background */
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  color: rgb(248, 245, 233);
+  font-size: 12px;
+}
+
+a {
+  min-width: 4em;
+  min-height: 4em;
+  color: rgba(248, 245, 233, 0.7);
+}
+
+.social-media-buttons {
+  padding: 1em;
+  text-align: center;
+}
+
+i.fa-stack-1x { font-size: 1.25em; }
+
+i.fa-stack-1x.dark {
+  color: rgb(99, 99, 108);
+  top: 1px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.title h1 {
+  font-size: 3em;
+  margin: 0;
+  font-family: 'Poiret One', cursive;
+}
+
+.title p { font-family: 'Quicksand', sans-serif; }
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.view-more { padding: 2em; }
+
+.view-more a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em;
+  margin: 1em;
+  border: 1px solid rgba(248, 245, 233, 0.7);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-block {
+  min-height: 500px;
+  width: 100%;
+}
+
+.summary {
+  order: 0;
+  background-color: black;
+}
+
+.personal-blog {
+  order: 1;
+  background-color: green;
+}
+
+.technical-blog {
+  order: 2;
+  background-color: blue;
+}
+
+.photo-blog {
+  order: 3;
+  background-color: red;
+}
+
+.twitter {
+  order: 4;
+  background-color: yellow;
+}
+
+.email-me {
+  order: 5;
+  background-color: purple;
+}
