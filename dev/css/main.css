@@ -83,34 +83,49 @@ i.fa-stack-1x.dark {
 .content-block {
   min-height: 500px;
   width: 100%;
+  padding: 1em;
+  padding-bottom: 2em;
+  font-size: 1.25em;
+}
+
+.block-header h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.block-header p {
+  margin-bottom: 2em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.block-description {
+  font-family: 'Lora', serif;
+  line-height: 1.5em;
 }
 
 .summary {
   order: 0;
-  background-color: black;
-}
-
-.personal-blog {
-  order: 1;
-  background-color: green;
+  background-color: rgb(51, 52, 71);
 }
 
 .technical-blog {
-  order: 2;
-  background-color: blue;
+  order: 1;
+  background-color: rgb(99, 99, 108);
 }
 
 .photo-blog {
-  order: 3;
-  background-color: red;
+  order: 2;
+  background-color: rgb(242, 105, 125);
 }
 
-.twitter {
-  order: 4;
-  background-color: yellow;
+.personal-blog {
+  order: 3;
+  background-color: rgb(248, 245, 233);
+  color: rgb(51, 52, 71);
 }
 
 .email-me {
-  order: 5;
+  order: 4;
   background-color: purple;
 }
