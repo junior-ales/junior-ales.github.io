@@ -109,6 +109,21 @@ i.fa-stack-1x.dark {
   background-color: rgb(51, 52, 71);
 }
 
+.avatar {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgb(248, 245, 233);
+
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
 .technical-blog {
   order: 1;
   background-color: rgb(99, 99, 108);
@@ -127,5 +142,5 @@ i.fa-stack-1x.dark {
 
 .email-me {
   order: 4;
-  background-color: purple;
+  background-color: rgb(48, 93, 84);
 }
