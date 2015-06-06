@@ -24,6 +24,14 @@ a {
   color: rgba(248, 245, 233, 0.7);
 }
 
+.link-wrapper {
+  display: block;
+  min-width: initial;
+  min-height: initial;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
 .social-media-buttons {
   padding: 1em;
   text-align: center;
@@ -124,23 +132,17 @@ i.fa-stack-1x.dark {
   border-radius: 100%;
 }
 
-.technical-blog {
+.avatar a img {
+  border: 2px solid rgba(248, 245, 233, 0.7);
+}
+
+.personal-blog {
   order: 1;
   background-color: rgb(99, 99, 108);
 }
 
-.photo-blog {
-  order: 2;
-  background-color: rgb(242, 105, 125);
-}
-
-.personal-blog {
-  order: 3;
-  background-color: rgb(248, 245, 233);
-  color: rgb(51, 52, 71);
-}
-
 .email-me {
-  order: 4;
-  background-color: rgb(48, 93, 84);
+  order: 2;
+  color: rgb(51, 52, 71);
+  background-color: rgb(248, 245, 233);
 }
