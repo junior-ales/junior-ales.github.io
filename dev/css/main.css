@@ -22,6 +22,12 @@ a {
   min-width: 4em;
   min-height: 4em;
   color: rgba(248, 245, 233, 0.7);
+  font-weight: bold;
+}
+
+.reverse-color {
+  border-color: rgb(51, 52, 71);
+  color: rgb(51, 52, 71);
 }
 
 .link-wrapper {
@@ -112,11 +118,6 @@ i.fa-stack-1x.dark {
   line-height: 1.5em;
 }
 
-.summary {
-  order: 0;
-  background-color: rgb(51, 52, 71);
-}
-
 .avatar {
   text-align: center;
   padding-top: 2em;
@@ -125,24 +126,41 @@ i.fa-stack-1x.dark {
 .avatar img {
   width: 150px;
   height: 150px;
-  border: 2px solid rgb(248, 245, 233);
+  border: 3px solid rgb(248, 245, 233);
 
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
 }
 
+.reverse-color {
+  color: rgb(99, 99, 108);
+}
+
 .avatar a img {
-  border: 2px solid rgba(248, 245, 233, 0.7);
+  border: 3px solid rgba(248, 245, 233, 0.7);
+}
+
+.avatar a img.reverse-color {
+  border-color: rgb(99, 99, 108);
+}
+
+.summary {
+  order: 0;
+  background-color: rgb(51, 52, 71);
 }
 
 .personal-blog {
   order: 1;
+  background-color: rgb(248, 245, 233);
+}
+
+.twitter-block {
+  order: 2;
   background-color: rgb(99, 99, 108);
 }
 
 .email-me {
-  order: 2;
-  color: rgb(51, 52, 71);
-  background-color: rgb(248, 245, 233);
+  order: 3;
+  background-color: rgb(48, 93, 84);
 }
