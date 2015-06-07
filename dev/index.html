@@ -121,13 +121,16 @@
       <article class="content-block email-me">
         <header class="block-header">
           <h1>Send me an email</h1>
-          <p>politcs, society, brazil</p>
+          <p>let's talk</p>
         </header>
         <section class="block-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-          </p>
+          <p>If you feel like commenting, complimenting or complaining about a shared interest, drop me a message.</p>
+          <form class="email-me-form" method="POST" action="http://formspree.io/edilson.ales.jr@gmail.com">
+            <input type="email" name="_replyto" placeholder="Your email" required>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+            <input type="text" name="_gotcha" style="display:none">
+            <button type="submit">Send Email</button>
+          </form>
         </section>
       </article>
     </section>
