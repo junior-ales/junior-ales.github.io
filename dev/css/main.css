@@ -91,16 +91,19 @@ i.fa-stack-1x.dark {
 }
 
 #view-less {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
-  min-height: initial;
   background-color: rgb(51, 52, 71);
 }
 
 #content {
   display: flex;
   flex-wrap: wrap;
+  transition: .5s ease;
+  transform: translateY(25%);
+  position: fixed;
 }
 
 .content-block {

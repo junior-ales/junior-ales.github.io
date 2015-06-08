@@ -1,25 +1,36 @@
 (function() {
   var showContent = function() {
-    viewLessElem.style.display = null;
     document.getElementById('social-media-buttons').style.display = 'none';
     document.getElementById('title').style.display = 'none';
-    document.getElementById('content').style.display = null;
     viewMoreElem.style.display = 'none';
+    contentElem.style.position = 'initial';
+    contentElem.style.transform = 'translateY(0)';
+    setTimeout(function() {
+      viewLessElem.style.display = 'block';
+    }, 550);
   };
 
   var hideContent = function() {
-    viewMoreElem.style.display = null;
     document.getElementById('social-media-buttons').style.display = null;
     document.getElementById('title').style.display = null;
-    document.getElementById('content').style.display = 'none';
+    contentElem.style.transform = 'translateY(25%)';
+    contentElem.style.position = 'fixed';
     viewLessElem.style.display = 'none';
+    viewMoreElem.style.display = null;
   };
 
+  var contentElem = document.getElementById('content');
   var viewMoreElem = document.getElementById('view-more');
   var viewLessElem = document.getElementById('view-less');
   var emailLink = document.getElementById('email-link');
 
   viewMoreElem.onclick = showContent;
   viewLessElem.onclick = hideContent;
-  emailLink.onclick = showContent;
+  emailLink.onclick = function() {
+    showContent();
+    setTimeout(function() {
+      document.getElementById('email-me').scrollIntoView();
+    }, 550);
+  };
+
 })();
