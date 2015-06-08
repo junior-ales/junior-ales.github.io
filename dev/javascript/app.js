@@ -1,5 +1,5 @@
 (function() {
-  var displayContent = function() {
+  var showContent = function() {
     viewLessElem.style.display = null;
     document.getElementById('social-media-buttons').style.display = 'none';
     document.getElementById('title').style.display = 'none';
@@ -19,7 +19,7 @@
   var viewLessElem = document.getElementById('view-less');
   var emailLink = document.getElementById('email-link');
 
-  viewMoreElem.onclick = displayContent;
+  viewMoreElem.onclick = showContent;
   viewLessElem.onclick = hideContent;
-  emailLink.onclick = displayContent;
+  emailLink.onclick = showContent;
 })();

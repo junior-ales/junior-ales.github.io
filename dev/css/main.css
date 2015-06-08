@@ -19,8 +19,6 @@ body {
 }
 
 a {
-  min-width: 4em;
-  min-height: 4em;
   color: rgba(248, 245, 233, 0.7);
   font-weight: bold;
 }
@@ -43,11 +41,14 @@ a {
   text-align: center;
 }
 
+.fa-stack { padding: 1em; }
+
 i.fa-stack-1x { font-size: 1.25em; }
 
 i.fa-stack-1x.dark {
   color: rgb(99, 99, 108);
   top: 1px;
+  position: relative;
 }
 
 #title {
@@ -156,6 +157,7 @@ i.fa-stack-1x.dark {
 .email-me-form {
   display: flex;
   flex-wrap: wrap;
+  margin: 3em 0;
 }
 
 .email-me-form * {
@@ -200,3 +202,23 @@ i.fa-stack-1x.dark {
   order: 3;
   background-color: rgb(51, 52, 71);
 }
+
+.email-me footer {
+  display: block;
+  text-align: center;
+}
+
+.email-me ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+  color: rgba(248, 245, 233, 0.7);
+}
+
+.email-me li {
+  font-family: 'Quicksand', sans-serif;
+  display: inline;
+}
+
+.separator { margin: 0 .5em; }
