@@ -41,6 +41,8 @@ a {
   text-align: center;
 }
 
+a.fa-stack { text-decoration: none; }
+
 .fa-stack { padding: 1em; }
 
 i.fa-stack-1x { font-size: 1.25em; }
@@ -100,8 +102,17 @@ i.fa-stack-1x.dark {
 }
 
 #content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+
   transition: .5s ease;
   position: fixed;
   visibility: hidden;
@@ -159,8 +170,17 @@ i.fa-stack-1x.dark {
 }
 
 .email-me-form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+
   margin: 3em 0;
 }
 
