@@ -103,9 +103,8 @@ i.fa-stack-1x.dark {
   display: flex;
   flex-wrap: wrap;
   transition: .5s ease;
-  -webkit-transform: translateY(25%);
-  transform: translateY(25%);
   position: fixed;
+  visibility: hidden;
 }
 
 .content-block {
