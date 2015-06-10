@@ -1,0 +1,13 @@
+@media screen and (min-width: 361px) {
+  html {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* workaround for full image background */
+    height: 100%;
+    min-height: 100%;
+  }
+}
