@@ -138,8 +138,25 @@ i.fa-stack-1x.dark {
 }
 
 .block-description {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
   font-family: 'Lora', serif;
   line-height: 1.5em;
+}
+
+.block-description .avatar,
+.block-description .description {
+  width: 100%;
+  margin: 0;
 }
 
 .avatar {
@@ -163,6 +180,7 @@ i.fa-stack-1x.dark {
 
 .avatar a img {
   border: 3px solid rgba(248, 245, 233, 0.7);
+  margin-bottom: 1em;
 }
 
 .avatar a img.reverse-color {
