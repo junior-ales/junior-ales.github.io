@@ -153,8 +153,7 @@ i.fa-stack-1x.dark {
   line-height: 1.5em;
 }
 
-.block-description .avatar,
-.block-description .description {
+.avatar, .description {
   width: 100%;
   margin: 0;
 }
@@ -174,18 +173,14 @@ i.fa-stack-1x.dark {
   border-radius: 100%;
 }
 
-.reverse-color {
-  color: rgb(99, 99, 108);
-}
+.reverse-color { color: rgb(99, 99, 108); }
 
 .avatar a img {
   border: 3px solid rgba(248, 245, 233, 0.7);
   margin-bottom: 1em;
 }
 
-.avatar a img.reverse-color {
-  border-color: rgb(99, 99, 108);
-}
+.avatar a img.reverse-color { border-color: rgb(99, 99, 108); }
 
 .email-me-form {
   display: -webkit-box;
@@ -200,6 +195,7 @@ i.fa-stack-1x.dark {
   flex-wrap: wrap;
 
   margin: 3em 0;
+  width: 100%;
 }
 
 .email-me-form * {

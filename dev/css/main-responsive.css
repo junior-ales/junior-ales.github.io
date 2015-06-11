@@ -11,3 +11,19 @@
     min-height: 100%;
   }
 }
+
+@media screen and (min-width: 601px) {
+  .content-block { min-height: initial; }
+
+  .description {
+    width: 60%;
+    margin-top: 1em;
+  }
+
+  .avatar {
+    width: 40%;
+    padding-top: 0;
+  }
+
+  .email-me .description { width: 100%; }
+}
