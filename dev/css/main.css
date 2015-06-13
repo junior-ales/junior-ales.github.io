@@ -222,21 +222,53 @@ i.fa-stack-1x.dark {
 }
 
 .summary {
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
   order: 0;
   background-color: rgb(51, 52, 71);
 }
 
+.summary .description {
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+}
+
+.summary .avatar {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+
 .personal-blog {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
   order: 1;
   background-color: rgb(248, 245, 233);
 }
 
 .twitter-block {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
   order: 2;
   background-color: rgb(99, 99, 108);
 }
 
 .email-me {
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
   order: 3;
   background-color: rgb(51, 52, 71);
 }

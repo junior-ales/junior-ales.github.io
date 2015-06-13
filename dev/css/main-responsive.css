@@ -33,7 +33,11 @@
 @media screen and (min-width: 901px) {
   .hidden-large { display: none; }
 
-  .content-block { box-sizing: border-box; }
+  .content-block {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 
   .avatar, .description { width: 100%; }
 
@@ -42,17 +46,41 @@
   .description { margin-top: 0; }
 
   .summary .avatar {
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 0;
+    -ms-flex-order: 0;
+    -webkit-order: 0;
+    order: 0;
     padding-top: 0;
+  }
+
+  .summary .description  {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
   }
 
   .summary, .email-me { width: 35%; }
 
   .personal-blog, .twitter-block { width: 65%; }
 
-  .twitter-block { order: 3; }
+  .twitter-block {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+  }
 
-  .email-me { order: 2; }
+  .email-me {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+  }
 
   .email-me-form { margin-top: 0; }
 }
