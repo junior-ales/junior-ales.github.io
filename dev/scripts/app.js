@@ -6,10 +6,8 @@
       e = document.documentElement || document.body;
     }
     return {
-      width : e[ a+'Width' ],
-      height : e[ a+'Height' ],
       largestDimension: function() {
-        return this.width > this.height ? this.width : this.height;
+        return e[ a+'Width' ] > e[ a+'Height' ] ? e[ a+'Width' ] : e[ a+'Height' ];
       }
     };
   })();
@@ -43,17 +41,33 @@
     contentElem.style.visibility = 'visible';
   }, 550);
 
-  var viewMoreElem = document.getElementById('view-more');
-  var viewLessElem = document.getElementById('view-less');
-  var emailLink = document.getElementById('email-link');
-
-  viewMoreElem.onclick = showContent;
-  viewLessElem.onclick = hideContent;
-  emailLink.onclick = function() {
+  var emailLinkClick = function() {
     showContent();
     setTimeout(function() {
       document.getElementById('email-me').scrollIntoView();
     }, 550);
   };
+
+  var increaseOpacityViewLess = function() {
+    document.getElementById('view-less').style.opacity = 1;
+  };
+
+  var decreaseOpacityViewLess = function() {
+    document.getElementById('view-less').style.opacity = 0.2;
+  };
+
+  var viewMoreElem = document.getElementById('view-more');
+  var viewLessElem = document.getElementById('view-less');
+  var emailLink = document.getElementById('email-link');
+  var senderEmail = document.getElementById('sender-email');
+  var senderMessage = document.getElementById('sender-message');
+
+  viewMoreElem.onclick = showContent;
+  viewLessElem.onclick = hideContent;
+  emailLink.onclick = emailLinkClick;
+  senderEmail.onfocus = decreaseOpacityViewLess;
+  senderMessage.onfocus = decreaseOpacityViewLess;
+  senderEmail.onblur = increaseOpacityViewLess;
+  senderMessage.onblur = increaseOpacityViewLess;
 
 })();
