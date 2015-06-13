@@ -28,11 +28,7 @@
   .email-me .description { width: 100%; }
 }
 
-@media screen and (min-width: 641px) {
-  body { font-size: 15px; }
-  #title { font-size: 1.5em; }
-}
-
+@media screen and (min-width: 641px) { #title { font-size: 1.5em; } }
 
 @media screen and (min-width: 901px) {
   .hidden-large { display: none; }
