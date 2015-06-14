@@ -55,6 +55,8 @@
   };
 
   var sendEmail = function(e) {
+    if (!senderMessage.value || !senderEmail.value) return;
+
     e.preventDefault();
 
     function encodeJson(object) { // copied from http://blog.garstasio.com/you-dont-need-jquery/ajax/#url-encoding
@@ -81,7 +83,7 @@
     var data = encodeJson({
       message: senderMessage.value,
       _replyto: senderEmail.value,
-      _subject: "test pra valer",
+      _subject: "New Message from Cover Page",
       _gotcha: document.getElementById('sender-gotcha').value
     });
 
