@@ -35,14 +35,34 @@ a {
   text-align: center;
 }
 
+.alert {
+  position: fixed;
+  z-index: 0;
+  font-size: 1.25em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: z-index .5s, opacity .5s;
+  -moz-transition: z-index .5s, opacity .5s;
+  -o-transition: z-index .5s, opacity .5s;
+  transition: z-index .5s, opacity .5s;
+}
+
+.alert p { padding: 0 1em; }
+
 #social-media-buttons {
   padding: 1em;
   text-align: center;
 }
 
-a.fa-stack { text-decoration: none; }
-
-.fa-stack { padding: 1em; }
+a.fa-stack {
+  padding: 1em;
+  text-decoration: none;
+}
 
 i.fa-stack-1x { font-size: 1.25em; }
 
@@ -116,6 +136,9 @@ i.fa-stack-1x.dark {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -o-transition: .5s ease;
   transition: .5s ease;
   position: fixed;
   visibility: hidden;
@@ -220,7 +243,7 @@ i.fa-stack-1x.dark {
 .email-me-form button {
   text-transform: uppercase;
   color: rgba(248, 245, 233, 0.7);
-  background-color: rgb(48, 93, 84);
+  background-color: rgba(48, 93, 84, 0.7);
 }
 
 .summary {

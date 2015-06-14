@@ -40,7 +40,9 @@
     viewMoreElem.style.display = null;
   };
 
-  var emailLinkClick = function() { showContent();
+  var emailLinkClick = function() {
+    showContent();
+
     setTimeout(function() {
       document.getElementById('email-me').scrollIntoView();
     }, 550);
@@ -55,11 +57,10 @@
   };
 
   var sendEmail = function(e) {
+    e.preventDefault();
     if (!senderMessage.value || !senderEmail.value) return;
 
-    e.preventDefault();
-
-    function encodeJson(object) { // copied from http://blog.garstasio.com/you-dont-need-jquery/ajax/#url-encoding
+    function encodeJson(object) { // from http://blog.garstasio.com/you-dont-need-jquery/ajax/#url-encoding
       var encodedString = '';
       for (var prop in object) {
         if (object.hasOwnProperty(prop)) {
@@ -75,9 +76,36 @@
     function sendEmailHandler(req) {
       return function() {
         if (req.status === 200 && req.responseText.success) {
-          console.log("e foi meso");
+          senderEmail.value = '';
+          senderMessage.value = '';
+          showSuccessMessage();
+        }
+        else {
+          showErrorMessage();
         }
       };
+
+      function showSuccessMessage() {
+        alertContentElem.innerHTML = 'Email Sent Successfuly';
+        alertElem.style['background-color'] = 'rgb(48, 93, 84)';
+        showMessage();
+      }
+
+      function showErrorMessage() {
+        alertContentElem.innerHTML = 'Oops! Something went wrong.<br>Please try again';
+        alertElem.style['background-color'] = 'rgb(242, 105, 125)';
+        showMessage();
+      }
+
+      function showMessage() {
+        alertElem.style['z-index'] = 15;
+        alertElem.style.opacity = 1;
+
+        setTimeout(function() {
+          alertElem.style.opacity = 0;
+          alertElem.style['z-index'] = 0;
+        }, 5000);
+      }
     }
 
     var data = encodeJson({
@@ -102,6 +130,8 @@
   var senderEmail = document.getElementById('sender-email');
   var senderMessage = document.getElementById('sender-message');
   var senderEmailButton = document.getElementById('send-email-button');
+  var alertElem = document.getElementById('alert-box');
+  var alertContentElem = document.getElementById('alert-content');
 
   contentElem.style['-webkit-transform'] = 'translateY('+ viewport.largestDimension()+ 'px)';
   contentElem.style['-moz-transform'] = 'translateY('+ viewport.largestDimension()+ 'px)';
