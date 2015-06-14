@@ -75,7 +75,7 @@
 
     function sendEmailHandler(req) {
       return function() {
-        if (req.status === 200 && req.responseText.success) {
+        if (req.status === 200) {
           senderEmail.value = '';
           senderMessage.value = '';
           showSuccessMessage();
