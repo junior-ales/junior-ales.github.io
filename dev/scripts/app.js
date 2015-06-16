@@ -15,7 +15,7 @@
   var showContent = function() {
     document.getElementById('social-media-buttons').style.display = 'none';
     document.getElementById('title').style.display = 'none';
-    viewMoreElem.style.display = 'none';
+    footerElem.style.display = 'none';
     contentElem.style.position = 'initial';
     contentElem.style['-webkit-transform'] = 'translateY(0)';
     contentElem.style['-moz-transform'] = 'translateY(0)';
@@ -37,7 +37,7 @@
     contentElem.style.transform = 'translateY('+ viewport.largestDimension()+ 'px)';
     contentElem.style.position = 'fixed';
     viewLessElem.style.display = 'none';
-    viewMoreElem.style.display = null;
+    footerElem.style.display = null;
   };
 
   var emailLinkClick = function() {
@@ -58,7 +58,10 @@
 
   var sendEmail = function(e) {
     e.preventDefault();
-    if (!senderMessage.value || !senderEmail.value) return;
+    if (!senderMessage.value || !senderEmail.value) {
+      showErrorMessage("Please add an email and a message");
+      return;
+    }
 
     function encodeJson(object) { // from http://blog.garstasio.com/you-dont-need-jquery/ajax/#url-encoding
       var encodedString = '';
@@ -84,28 +87,28 @@
           showErrorMessage();
         }
       };
+    }
 
-      function showSuccessMessage() {
-        alertContentElem.innerHTML = 'Email Sent Successfuly';
-        alertElem.style['background-color'] = 'rgb(48, 93, 84)';
-        showMessage();
-      }
+    function showSuccessMessage() {
+      alertContentElem.innerHTML = 'Email Sent Successfuly';
+      alertElem.style['background-color'] = 'rgb(48, 93, 84)';
+      showMessage();
+    }
 
-      function showErrorMessage() {
-        alertContentElem.innerHTML = 'Oops! Something went wrong.<br>Please try again';
-        alertElem.style['background-color'] = 'rgb(242, 105, 125)';
-        showMessage();
-      }
+    function showErrorMessage(message) {
+      alertContentElem.innerHTML = message || 'Oops! Something went wrong.<br>Please try again';
+      alertElem.style['background-color'] = 'rgb(242, 105, 125)';
+      showMessage();
+    }
 
-      function showMessage() {
-        alertElem.style['z-index'] = 15;
-        alertElem.style.opacity = 1;
+    function showMessage() {
+      alertElem.style['z-index'] = 15;
+      alertElem.style.opacity = 1;
 
-        setTimeout(function() {
-          alertElem.style.opacity = 0;
-          alertElem.style['z-index'] = 0;
-        }, 5000);
-      }
+      setTimeout(function() {
+        alertElem.style.opacity = 0;
+        alertElem.style['z-index'] = 0;
+      }, 5000);
     }
 
     var data = encodeJson({
@@ -120,10 +123,16 @@
     request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.onload = sendEmailHandler(request);
-    request.send(data);
+    try {
+      request.send(data);
+    } catch(error) {
+      showErrorMessage();
+      console.log(error);
+    }
   };
 
   var contentElem = document.getElementById('content');
+  var footerElem = document.getElementById('main-footer');
   var viewMoreElem = document.getElementById('view-more');
   var viewLessElem = document.getElementById('view-less');
   var emailLink = document.getElementById('email-link');
