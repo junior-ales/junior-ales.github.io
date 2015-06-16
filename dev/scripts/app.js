@@ -58,9 +58,33 @@
 
   var sendEmail = function(e) {
     e.preventDefault();
-    if (!senderMessage.value || !senderEmail.value) {
-      showErrorMessage("Please add an email and a message");
+    if (!senderMessage.value || !validEmail(senderEmail.value)) {
+      showErrorMessage("Please add a valid email and a message");
       return;
+    }
+
+    var data = encodeJson({
+      message: senderMessage.value,
+      _replyto: senderEmail.value,
+      _subject: "New Message from Cover Page",
+      _gotcha: document.getElementById('sender-gotcha').value
+    });
+
+    var request = new XMLHttpRequest();
+    request.open('POST', '//formspree.io/edilson.ales.jr@gmail.com', true);
+    request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.onload = sendEmailHandler(request);
+    try {
+      request.send(data);
+    } catch(error) {
+      showErrorMessage();
+      console.log(error);
+    }
+
+    function validEmail(emailAddress) {
+      var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i;
+      return re.test(emailAddress);
     }
 
     function encodeJson(object) { // from http://blog.garstasio.com/you-dont-need-jquery/ajax/#url-encoding
@@ -109,25 +133,6 @@
         alertElem.style.opacity = 0;
         alertElem.style['z-index'] = 0;
       }, 5000);
-    }
-
-    var data = encodeJson({
-      message: senderMessage.value,
-      _replyto: senderEmail.value,
-      _subject: "New Message from Cover Page",
-      _gotcha: document.getElementById('sender-gotcha').value
-    });
-
-    var request = new XMLHttpRequest();
-    request.open('POST', '//formspree.io/edilson.ales.jr@gmail.com', true);
-    request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    request.onload = sendEmailHandler(request);
-    try {
-      request.send(data);
-    } catch(error) {
-      showErrorMessage();
-      console.log(error);
     }
   };
 
