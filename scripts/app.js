@@ -13,7 +13,6 @@
   })();
 
   var showContent = function() {
-    mixpanel.track('show content event');
     document.getElementById('social-media-buttons').style.display = 'none';
     document.getElementById('title').style.display = 'none';
     footerElem.style.display = 'none';
@@ -29,7 +28,6 @@
   };
 
   var hideContent = function() {
-    mixpanel.track('hide content event');
     document.getElementById('social-media-buttons').style.display = null;
     document.getElementById('title').style.display = null;
     contentElem.style['-webkit-transform'] = 'translateY('+ viewport.largestDimension()+ 'px)';
@@ -43,7 +41,6 @@
   };
 
   var emailLinkClick = function() {
-    mixpanel.track('email link');
     showContent();
 
     setTimeout(function() {
@@ -64,11 +61,9 @@
 
     if (!senderMessage.value || !validEmail(senderEmail.value)) {
       showErrorMessage("Please add a valid email and a message");
-      mixpanel.track('invalid fields of sending email');
+      mixpanel.track('email fields error');
       return;
     }
-
-    mixpanel.track('sending email');
 
     var data = encodeJson({
       message: senderMessage.value,
@@ -87,6 +82,7 @@
     } catch(error) {
       showErrorMessage();
       console.log(error);
+      mixpanel.track('excepetion sending email');
     }
 
     function validEmail(emailAddress) {
@@ -163,12 +159,19 @@
     contentElem.style.visibility = 'visible';
   }, 550);
 
-  viewMoreElem.onclick = showContent;
-  viewLessElem.onclick = hideContent;
-  emailLink.onclick = emailLinkClick;
+  function track(eventName, fn) {
+    return function() {
+      mixpanel.track(eventName);
+      fn.apply(this, arguments);
+    };
+  }
+
+  viewMoreElem.onclick = track('view more', showContent);
+  viewLessElem.onclick = track('view less', hideContent);
+  emailLink.onclick = track('email link', emailLinkClick);
   senderEmail.onfocus = decreaseOpacityViewLess;
   senderMessage.onfocus = decreaseOpacityViewLess;
   senderEmail.onblur = increaseOpacityViewLess;
   senderMessage.onblur = increaseOpacityViewLess;
-  senderEmailButton.onclick = sendEmail;
+  senderEmailButton.onclick = track('send email', sendEmail);
 })(mixpanel);
