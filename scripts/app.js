@@ -1,4 +1,4 @@
-(function() {
+(function(mixpanel) {
   var viewport = (function() {
     var e = window, a = 'inner';
     if (!('innerWidth' in window )) {
@@ -13,6 +13,7 @@
   })();
 
   var showContent = function() {
+    mixpanel.track('show content event');
     document.getElementById('social-media-buttons').style.display = 'none';
     document.getElementById('title').style.display = 'none';
     footerElem.style.display = 'none';
@@ -28,6 +29,7 @@
   };
 
   var hideContent = function() {
+    mixpanel.track('hide content event');
     document.getElementById('social-media-buttons').style.display = null;
     document.getElementById('title').style.display = null;
     contentElem.style['-webkit-transform'] = 'translateY('+ viewport.largestDimension()+ 'px)';
@@ -41,6 +43,7 @@
   };
 
   var emailLinkClick = function() {
+    mixpanel.track('email link');
     showContent();
 
     setTimeout(function() {
@@ -58,10 +61,14 @@
 
   var sendEmail = function(e) {
     e.preventDefault();
+
     if (!senderMessage.value || !validEmail(senderEmail.value)) {
       showErrorMessage("Please add a valid email and a message");
+      mixpanel.track('invalid fields of sending email');
       return;
     }
+
+    mixpanel.track('sending email');
 
     var data = encodeJson({
       message: senderMessage.value,
@@ -164,4 +171,4 @@
   senderEmail.onblur = increaseOpacityViewLess;
   senderMessage.onblur = increaseOpacityViewLess;
   senderEmailButton.onclick = sendEmail;
-})();
+})(mixpanel);
