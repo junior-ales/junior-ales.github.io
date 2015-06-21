@@ -1,4 +1,4 @@
-(function(mixpanel) {
+(function(mixpanel, page) {
   var viewport = (function() {
     var e = window, a = 'inner';
     if (!('innerWidth' in window )) {
@@ -13,7 +13,7 @@
   })();
 
   var showContent = function() {
-    document.getElementById('social-media-buttons').style.display = 'none';
+    page.socialMediaButtons.elem.style.display = 'none';
     document.getElementById('title').style.display = 'none';
     footerElem.style.display = 'none';
     contentElem.style.position = 'initial';
@@ -28,7 +28,7 @@
   };
 
   var hideContent = function() {
-    document.getElementById('social-media-buttons').style.display = null;
+    page.socialMediaButtons.elem.style.display = null;
     document.getElementById('title').style.display = null;
     contentElem.style['-webkit-transform'] = 'translateY('+ viewport.largestDimension()+ 'px)';
     contentElem.style['-moz-transform'] = 'translateY('+ viewport.largestDimension()+ 'px)';
@@ -174,4 +174,4 @@
   senderEmail.onblur = increaseOpacityViewLess;
   senderMessage.onblur = increaseOpacityViewLess;
   senderEmailButton.onclick = track('send email', sendEmail);
-})(mixpanel);
+})(mixpanel, new HomePage());
