@@ -5,7 +5,7 @@
   "main": "start.js",
   "scripts": {
     "start": "./node_modules/.bin/nodemon start.js",
-    "test": "./node_modules/.bin/mocha --recursive -R spec specs/ -t 5000"
+    "test": "./node_modules/.bin/mocha --recursive -R spec specs/ -t 10000"
   },
   "repository": {
     "type": "git",

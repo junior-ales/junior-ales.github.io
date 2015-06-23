@@ -30,8 +30,41 @@ test.describe('Home Page', function() {
     });
   });
 
-  test.it('should have a links of main social media');
-  test.it('should have a link to contact form');
+  test.it('should have a links of main social media', function(done) {
+    var socialMediaNames = ['medium', 'twitter', 'linkedin'];
+    var socialMediaSection = this.driver.findElement(By.id('social-media-buttons'));
+    socialMediaSection.findElements(By.tagName('a')).then(function(links) {
+      webdriver.promise.filter(links, removeLocalhost)
+        .then(function(allLinksButLocalhost) {
+          assert.equal(socialMediaNames.length, allLinksButLocalhost.length);
+
+          allLinksButLocalhost.forEach(function(link) {
+            link.getAttribute('href').then(function(attr) {
+              var urlIncludesName = socialMediaNames.some(function(name) {
+                return attr.indexOf(name) >= 0;
+              });
+              assert.ok(urlIncludesName);
+              done();
+            });
+          });
+        });
+
+      function removeLocalhost(link) {
+        return link.getAttribute('href').then(function(attr) {
+          return attr.indexOf('localhost') === -1;
+        });
+      }
+    });
+  });
+
+  test.it('should have a link to contact form', function(done) {
+    var elem = this.driver.findElement(By.id('email-link'));
+    elem.isDisplayed().then(function(result) {
+      assert.ok(result);
+      done();
+    });
+  });
+
   test.it('should have a button to see MORE content');
   test.it('should not have a button to see LESS content');
   test.it('should not show the the elements of more content section');
