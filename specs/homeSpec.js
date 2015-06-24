@@ -32,8 +32,7 @@ test.describe('Home Page', function() {
 
   test.it('should have a links of main social media', function(done) {
     var socialMediaNames = ['medium', 'twitter', 'linkedin'];
-    var socialMediaSection = this.driver.findElement(By.id('social-media-buttons'));
-    socialMediaSection.findElements(By.tagName('a')).then(function(links) {
+    this.driver.findElements(By.css('#social-media-buttons a')).then(function(links) {
       webdriver.promise.filter(links, removeLocalhost)
         .then(function(allLinksButLocalhost) {
           assert.equal(socialMediaNames.length, allLinksButLocalhost.length);
