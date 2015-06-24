@@ -1,14 +1,14 @@
 var app = require(__dirname + '/../app');
-var assert = require('assert');
+var expect = require('chai').expect;
 var webdriver = require('selenium-webdriver');
 var test = require('selenium-webdriver/testing');
-var By = webdriver.By;
+var by = webdriver.By;
 
 var Assure = function(driver) {
   this.isDisplayed = function(elemCss, done) {
-    var elem = driver.findElement(By.css(elemCss));
+    var elem = driver.findElement(by.css(elemCss));
     elem.isDisplayed().then(function(result) {
-      assert.ok(result);
+      expect(result).to.be.true;
       done();
     });
   }
@@ -34,26 +34,27 @@ test.describe('Home Page', function() {
   });
 
   test.it('should have my name =\)', function(done) {
-    var elem = this.driver.findElement(By.css('#title h1'));
+    var elem = this.driver.findElement(by.css('#title h1'));
     elem.getText().then(function(text) {
-      assert.equal(text, 'junior ales');
+      expect(text).to.be.equal('junior ales');
       done();
     });
   });
 
   test.it('should have a links of main social media', function(done) {
     var socialMediaNames = ['medium', 'twitter', 'linkedin'];
-    this.driver.findElements(By.css('#social-media-buttons a')).then(function(links) {
+    this.driver.findElements(by.css('#social-media-buttons a')).then(function(links) {
       webdriver.promise.filter(links, removeLocalhost)
         .then(function(allLinksButLocalhost) {
-          assert.equal(socialMediaNames.length, allLinksButLocalhost.length);
+
+          expect(allLinksButLocalhost).to.have.length(socialMediaNames.length);
 
           allLinksButLocalhost.forEach(function(link) {
             link.getAttribute('href').then(function(attr) {
               var urlIncludesName = socialMediaNames.some(function(name) {
                 return attr.indexOf(name) >= 0;
               });
-              assert.ok(urlIncludesName);
+              expect(urlIncludesName).to.be.true;
               done();
             });
           });
@@ -76,9 +77,9 @@ test.describe('Home Page', function() {
   });
 
   test.it('should not have a button to see LESS content', function(done) {
-    var elem = this.driver.findElement(By.css('#view-less'));
+    var elem = this.driver.findElement(by.css('#view-less'));
     elem.isDisplayed().then(function(result) {
-      assert.equal(result, false);
+      expect(result).to.be.false;
       done();
     });
   });

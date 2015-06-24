@@ -18,6 +18,7 @@
   },
   "homepage": "http://juniorales.com",
   "devDependencies": {
+    "chai": "^3.0.0",
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
