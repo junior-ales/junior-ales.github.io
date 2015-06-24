@@ -4,10 +4,21 @@ var webdriver = require('selenium-webdriver');
 var test = require('selenium-webdriver/testing');
 var By = webdriver.By;
 
+var Assure = function(driver) {
+  this.elemIsDisplayed = function(elemCss, done) {
+    var elem = driver.findElement(By.css(elemCss));
+    elem.isDisplayed().then(function(result) {
+      assert.ok(result);
+      done();
+    });
+  }
+};
+
 test.describe('Home Page', function() {
   test.before(function(done) {
     this.server = require('http').createServer(app).listen(3000);
     this.driver = new webdriver.Builder().forBrowser('phantomjs').build();
+    this.assure = new Assure(this.driver);
     done();
   });
 
@@ -57,14 +68,13 @@ test.describe('Home Page', function() {
   });
 
   test.it('should have a link to contact form', function(done) {
-    var elem = this.driver.findElement(By.id('email-link'));
-    elem.isDisplayed().then(function(result) {
-      assert.ok(result);
-      done();
-    });
+    this.assure.elemIsDisplayed('#email-link', done);
   });
 
-  test.it('should have a button to see MORE content');
+  test.it('should have a button to see MORE content', function(done) {
+    this.assure.elemIsDisplayed('#view-more', done);
+  });
+
   test.it('should not have a button to see LESS content');
   test.it('should not show the the elements of more content section');
 
@@ -83,4 +93,5 @@ test.describe('Home Page', function() {
       test.it('should show an error message when a message is missing');
     });
   });
+
 });
