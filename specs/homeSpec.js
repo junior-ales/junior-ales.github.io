@@ -5,7 +5,7 @@ var test = require('selenium-webdriver/testing');
 var By = webdriver.By;
 
 var Assure = function(driver) {
-  this.elemIsDisplayed = function(elemCss, done) {
+  this.isDisplayed = function(elemCss, done) {
     var elem = driver.findElement(By.css(elemCss));
     elem.isDisplayed().then(function(result) {
       assert.ok(result);
@@ -68,15 +68,22 @@ test.describe('Home Page', function() {
   });
 
   test.it('should have a link to contact form', function(done) {
-    this.assure.elemIsDisplayed('#email-link', done);
+    this.assure.isDisplayed('#email-link', done);
   });
 
   test.it('should have a button to see MORE content', function(done) {
-    this.assure.elemIsDisplayed('#view-more', done);
+    this.assure.isDisplayed('#view-more', done);
   });
 
-  test.it('should not have a button to see LESS content');
-  test.it('should not show the the elements of more content section');
+  test.it('should not have a button to see LESS content', function(done) {
+    var elem = this.driver.findElement(By.css('#view-less'));
+    elem.isDisplayed().then(function(result) {
+      assert.equal(result, false);
+      done();
+    });
+  });
+
+  test.it('should not show more content section');
 
   test.describe('more content', function() {
     test.it('should have a button to see LESS content');
