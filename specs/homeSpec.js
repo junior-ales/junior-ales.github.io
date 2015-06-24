@@ -1,24 +1,38 @@
+/*jshint expr: true*/ // so it accept chai's to.be.true/false
+
 var app = require(__dirname + '/../app');
 var expect = require('chai').expect;
 var webdriver = require('selenium-webdriver');
 var test = require('selenium-webdriver/testing');
 var by = webdriver.By;
 
-var Assure = function(driver) {
+function Assure(driver) {
+  'use strict';
+
   this.isDisplayed = function(elemCss, done) {
     var elem = driver.findElement(by.css(elemCss));
     elem.isDisplayed().then(function(result) {
       expect(result).to.be.true;
       done();
     });
-  }
-};
+  };
+
+  this.windowSizeIs = function(x, y) {
+    driver.manage().window().getSize().then(function(size) {
+      driver.manage().window().setSize(x, y);
+    });
+  };
+}
 
 test.describe('Home Page', function() {
+  'use strict';
+
   test.before(function(done) {
     this.server = require('http').createServer(app).listen(3000);
     this.driver = new webdriver.Builder().forBrowser('phantomjs').build();
     this.assure = new Assure(this.driver);
+    this.windowHeight = 640;
+    this.assure.windowSizeIs(360, this.windowHeight);
     done();
   });
 
@@ -84,9 +98,18 @@ test.describe('Home Page', function() {
     });
   });
 
-  test.it('should not show more content section');
+  test.xit('should place the content section below the viewport height', function(done) {
+    var windowHeight = this.windowHeight;
+    var elem = this.driver.findElement(by.css('#content'));
+
+    elem.getCssValue('transform').then(function(transformValue) {
+      expect(transformValue).to.be.equal('translateY(' + windowHeight + 'px)');
+      done();
+    });
+  });
 
   test.describe('more content', function() {
+    test.it('should place the content section visible');
     test.it('should have a button to see LESS content');
     test.it('should not show elements of the initial view');
     test.it('should have a summary');
@@ -101,5 +124,4 @@ test.describe('Home Page', function() {
       test.it('should show an error message when a message is missing');
     });
   });
-
 });
