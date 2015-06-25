@@ -98,12 +98,14 @@ test.describe('Home Page', function() {
     });
   });
 
-  test.xit('should place the content section below the viewport height', function(done) {
+  test.it('should place the content section on the top of the viewport', function(done) {
     var windowHeight = this.windowHeight;
     var elem = this.driver.findElement(by.css('#content'));
 
-    elem.getCssValue('transform').then(function(transformValue) {
-      expect(transformValue).to.be.equal('translateY(' + windowHeight + 'px)');
+    elem.getAttribute('style').then(function(styleAttr) {
+      var regex = /translateY\((\d+)px\)/;
+      var translateYValue = regex.exec(styleAttr)[1];
+      expect(translateYValue).to.be.above(0);
       done();
     });
   });
