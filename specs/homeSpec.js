@@ -5,6 +5,7 @@ var expect = require('chai').expect;
 var webdriver = require('selenium-webdriver');
 var test = require('selenium-webdriver/testing');
 var by = webdriver.By;
+var until = webdriver.until;
 
 function Assure(driver) {
   'use strict';
@@ -86,10 +87,6 @@ test.describe('Home Page', function() {
     this.assure.isDisplayed('#email-link', done);
   });
 
-  test.it('should have a button to see MORE content', function(done) {
-    this.assure.isDisplayed('#view-more', done);
-  });
-
   test.it('should not have a button to see LESS content', function(done) {
     var elem = this.driver.findElement(by.css('#view-less'));
     elem.isDisplayed().then(function(result) {
@@ -98,12 +95,12 @@ test.describe('Home Page', function() {
     });
   });
 
-  test.it('should place the content section on the top of the viewport', function(done) {
+  test.it('should not place the content section on the top of the viewport', function(done) {
     var windowHeight = this.windowHeight;
     var elem = this.driver.findElement(by.css('#content'));
 
     elem.getAttribute('style').then(function(styleAttr) {
-      var regex = /translateY\((\d+)px\)/;
+      var regex = /translateY\((\d+)(px)?\)/;
       var translateYValue = regex.exec(styleAttr)[1];
       expect(translateYValue).to.be.above(0);
       done();
@@ -111,13 +108,70 @@ test.describe('Home Page', function() {
   });
 
   test.describe('more content', function() {
-    test.it('should place the content section visible');
-    test.it('should have a button to see LESS content');
-    test.it('should not show elements of the initial view');
-    test.it('should have a summary');
-    test.it('should have a personal blog section');
-    test.it('should have a twitter section');
-    test.it('should have a footer with links of social media and the github project');
+    test.beforeEach(function(done) {
+      this.driver.findElement(by.css('#view-more')).click();
+      done();
+    });
+
+    test.it('should place the content on the top of the viewport', function(done) {
+      var elem = this.driver.findElement(by.css('#content'));
+
+      elem.getAttribute('style').then(function(styleAttr) {
+        var regex = /translateY\((\d+)(px)?\)/;
+        var translateYValue = parseInt(regex.exec(styleAttr)[1], 10);
+        expect(translateYValue).to.equal(0);
+        done();
+      });
+    });
+
+    test.it('should have a button to see LESS content', function(done) {
+      this.driver.wait(until.elementLocated(by.id('view-less')), 1000);
+      done();
+    });
+
+    test.it('should not show elements of the initial view', function(done) {
+      var initialViewElems = [
+        this.driver.findElement(by.css('#social-media-buttons')),
+        this.driver.findElement(by.css('#title')),
+        this.driver.findElement(by.css('#main-footer'))
+      ];
+      initialViewElems.map(function(elem) {
+        elem.isDisplayed().then(function(result) {
+          expect(result).to.be.false;
+        });
+      });
+      done();
+    });
+
+    test.xit('should have a twitter section', function(done) {
+      this.assure.isDisplayed('.twitter-block', done);
+    });
+
+    test.xit('should have a personal blog section', function(done) {
+      this.assure.isDisplayed('.personal-blog', done);
+    });
+
+    test.xit('should have a summary', function(done) {
+      this.assure.isDisplayed('.summary', done);
+    });
+
+    test.xit('should have a footer with links of social media and the github project', function(done) {
+      var linkNames = ['linkedin', 'instagram', 'facebook', 'github', 'junior-ales.github.io'];
+
+      this.driver.findElements(by.css('#email-me footer a')).then(function(footerLinks) {
+        expect(footerLinks).to.have.length(linkNames.length);
+
+        footerLinks.forEach(function(link) {
+          link.getAttribute('href').then(function(attr) {
+            var urlIncludesName = linkNames.some(function(name) {
+              return attr.indexOf(name) >= 0;
+            });
+            expect(urlIncludesName).to.be.true;
+            done();
+          });
+        });
+      });
+    });
 
     test.describe('contact form', function() {
       test.it('should show a success message when sending email');
