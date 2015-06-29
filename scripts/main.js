@@ -23,35 +23,6 @@ function HomePage(document) {
   })();
 }
 
-
-var showContent = function(page) {
-  page.socialMediaButtons.style.display = 'none';
-  page.titleElem.style.display = 'none';
-  page.footerElem.style.display = 'none';
-  page.contentElem.style.position = 'initial';
-  page.contentElem.style['-webkit-transform'] = 'translateY(0)';
-  page.contentElem.style['-moz-transform'] = 'translateY(0)';
-  page.contentElem.style['-ms-transform'] = 'translateY(0)';
-  page.contentElem.style['-o-transform'] = 'translateY(0)';
-  page.contentElem.style.transform = 'translateY(0)';
-  setTimeout(function() {
-    page.viewLessElem.style.display = 'block';
-  }, 550);
-};
-
-var hideContent = function(page) {
-  page.socialMediaButtons.style.display = null;
-  page.titleElem.style.display = null;
-  page.contentElem.style['-webkit-transform'] = 'translateY('+ page.largestDimension + 'px)';
-  page.contentElem.style['-moz-transform'] = 'translateY('+ page.largestDimension + 'px)';
-  page.contentElem.style['-ms-transform'] = 'translateY('+ page.largestDimension + 'px)';
-  page.contentElem.style['-o-transform'] = 'translateY('+ page.largestDimension + 'px)';
-  page.contentElem.style.transform = 'translateY('+ page.largestDimension + 'px)';
-  page.contentElem.style.position = 'fixed';
-  page.viewLessElem.style.display = 'none';
-  page.footerElem.style.display = null;
-};
-
 function Notifier(page) {
   this.success = function() {
     page.alertContentElem.innerHTML = 'Email Sent Successfuly';
@@ -141,46 +112,80 @@ function EmailSender(page) {
   }
 }
 
-var emailLinkClick = function(page) {
-  showContent(page);
+function bindPageEvents(page, emailSender) {
+  page.viewMoreElem.onclick = track('view more', showContent);
+  page.viewLessElem.onclick = track('view less', hideContent);
+  page.emailLink.onclick = track('email link', emailLinkClick);
+  page.senderEmail.onfocus = decreaseOpacityViewLess;
+  page.senderMessage.onfocus = decreaseOpacityViewLess;
+  page.senderEmail.onblur = increaseOpacityViewLess;
+  page.senderMessage.onblur = increaseOpacityViewLess;
+  page.senderEmailButton.onclick = track('send email', emailSender.send);
 
+  function showContent() {
+    page.socialMediaButtons.style.display = 'none';
+    page.titleElem.style.display = 'none';
+    page.footerElem.style.display = 'none';
+    page.contentElem.style.position = 'initial';
+    page.contentElem.style['-webkit-transform'] = 'translateY(0)';
+    page.contentElem.style['-moz-transform'] = 'translateY(0)';
+    page.contentElem.style['-ms-transform'] = 'translateY(0)';
+    page.contentElem.style['-o-transform'] = 'translateY(0)';
+    page.contentElem.style.transform = 'translateY(0)';
+    setTimeout(function() {
+      page.viewLessElem.style.display = 'block';
+    }, 550);
+  }
+
+  function hideContent() {
+    page.socialMediaButtons.style.display = null;
+    page.titleElem.style.display = null;
+    page.contentElem.style['-webkit-transform'] = 'translateY('+ page.largestDimension + 'px)';
+    page.contentElem.style['-moz-transform'] = 'translateY('+ page.largestDimension + 'px)';
+    page.contentElem.style['-ms-transform'] = 'translateY('+ page.largestDimension + 'px)';
+    page.contentElem.style['-o-transform'] = 'translateY('+ page.largestDimension + 'px)';
+    page.contentElem.style.transform = 'translateY('+ page.largestDimension + 'px)';
+    page.contentElem.style.position = 'fixed';
+    page.viewLessElem.style.display = 'none';
+    page.footerElem.style.display = null;
+  }
+
+  function track(eventName, fn) {
+    return function() {
+      mixpanel.track(eventName);
+      fn.apply(this, arguments);
+    };
+  }
+
+  function emailLinkClick() {
+    showContent();
+
+    setTimeout(function() {
+      page.emailMeSection.scrollIntoView();
+    }, 550);
+  }
+
+  function increaseOpacityViewLess() {
+    page.viewLessElem.style.opacity = 1;
+  }
+
+  function decreaseOpacityViewLess() {
+    page.viewLessElem.style.opacity = 0.2;
+  }
+}
+
+function initializeMainContent(page) {
+  page.contentElem.style['-webkit-transform'] = 'translateY('+ page.largestDimension + 'px)';
+  page.contentElem.style['-moz-transform'] = 'translateY('+ page.largestDimension + 'px)';
+  page.contentElem.style['-ms-transform'] = 'translateY('+ page.largestDimension + 'px)';
+  page.contentElem.style['-o-transform'] = 'translateY('+ page.largestDimension + 'px)';
+  page.contentElem.style.transform = 'translateY('+ page.largestDimension + 'px)';
   setTimeout(function() {
-    page.emailMeSection.scrollIntoView();
+    page.contentElem.style.visibility = 'visible';
   }, 550);
-};
-
-var increaseOpacityViewLess = function(page) {
-  page.viewLessElem.style.opacity = 1;
-};
-
-var decreaseOpacityViewLess = function(page) {
-  page.viewLessElem.style.opacity = 0.2;
-};
+}
 
 var homePage = new HomePage(document);
 var emailSender = new EmailSender(homePage);
-
-homePage.contentElem.style['-webkit-transform'] = 'translateY('+ homePage.largestDimension + 'px)';
-homePage.contentElem.style['-moz-transform'] = 'translateY('+ homePage.largestDimension + 'px)';
-homePage.contentElem.style['-ms-transform'] = 'translateY('+ homePage.largestDimension + 'px)';
-homePage.contentElem.style['-o-transform'] = 'translateY('+ homePage.largestDimension + 'px)';
-homePage.contentElem.style.transform = 'translateY('+ homePage.largestDimension + 'px)';
-setTimeout(function() {
-  homePage.contentElem.style.visibility = 'visible';
-}, 550);
-
-function track(eventName, fn) {
-  return function() {
-    mixpanel.track(eventName);
-    fn.apply(this, arguments);
-  };
-}
-
-homePage.viewMoreElem.onclick = track('view more', showContent.bind(null, homePage));
-homePage.viewLessElem.onclick = track('view less', hideContent.bind(null, homePage));
-homePage.emailLink.onclick = track('email link', emailLinkClick.bind(null, homePage));
-homePage.senderEmail.onfocus = decreaseOpacityViewLess.bind(null, homePage);
-homePage.senderMessage.onfocus = decreaseOpacityViewLess.bind(null, homePage);
-homePage.senderEmail.onblur = increaseOpacityViewLess.bind(null, homePage);
-homePage.senderMessage.onblur = increaseOpacityViewLess.bind(null, homePage);
-homePage.senderEmailButton.onclick = track('send email', emailSender.send);
+bindPageEvents(homePage, emailSender);
+initializeMainContent(homePage);
