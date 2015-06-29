@@ -83,10 +83,6 @@ test.describe('Home Page', function() {
     });
   });
 
-  test.it('should have a link to contact form', function(done) {
-    this.assure.isDisplayed('#email-link', done);
-  });
-
   test.it('should not have a button to see LESS content', function(done) {
     var elem = this.driver.findElement(by.css('#view-less'));
     elem.isDisplayed().then(function(result) {
@@ -168,12 +164,33 @@ test.describe('Home Page', function() {
         });
       });
     });
+  });
 
-    test.describe('contact form', function() {
-      test.it('should show a success message when sending email');
-      test.it('should show an error message when form is empty');
-      test.it('should show an error message when email address is missing');
-      test.it('should show an error message when a message is missing');
+  test.describe('contact form', function() {
+    test.beforeEach(function(done) {
+      this.driver.findElement(by.css('#email-link')).click();
+      this.driver.wait(until.elementIsVisible(this.driver.findElement(by.id('view-less'))), 1000);
+      done();
     });
+
+    test.it('should show a success message when sending email', function(done) {
+      var validEmail = "user@mail.com";
+      this.driver.findElement(by.css('#sender-email')).sendKeys(validEmail);
+      this.driver.findElement(by.css('#sender-message')).sendKeys('an email message');
+      this.driver.findElement(by.css('#send-email-button')).click();
+
+      var alertMessageElem = this.driver.findElement(by.css('#alert-content'));
+      this.driver.wait(until.elementIsVisible(alertMessageElem), 1000);
+
+      alertMessageElem.getText().then(function(alertMessage) {
+        var successMessage = "Email Sent Successfuly";
+        expect(alertMessage).to.be.equal(successMessage);
+        done();
+      });
+    });
+
+    test.it('should show an error message when form is empty');
+    test.it('should show an error message when email address is missing');
+    test.it('should show an error message when a message is missing');
   });
 });
