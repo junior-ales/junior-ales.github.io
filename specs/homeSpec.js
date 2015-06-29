@@ -110,6 +110,7 @@ test.describe('Home Page', function() {
   test.describe('more content', function() {
     test.beforeEach(function(done) {
       this.driver.findElement(by.css('#view-more')).click();
+      this.driver.wait(until.elementIsVisible(this.driver.findElement(by.id('view-less'))), 1000);
       done();
     });
 
@@ -122,11 +123,6 @@ test.describe('Home Page', function() {
         expect(translateYValue).to.equal(0);
         done();
       });
-    });
-
-    test.it('should have a button to see LESS content', function(done) {
-      this.driver.wait(until.elementLocated(by.id('view-less')), 1000);
-      done();
     });
 
     test.it('should not show elements of the initial view', function(done) {
@@ -143,19 +139,19 @@ test.describe('Home Page', function() {
       done();
     });
 
-    test.xit('should have a twitter section', function(done) {
+    test.it('should have a twitter section', function(done) {
       this.assure.isDisplayed('.twitter-block', done);
     });
 
-    test.xit('should have a personal blog section', function(done) {
+    test.it('should have a personal blog section', function(done) {
       this.assure.isDisplayed('.personal-blog', done);
     });
 
-    test.xit('should have a summary', function(done) {
+    test.it('should have a summary', function(done) {
       this.assure.isDisplayed('.summary', done);
     });
 
-    test.xit('should have a footer with links of social media and the github project', function(done) {
+    test.it('should have a footer with links of social media and the github project', function(done) {
       var linkNames = ['linkedin', 'instagram', 'facebook', 'github', 'junior-ales.github.io'];
 
       this.driver.findElements(by.css('#email-me footer a')).then(function(footerLinks) {
