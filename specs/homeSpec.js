@@ -10,14 +10,6 @@ var until = webdriver.until;
 function Assure(driver) {
   'use strict';
 
-  this.isDisplayed = function(elemCss, done) {
-    var elem = driver.findElement(by.css(elemCss));
-    elem.isDisplayed().then(function(result) {
-      expect(result).to.be.true;
-      done();
-    });
-  };
-
   this.windowSizeIs = function(x, y) {
     driver.manage().window().getSize().then(function(size) {
       driver.manage().window().setSize(x, y);
@@ -127,7 +119,7 @@ test.describe('Home Page', function() {
         this.driver.findElement(by.css('#title')),
         this.driver.findElement(by.css('#main-footer'))
       ];
-      initialViewElems.map(function(elem) {
+      initialViewElems.forEach(function(elem) {
         elem.isDisplayed().then(function(result) {
           expect(result).to.be.false;
         });
@@ -135,16 +127,15 @@ test.describe('Home Page', function() {
       done();
     });
 
-    test.it('should have a twitter section', function(done) {
-      this.assure.isDisplayed('.twitter-block', done);
-    });
-
-    test.it('should have a personal blog section', function(done) {
-      this.assure.isDisplayed('.personal-blog', done);
-    });
-
-    test.it('should have a summary', function(done) {
-      this.assure.isDisplayed('.summary', done);
+    test.it('should have content sections', function(done) {
+      this.driver.findElements(by.css('.content-block')).then(function(sections) {
+        sections.forEach(function(section) {
+          section.isDisplayed().then(function(result) {
+            expect(result).to.be.true;
+          });
+        });
+        done();
+      });
     });
 
     test.it('should have a footer with links of social media and the github project', function(done) {
@@ -159,9 +150,9 @@ test.describe('Home Page', function() {
               return attr.indexOf(name) >= 0;
             });
             expect(urlIncludesName).to.be.true;
-            done();
           });
         });
+        done();
       });
     });
   });
@@ -180,7 +171,7 @@ test.describe('Home Page', function() {
       this.driver.findElement(by.css('#send-email-button')).click();
 
       var alertMessageElem = this.driver.findElement(by.css('#alert-content'));
-      this.driver.wait(until.elementIsVisible(alertMessageElem), 1000);
+      this.driver.wait(until.elementIsVisible(alertMessageElem), 3000);
 
       alertMessageElem.getText().then(function(alertMessage) {
         var successMessage = "Email Sent Successfuly";
@@ -189,8 +180,61 @@ test.describe('Home Page', function() {
       });
     });
 
-    test.it('should show an error message when form is empty');
-    test.it('should show an error message when email address is missing');
-    test.it('should show an error message when a message is missing');
+    test.it('should show an error message when form is empty', function(done) {
+      this.driver.findElement(by.css('#send-email-button')).click();
+
+      var alertMessageElem = this.driver.findElement(by.css('#alert-content'));
+      this.driver.wait(until.elementIsVisible(alertMessageElem), 3000);
+
+      alertMessageElem.getText().then(function(alertMessage) {
+        var errorMessage = "Please add a valid email and a message";
+        expect(alertMessage).to.be.equal(errorMessage);
+        done();
+      });
+    });
+
+    test.it('should show an error message when a message is missing', function(done) {
+      var validEmail = "user@mail.com";
+      this.driver.findElement(by.css('#sender-email')).sendKeys(validEmail);
+      this.driver.findElement(by.css('#send-email-button')).click();
+
+      var alertMessageElem = this.driver.findElement(by.css('#alert-content'));
+      this.driver.wait(until.elementIsVisible(alertMessageElem), 3000);
+
+      alertMessageElem.getText().then(function(alertMessage) {
+        var errorMessage = 'Please add a valid email and a message';
+        expect(alertMessage).to.be.equal(errorMessage);
+        done();
+      });
+    });
+
+    test.it('should show an error message when email is invalid', function(done) {
+      var invalidEmails = [
+        '',
+        'noAt',
+        'a string',
+        'something@',
+        'something@@',
+        'something@com'
+      ];
+      var driver = this.driver;
+      var alertMessageElem = driver.findElement(by.css('#alert-content'));
+      var sendEmailInput = driver.findElement(by.css('#sender-email'));
+      var sendEmailButton = driver.findElement(by.css('#send-email-button'));
+      var errorMessage = 'Please add a valid email and a message';
+
+      invalidEmails.forEach(function(invalidEmail) {
+        sendEmailInput.clear();
+        sendEmailInput.sendKeys(invalidEmail);
+        sendEmailButton.click();
+
+        driver.wait(until.elementIsVisible(alertMessageElem), 3000);
+
+        alertMessageElem.getText().then(function(alertMessage) {
+          expect(alertMessage).to.be.equal(errorMessage);
+        });
+      });
+      done();
+    });
   });
 });
