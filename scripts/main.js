@@ -185,7 +185,9 @@ function initializeMainContent(page) {
   }, 550);
 }
 
-var homePage = new HomePage(document);
-var emailSender = new EmailSender(homePage);
-bindPageEvents(homePage, emailSender);
-initializeMainContent(homePage);
+document.addEventListener('DOMContentLoaded', function() {
+  var homePage = new HomePage(document);
+  var emailSender = new EmailSender(homePage);
+  bindPageEvents(homePage, emailSender);
+  initializeMainContent(homePage);
+});
