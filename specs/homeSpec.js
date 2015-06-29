@@ -155,6 +155,24 @@ test.describe('Home Page', function() {
         done();
       });
     });
+
+    test.it('should show initial view when view less is clicked', function(done) {
+      var initialViewElems = [
+        this.driver.findElement(by.css('#social-media-buttons')),
+        this.driver.findElement(by.css('#title')),
+        this.driver.findElement(by.css('#main-footer'))
+      ];
+
+      this.driver.findElement(by.id('view-less')).click();
+      this.driver.wait(until.elementIsVisible(this.driver.findElement(by.id('view-more'))), 1000);
+
+      initialViewElems.forEach(function(elem) {
+        elem.isDisplayed().then(function(result) {
+          expect(result).to.be.true;
+        });
+      });
+      done();
+    });
   });
 
   test.describe('contact form', function() {
