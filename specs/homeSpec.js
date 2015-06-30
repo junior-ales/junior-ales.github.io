@@ -231,6 +231,7 @@ test.describe('Home Page', function() {
         '',
         'noAt',
         'a string',
+        '@com.br',
         'something@',
         'something@@',
         'something@com'

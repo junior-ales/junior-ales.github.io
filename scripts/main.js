@@ -1,4 +1,4 @@
-function HomePage(document) {
+function HomePage(document, window) {
   this.senderGotcha = document.getElementById('sender-gotcha');
   this.alertContentElem = document.getElementById('alert-content');
   this.alertElem = document.getElementById('alert-box');
@@ -186,7 +186,7 @@ function initializeMainContent(page) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var homePage = new HomePage(document);
+  var homePage = new HomePage(document, window);
   var emailSender = new EmailSender(homePage);
   bindPageEvents(homePage, emailSender);
   initializeMainContent(homePage);
