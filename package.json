@@ -4,8 +4,13 @@
   "description": "My Web Cover Page",
   "main": "start.js",
   "scripts": {
-    "start": "./node_modules/.bin/browser-sync  start --server --files='*.html, css/*.css, scripts/*.js'",
-    "test": "./node_modules/.bin/mocha --recursive -R spec specs/ -t 10000"
+    "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/*.js'",
+    "test": "mocha --recursive -R spec specs/ -t 10000",
+    "test:all": "SELENIUM_BROWSER=safari npm run test && SELENIUM_BROWSER=chrome npm run test && SELENIUM_BROWSER=firefox npm run test && npm run test",
+    "build:js": "uglifyjs src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
+
+    "prestart": "npm run build:js",
+    "pretest": "npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,7 @@
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
-    "selenium-webdriver": "^2.46.1"
+    "selenium-webdriver": "^2.46.1",
+    "uglify-js": "^2.4.23"
   }
 }
