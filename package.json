@@ -8,9 +8,12 @@
     "test": "mocha --recursive -R spec specs/ -t 10000",
     "test:all": "SELENIUM_BROWSER=safari npm run test && SELENIUM_BROWSER=chrome npm run test && SELENIUM_BROWSER=firefox npm run test && npm run test",
     "build:js": "uglifyjs src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
+    "server:up": "node start.js",
+    "server:down": "pkill -SIGINT node",
 
     "prestart": "npm run build:js",
-    "pretest": "npm run build:js"
+    "pretest": "npm run build:js && npm run server:up &",
+    "posttest": "npm run server:down"
   },
   "repository": {
     "type": "git",

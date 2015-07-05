@@ -16,9 +16,3 @@ var app = function () {
 }();
 
 module.exports = app;
-
-if (!module.parent) {
-  require('http').createServer(app).listen(process.env.PORT, function(){
-    console.log('Server listening on port ' + app.get('port'));
-  });
-}

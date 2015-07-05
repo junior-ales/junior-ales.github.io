@@ -21,7 +21,6 @@ test.describe('Home Page', function() {
   'use strict';
 
   test.before(function(done) {
-    this.server = require('http').createServer(app).listen(3000);
     this.driver = new webdriver.Builder().forBrowser('phantomjs').build();
     this.assure = new Assure(this.driver);
     this.windowHeight = 640;
@@ -30,7 +29,6 @@ test.describe('Home Page', function() {
   });
 
   test.after(function(done) {
-    this.server.close();
     this.driver.quit();
     done();
   });
