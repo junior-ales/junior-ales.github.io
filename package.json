@@ -4,16 +4,23 @@
   "description": "My Web Cover Page",
   "main": "start.js",
   "scripts": {
-    "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/*.js'",
-    "test": "mocha --recursive -R spec specs/ -t 10000",
-    "test:all": "SELENIUM_BROWSER=safari npm run test && SELENIUM_BROWSER=chrome npm run test && SELENIUM_BROWSER=firefox npm run test && npm run test",
-    "build:js": "uglifyjs src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
-    "server:up": "node start.js",
-    "server:down": "pkill -SIGINT node",
-
     "prestart": "npm run build:js",
-    "pretest": "npm run build:js && npm run server:up &",
-    "posttest": "npm run server:down"
+    "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/*.js'",
+
+    "mocha": "mocha --recursive -R spec specs/ -t 10000",
+
+    "pretest": "npm run build:js && npm run server:up",
+    "test": "npm run mocha",
+    "posttest": "npm run server:down",
+
+    "precrossbrowser": "npm run pretest",
+    "crossbrowser": "parallelshell 'SELENIUM_BROWSER=safari npm run mocha' 'SELENIUM_BROWSER=chrome npm run mocha' 'SELENIUM_BROWSER=firefox npm run mocha' 'npm run mocha'",
+    "postcrossbrowser": "npm run posttest",
+
+    "build:js": "uglifyjs src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
+
+    "server:up": "node start.js &",
+    "server:down": "pkill -SIGINT node"
   },
   "repository": {
     "type": "git",
@@ -31,6 +38,7 @@
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
+    "parallelshell": "^1.2.0",
     "selenium-webdriver": "^2.46.1",
     "uglify-js": "^2.4.23"
   }
