@@ -1,0 +1,40 @@
+{
+  "name": "juniorales-photoblog",
+  "version": "0.0.1",
+  "description": "Photo blog of Junior Ales",
+  "private": true,
+  "scripts": {
+    "_clean": "rm -Rfv dist/*",
+    "_clean:production": "rm -Rfv ../!(_src)",
+    "_browser-sync": "browser-sync start --startPath=dist/ --server --files='dist/**/*' &",
+    "_watch": "brunch watch",
+
+    "prebuild": "npm run _clean",
+    "build": "brunch build",
+
+    "prebuild:production": "npm run _clean:production",
+    "build:production": "npm run build -- -P && cp -Rv dist/* ../",
+
+    "preserver": "npm run _clean",
+    "server": "npm run _browser-sync && npm run _watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junior-ales/junior-ales.github.io.git"
+  },
+  "author": "@junior_ales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/junior-ales/junior-ales.github.io/issues"
+  },
+  "homepage": "http://juniorales.com/photo",
+  "devDependencies": {
+    "after-brunch": "0.0.5",
+    "browser-sync": "^2.7.13",
+    "brunch": "^1.8.3",
+    "javascript-brunch": "^1.7.1",
+    "sass-brunch": "^1.8.10",
+    "static-handlebars-brunch": "^0.1.5",
+    "uglify-js-brunch": "^1.7.8"
+  }
+}

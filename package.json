@@ -6,19 +6,15 @@
   "scripts": {
     "prestart": "npm run build:js",
     "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/*.js'",
-
     "mocha": "mocha --recursive -R spec specs/ -t 10000",
     "pretest": "npm run build:js && npm run server:up",
     "test": "npm run mocha",
     "posttest": "npm run server:down",
-
     "precrossbrowser": "npm run pretest",
     "crossbrowser": "parallelshell 'SELENIUM_BROWSER=safari npm run mocha' 'SELENIUM_BROWSER=chrome npm run mocha' 'SELENIUM_BROWSER=firefox npm run mocha' 'npm run mocha'",
     "postcrossbrowser": "npm run posttest",
-
     "build:js": "uglifyjs scripts/_src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
     "build:photo": "harp compile photo/_src photo/",
-
     "server:up": "node start.js &",
     "server:down": "pkill -SIGINT node"
   },

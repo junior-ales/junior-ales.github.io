@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /dev/
+Disallow: /photo/_src/
 Disallow: /fonts/
 Disallow: /README.md
 Disallow: /CNAME
