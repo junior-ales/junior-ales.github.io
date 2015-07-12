@@ -1,0 +1,9 @@
+$color-primary: rgba(26,15,0,1);
+$color-tertiary: rgba(99,99,99,1);
+$color-secondary: lighten($color-tertiary, 60%);
+$color-alert: rgba(70,135,122,1);
+$color-success: rgba(233,75,98,1);
+$color-detail: rgba(255,104,10,1);
+
+$color-default-bg: $color-tertiary;
+$color-default-text: $color-primary;

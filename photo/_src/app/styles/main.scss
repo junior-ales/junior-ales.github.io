@@ -1,13 +1,5 @@
-$color-primary: rgba(26,15,0,1);
-$color-tertiary: rgba(99,99,99,1);
-$color-secondary: lighten($color-tertiary, 60%);
-$color-alert: rgba(70,135,122,1);
-$color-success: rgba(233,75,98,1);
-
-$color-default-bg: $color-secondary;
-$color-default-text: $color-primary;
-
-$font-default-size: 14px;
+@import "colors";
+@import "fonts";
 
 @mixin prefix($property, $value) {
   -webkit-#{$property}: #{$value};
@@ -37,18 +29,28 @@ body {
   background-color: $color-primary;
   color: $color-secondary;
   width: 100%;
+  min-height: 5em;
   position: fixed;
   top: 0;
   left: 0;
-  min-height: 5em;
-  text-align: center;
   padding: 1em 0;
+  text-align: center;
+  text-transform: lowercase;
+  border-top: 5px solid $color-detail;
 
   h1 {
-    text-transform: uppercase;
-    margin-bottom: 0;
+    font-family: $font-headline;
+    font-size: 3em;
+    margin: 0;
   }
 
-  p { margin-top: 0; }
+  p {
+    margin: .25em;
+    font-family: $font-subhead;
+    font-size: 1em;
+    font-weight: bold;
+
+    span { font-size: .6em; }
+  }
 
 }
