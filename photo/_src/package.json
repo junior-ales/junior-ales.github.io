@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "_clean": "rm -Rfv dist/*",
-    "_clean:production": "rm -Rfv ../index.html ../scripts ../styles",
+    "_clean:production": "rm -Rfv ../index.html ../scripts ../styles ../img",
     "_browser-sync": "browser-sync start --startPath=dist/ --server --files='dist/**/*' &",
     "_watch": "brunch watch",
     "prebuild": "npm run _clean",

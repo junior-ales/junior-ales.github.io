@@ -1,20 +1,91 @@
 @font-face {
-  font-family: 'Comfortaa';
+  font-family: 'Quicksand';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./fonts/Quicksand-300/Quicksand-300.eot');
+  src: url('./fonts/Quicksand-300/Quicksand-300.eot?#iefix') format('embedded-opentype'), local('Quicksand Light'), local('Quicksand-300'), url('./fonts/Quicksand-300/Quicksand-300.woff2') format('woff2'), url('./fonts/Quicksand-300/Quicksand-300.woff') format('woff'), url('./fonts/Quicksand-300/Quicksand-300.ttf') format('truetype'), url('./fonts/Quicksand-300/Quicksand-300.svg#Quicksand') format('svg'); }
+
+@font-face {
+  font-family: 'Poiret One';
   font-weight: 400;
   font-style: normal;
-  src: url('./fonts/Comfortaa-regular/Comfortaa-regular.eot');
-  src: url('./fonts/Comfortaa-regular/Comfortaa-regular.eot?#iefix') format('embedded-opentype'), local('Comfortaa'), local('Comfortaa-regular'), url('./fonts/Comfortaa-regular/Comfortaa-regular.woff2') format('woff2'), url('./fonts/Comfortaa-regular/Comfortaa-regular.woff') format('woff'), url('./fonts/Comfortaa-regular/Comfortaa-regular.ttf') format('truetype'), url('./fonts/Comfortaa-regular/Comfortaa-regular.svg#Comfortaa') format('svg'); }
+  src: url('./fonts/Poiret-One-regular/Poiret-One-regular.eot');
+  src: url('./fonts/Poiret-One-regular/Poiret-One-regular.eot?#iefix') format('embedded-opentype'), local('Poiret One'), local('Poiret-One-regular'), url('./fonts/Poiret-One-regular/Poiret-One-regular.woff2') format('woff2'), url('./fonts/Poiret-One-regular/Poiret-One-regular.woff') format('woff'), url('./fonts/Poiret-One-regular/Poiret-One-regular.ttf') format('truetype'), url('./fonts/Poiret-One-regular/Poiret-One-regular.svg#PoiretOne') format('svg'); }
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./fonts/Lora-regular/Lora-regular.eot');
+  src: url('./fonts/Lora-regular/Lora-regular.eot?#iefix') format('embedded-opentype'), local('Lora'), local('Lora-regular'), url('./fonts/Lora-regular/Lora-regular.woff2') format('woff2'), url('./fonts/Lora-regular/Lora-regular.woff') format('woff'), url('./fonts/Lora-regular/Lora-regular.ttf') format('truetype'), url('./fonts/Lora-regular/Lora-regular.svg#Lora') format('svg'); }
+
+html {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -o-box-sizing: inherit;
+  box-sizing: inherit; }
 
 body {
-  font-family: 'Comfortaa';
-  font-size: 16px;
-  background: white;
-  color: black; }
+  background-color: #636363;
+  color: #fcfcfc;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
 
-h1 {
-  font-size: 2em;
-  margin: 0.5em 0 1em; }
-  h1 > small {
-    color: gray;
-    font-size: 70%; }
+.main-header {
+  background-color: #1a0f00;
+  color: #fcfcfc;
+  width: 100%;
+  min-height: 8em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em 0;
+  text-align: center;
+  text-transform: lowercase;
+  border-top: 5px solid #ff680a; }
+  .main-header h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 3em;
+    margin: 0; }
+  .main-header p {
+    margin: .25em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    font-weight: bold; }
+    .main-header p span {
+      font-size: .6em; }
+
+.intro {
+  display: block;
+  position: relative;
+  min-height: 15em;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(../img/main-selfie-small.jpg);
+  margin-top: 8em; }
+  .intro p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1.5em;
+    text-align: justify;
+    line-height: 1.5em;
+    letter-spacing: .1em;
+    margin: 0; }
+    .intro p em {
+      font-style: normal;
+      font-weight: bold; }
 
