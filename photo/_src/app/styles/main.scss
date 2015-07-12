@@ -9,6 +9,8 @@
   #{$property}: #{$value};
 }
 
+$size-header: 8em;
+
 html {
   @include prefix(box-sizing, border-box);
 }
@@ -29,7 +31,7 @@ body {
   background-color: $color-primary;
   color: $color-secondary;
   width: 100%;
-  min-height: 5em;
+  min-height: $size-header;
   position: fixed;
   top: 0;
   left: 0;
@@ -52,5 +54,13 @@ body {
 
     span { font-size: .6em; }
   }
+}
 
+.intro {
+  min-height: 15em;
+  @include prefix(background-size, cover);
+  background-image: url(../img/main-selfie.jpg);
+  margin-top: $size-header;
+
+  p { padding: .75em; }
 }
