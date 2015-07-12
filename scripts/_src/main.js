@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var emailSender = new EmailSender(homePage);
   bindPageEvents(homePage, emailSender);
   initializeMainContent(homePage);
+  mixpanel.track('cover page visit');
 });
 
 function bindPageEvents(page, emailSender) {

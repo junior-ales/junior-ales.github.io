@@ -14,7 +14,6 @@
     "crossbrowser": "parallelshell 'SELENIUM_BROWSER=safari npm run mocha' 'SELENIUM_BROWSER=chrome npm run mocha' 'SELENIUM_BROWSER=firefox npm run mocha' 'npm run mocha'",
     "postcrossbrowser": "npm run posttest",
     "build:js": "uglifyjs scripts/_src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
-    "build:photo": "harp compile photo/_src photo/",
     "server:up": "node start.js &",
     "server:down": "pkill -SIGINT node"
   },
@@ -34,7 +33,6 @@
     "chromedriver": "^2.16.0",
     "ejs": "^2.3.1",
     "express": "^4.12.4",
-    "harp": "^0.17.0",
     "mocha": "^2.2.5",
     "parallelshell": "^1.2.0",
     "selenium-webdriver": "^2.46.1",
