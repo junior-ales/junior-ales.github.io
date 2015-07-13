@@ -39,7 +39,7 @@ body {
   padding: 1em 0;
   text-align: center;
   text-transform: lowercase;
-  border-top: 5px solid $color-detail;
+  border-top: .5em solid $color-detail;
 
   h1 {
     font-family: $font-headline;
@@ -53,7 +53,9 @@ body {
     font-size: 1em;
     font-weight: bold;
 
-    span { font-size: .6em; }
+    span {
+      font-size: .6em;
+    }
   }
 }
 
@@ -79,5 +81,33 @@ body {
       font-style: normal;
       font-weight: bold;
     }
+  }
+}
+
+.posts {
+  display: block;
+  text-align: center;
+
+  .posts-sorting {
+    list-style-type: none;
+    padding: 0;
+    font-family: $font-subhead;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    li {
+      padding: 1em;
+      padding-bottom: .5em;
+      display: inline;
+      color: transparentize($color-default-text, .6);
+      width: 3em;
+    }
+
+    li.sorting-active {
+      color: $color-default-text;
+      border-bottom: .125em solid $color-detail;
+    }
+
+    li.separator { color: transparentize($color-default-text, .9); }
   }
 }
