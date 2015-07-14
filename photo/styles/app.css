@@ -52,7 +52,8 @@ body {
   padding: 1em 0;
   text-align: center;
   text-transform: lowercase;
-  border-top: .5em solid #ff680a; }
+  border-top: .5em solid #ff680a;
+  z-index: 10; }
   .main-header h1 {
     font-family: 'Poiret One', cursive;
     font-size: 3em;
@@ -80,7 +81,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 1.5em;
+    padding: 1em;
     text-align: justify;
     line-height: 1.5em;
     letter-spacing: .1em;
@@ -89,24 +90,84 @@ body {
       font-style: normal;
       font-weight: bold; }
 
-.posts {
+.posts-container {
   display: block;
+  padding: 1em; }
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center; }
-  .posts .posts-sorting {
-    list-style-type: none;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase; }
-    .posts .posts-sorting li {
-      padding: 1em;
-      padding-bottom: .5em;
-      display: inline;
-      color: rgba(252, 252, 252, 0.4);
-      width: 3em; }
-    .posts .posts-sorting li.sorting-active {
-      color: #fcfcfc;
-      border-bottom: .125em solid #ff680a; }
-    .posts .posts-sorting li.separator {
-      color: rgba(252, 252, 252, 0.1); }
+
+.post-list__sorting, .post-list__sorting--separator, .post-list__sorting--active {
+  padding: 1em;
+  padding-bottom: .5em;
+  display: inline;
+  color: rgba(252, 252, 252, 0.4); }
+
+.post-list__sorting--separator {
+  color: rgba(252, 252, 252, 0.1); }
+
+.post-list__sorting--active {
+  color: #fcfcfc;
+  border-bottom: .125em solid #ff680a; }
+
+.post-list-wrapper {
+  margin-top: 2em; }
+
+.post-wrapper {
+  text-decoration: none;
+  color: inherit; }
+
+.post {
+  position: relative;
+  background-color: #1a0f00;
+  margin: 1em 0;
+  padding: .5em;
+  min-height: 15em; }
+  .post p {
+    margin: 0; }
+
+.post__location, .post__pubdate, .post__content {
+  padding: .5em;
+  position: absolute; }
+
+.post__location {
+  font-family: 'Quicksand', sans-serif;
+  top: 0;
+  left: 0; }
+
+.post__pubdate {
+  font-family: 'Quicksand', sans-serif;
+  top: 0;
+  right: 0;
+  text-align: center; }
+
+.post_pubdate__time {
+  display: block;
+  width: 3em;
+  height: 3em;
+  background-color: #636363; }
+
+.post__pubdate__month {
+  font-size: .75em; }
+
+.post__pubdate__day {
+  font-size: 2em;
+  line-height: 0.75em; }
+
+.post__content {
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+
+.post__content__title {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: .75em 0; }
 

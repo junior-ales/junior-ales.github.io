@@ -116,3 +116,71 @@ body {
   color: $color-default-text;
   border-bottom: .125em solid $color-detail;
 }
+
+.post-list-wrapper {
+  margin-top: 2em;
+}
+
+.post-wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post {
+  position: relative;
+  background-color: $color-primary;
+  margin: 1em 0;
+  padding: .5em;
+  min-height: 15em;
+
+  p { margin: 0; }
+}
+
+%post-elem {
+  padding: .5em;
+  position: absolute;
+}
+
+.post__location {
+  @extend %post-elem;
+  font-family: $font-subhead;
+  top: 0;
+  left: 0;
+}
+
+.post__pubdate {
+  @extend %post-elem;
+  font-family: $font-subhead;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+
+.post_pubdate__time {
+  display: block;
+  width: 3em;
+  height: 3em;
+  background-color: $color-tertiary;
+}
+
+.post__pubdate__month { font-size: .75em; }
+
+.post__pubdate__day {
+  font-size: 2em;
+  line-height: 0.75em;
+}
+
+.post__content {
+  @extend %post-elem;
+  width: 100%;
+  bottom: 0;
+  left:0;
+}
+
+.post__content__title {
+  font-family: $font-subhead;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: .75em 0;
+}
