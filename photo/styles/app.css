@@ -2,22 +2,22 @@
   font-family: 'Quicksand';
   font-weight: 300;
   font-style: normal;
-  src: url('./fonts/Quicksand-300/Quicksand-300.eot');
-  src: url('./fonts/Quicksand-300/Quicksand-300.eot?#iefix') format('embedded-opentype'), local('Quicksand Light'), local('Quicksand-300'), url('./fonts/Quicksand-300/Quicksand-300.woff2') format('woff2'), url('./fonts/Quicksand-300/Quicksand-300.woff') format('woff'), url('./fonts/Quicksand-300/Quicksand-300.ttf') format('truetype'), url('./fonts/Quicksand-300/Quicksand-300.svg#Quicksand') format('svg'); }
+  src: url('../fonts/Quicksand-300/Quicksand-300.eot');
+  src: url('../fonts/Quicksand-300/Quicksand-300.eot?#iefix') format('embedded-opentype'), local('Quicksand Light'), local('Quicksand-300'), url('../fonts/Quicksand-300/Quicksand-300.woff2') format('woff2'), url('../fonts/Quicksand-300/Quicksand-300.woff') format('woff'), url('../fonts/Quicksand-300/Quicksand-300.ttf') format('truetype'), url('../fonts/Quicksand-300/Quicksand-300.svg#Quicksand') format('svg'); }
 
 @font-face {
   font-family: 'Poiret One';
   font-weight: 400;
   font-style: normal;
-  src: url('./fonts/Poiret-One-regular/Poiret-One-regular.eot');
-  src: url('./fonts/Poiret-One-regular/Poiret-One-regular.eot?#iefix') format('embedded-opentype'), local('Poiret One'), local('Poiret-One-regular'), url('./fonts/Poiret-One-regular/Poiret-One-regular.woff2') format('woff2'), url('./fonts/Poiret-One-regular/Poiret-One-regular.woff') format('woff'), url('./fonts/Poiret-One-regular/Poiret-One-regular.ttf') format('truetype'), url('./fonts/Poiret-One-regular/Poiret-One-regular.svg#PoiretOne') format('svg'); }
+  src: url('../fonts/Poiret-One-regular/Poiret-One-regular.eot');
+  src: url('../fonts/Poiret-One-regular/Poiret-One-regular.eot?#iefix') format('embedded-opentype'), local('Poiret One'), local('Poiret-One-regular'), url('../fonts/Poiret-One-regular/Poiret-One-regular.woff2') format('woff2'), url('../fonts/Poiret-One-regular/Poiret-One-regular.woff') format('woff'), url('../fonts/Poiret-One-regular/Poiret-One-regular.ttf') format('truetype'), url('../fonts/Poiret-One-regular/Poiret-One-regular.svg#PoiretOne') format('svg'); }
 
 @font-face {
   font-family: 'Lora';
   font-weight: 400;
   font-style: normal;
-  src: url('./fonts/Lora-regular/Lora-regular.eot');
-  src: url('./fonts/Lora-regular/Lora-regular.eot?#iefix') format('embedded-opentype'), local('Lora'), local('Lora-regular'), url('./fonts/Lora-regular/Lora-regular.woff2') format('woff2'), url('./fonts/Lora-regular/Lora-regular.woff') format('woff'), url('./fonts/Lora-regular/Lora-regular.ttf') format('truetype'), url('./fonts/Lora-regular/Lora-regular.svg#Lora') format('svg'); }
+  src: url('../fonts/Lora-regular/Lora-regular.eot');
+  src: url('../fonts/Lora-regular/Lora-regular.eot?#iefix') format('embedded-opentype'), local('Lora'), local('Lora-regular'), url('../fonts/Lora-regular/Lora-regular.woff2') format('woff2'), url('../fonts/Lora-regular/Lora-regular.woff') format('woff'), url('../fonts/Lora-regular/Lora-regular.ttf') format('truetype'), url('../fonts/Lora-regular/Lora-regular.svg#Lora') format('svg'); }
 
 html {
   -webkit-box-sizing: border-box;
@@ -52,7 +52,7 @@ body {
   padding: 1em 0;
   text-align: center;
   text-transform: lowercase;
-  border-top: 5px solid #ff680a; }
+  border-top: .5em solid #ff680a; }
   .main-header h1 {
     font-family: 'Poiret One', cursive;
     font-size: 3em;
@@ -88,4 +88,25 @@ body {
     .intro p em {
       font-style: normal;
       font-weight: bold; }
+
+.posts {
+  display: block;
+  text-align: center; }
+  .posts .posts-sorting {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; }
+    .posts .posts-sorting li {
+      padding: 1em;
+      padding-bottom: .5em;
+      display: inline;
+      color: rgba(252, 252, 252, 0.4);
+      width: 3em; }
+    .posts .posts-sorting li.sorting-active {
+      color: #fcfcfc;
+      border-bottom: .125em solid #ff680a; }
+    .posts .posts-sorting li.separator {
+      color: rgba(252, 252, 252, 0.1); }
 

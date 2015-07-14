@@ -1,3 +1,4 @@
+//http://www.colourlovers.com/palette/1396022/gray_matters
 module.exports = {
   config: {
     paths: {
@@ -15,13 +16,10 @@ module.exports = {
           'styles/app.css': /^app/,
           'styles/libs.css': /^vendor\/styles/
         }
+      },
+      templates: {
+        joinTo: 'scripts/app.js'
       }
-    },
-
-    plugins: {
-      afterBrunch: [
-        'cp -R app/styles/fonts/ dist/styles/fonts'
-      ]
     }
   }
 };

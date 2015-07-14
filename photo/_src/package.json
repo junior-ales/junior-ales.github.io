@@ -26,10 +26,10 @@
   },
   "homepage": "http://juniorales.com/photo",
   "devDependencies": {
-    "after-brunch": "0.0.5",
     "browser-sync": "^2.7.13",
     "brunch": "^1.8.3",
     "javascript-brunch": "^1.7.1",
+    "react-brunch": "^1.0.9",
     "sass-brunch": "^1.8.10",
     "static-handlebars-brunch": "^0.1.5",
     "uglify-js-brunch": "^1.7.8"
