@@ -36,9 +36,10 @@ var PostList = React.createClass({
 var SortingOptions = React.createClass({
   render: function() {
     return (
-      <ul>
-        <li>most viewed</li>
-        <li>latest</li>
+      <ul className='post-list'>
+        <li className='post-list__sorting'>most viewed</li>
+        <li className='post-list__sorting--separator'>|</li>
+        <li className='post-list__sorting--active'>latest</li>
       </ul>
     );
   }
@@ -47,7 +48,7 @@ var SortingOptions = React.createClass({
 var PostsContainer = React.createClass({
   render: function() {
     return (
-      <section>
+      <section className='posts-container'>
         <SortingOptions />
         <PostList posts={this.props.posts} />
       </section>

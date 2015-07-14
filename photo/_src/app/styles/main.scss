@@ -40,6 +40,7 @@ body {
   text-align: center;
   text-transform: lowercase;
   border-top: .5em solid $color-detail;
+  z-index: 10;
 
   h1 {
     font-family: $font-headline;
@@ -71,7 +72,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 1.5em;
+    padding: 1em;
     text-align: justify;
     line-height: 1.5em;
     letter-spacing: .1em;
@@ -84,30 +85,34 @@ body {
   }
 }
 
-.posts {
+.posts-container {
   display: block;
+  padding: 1em;
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  font-family: $font-subhead;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
+}
 
-  .posts-sorting {
-    list-style-type: none;
-    padding: 0;
-    font-family: $font-subhead;
-    font-weight: bold;
-    text-transform: uppercase;
+.post-list__sorting {
+  padding: 1em;
+  padding-bottom: .5em;
+  display: inline;
+  color: transparentize($color-default-text, .6);
+}
 
-    li {
-      padding: 1em;
-      padding-bottom: .5em;
-      display: inline;
-      color: transparentize($color-default-text, .6);
-      width: 3em;
-    }
+.post-list__sorting--separator {
+  @extend .post-list__sorting;
+  color: transparentize($color-default-text, .9);
+}
 
-    li.sorting-active {
-      color: $color-default-text;
-      border-bottom: .125em solid $color-detail;
-    }
-
-    li.separator { color: transparentize($color-default-text, .9); }
-  }
+.post-list__sorting--active {
+  @extend .post-list__sorting;
+  color: $color-default-text;
+  border-bottom: .125em solid $color-detail;
 }
