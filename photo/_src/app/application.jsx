@@ -7,12 +7,8 @@ var post1 = {
   href: 'posts/2015/02/21/lunch-by-the-bay.html',
   cover: 'posts/2015/02/21/lunch-by-the-bay.jpg',
   location: 'San Francisco, USA',
-  pubdate: {
-    toString: '2015-02-21',
-    month: 'Feb',
-    day: 21
-  },
-  viewsRanking: 1
+  pubdate: new Date('2015-02-21'),
+  viewsRanking: 3
 };
 
 var post2 = {
@@ -22,12 +18,8 @@ var post2 = {
   href: 'posts/2015/04/13/origami-party.html',
   cover: 'posts/2015/04/13/origami-party.jpg',
   location: 'Pune, India',
-  pubdate: {
-    toString: '2015-04-13',
-    month: 'Apr',
-    day: 13
-  },
-  viewsRanking: 2
+  pubdate: new Date('2015-04-13'),
+  viewsRanking: 1
 };
 
 var post3 = {
@@ -37,12 +29,8 @@ var post3 = {
   href: 'posts/2015/07/17/flowers-fountain.html',
   cover: 'posts/2015/07/17/flowers-fountain.jpg',
   location: 'Amsterdam, Netherlands',
-  pubdate: {
-    toString: '2015-07-17',
-    month: 'Jul',
-    day: 17
-  },
-  viewsRanking: 3
+  pubdate: new Date('2015-07-17'),
+  viewsRanking: 2
 };
 
 var PostsContainer = require('templates/postsContainer');
