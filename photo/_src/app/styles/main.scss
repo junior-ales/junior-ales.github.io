@@ -138,41 +138,44 @@ body {
 }
 
 .post {
+  @include prefix(background-size, cover);
   position: relative;
   background-color: $color-primary;
   margin: 1em 0;
   padding: .5em;
   min-height: 15em;
+  font-family: $font-subhead;
 
   p { margin: 0; }
 }
 
-%post-elem {
-  padding: .5em;
+.post__cover {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: .5;
 }
 
 .post__location {
-  @extend %post-elem;
-  font-family: $font-subhead;
+  padding: .75em;
+  position: absolute;
   top: 0;
   left: 0;
 }
 
 .post__pubdate {
-  @extend %post-elem;
-  font-family: $font-subhead;
+  padding: .75em;
+  position: absolute;
   top: 0;
   right: 0;
   text-align: center;
 }
 
-.post_pubdate__time {
-  display: block;
-  width: 3em;
-  height: 3em;
-  background-color: $color-tertiary;
-}
+.post_pubdate__time { display: block; }
 
 .post__pubdate__month { font-size: .75em; }
 
@@ -181,17 +184,14 @@ body {
   line-height: 0.75em;
 }
 
-.post__content {
-  @extend %post-elem;
+.post__title {
+  padding: .5em;
+  position: absolute;
   width: 100%;
   bottom: 0;
   left:0;
-}
-
-.post__content__title {
-  font-family: $font-subhead;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.75em;
   text-transform: uppercase;
-  margin: .75em 0;
+  margin: 0;
 }

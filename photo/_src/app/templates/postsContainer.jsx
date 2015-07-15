@@ -9,8 +9,9 @@ var Post = React.createClass({
     var post = this.props.post;
 
     return (
-      <a className='post-wrapper' href={post.href} alt={post.title}>
+      <a className='post-wrapper' href={post.href}>
         <article className='post'>
+          <img className='post__cover' src={post.cover} alt={post.title + ' photo'} />
           <p className='post__location'>{post.location}</p>
           <p className='post__pubdate'>
             <time className='post_pubdate__time' dateTime={post.pubdate}>
@@ -19,10 +20,7 @@ var Post = React.createClass({
               <span className='post__pubdate__day'>{post.pubdate.getDate()}</span>
             </time>
           </p>
-          <header className='post__content'>
-            <h1 className='post__content__title'>{post.title}</h1>
-            <p>{post.description}</p>
-          </header>
+          <h1 className='post__title'>{post.title}</h1>
         </article>
       </a>
     );
@@ -94,7 +92,7 @@ var SortingOptions = React.createClass({
 
 var PostsContainer = React.createClass({
   getInitialState: function() {
-    return { sortBy: 'most-viewed' };
+    return { sortBy: 'latest' };
   },
 
   handleSortingChange: function(sortOption) {

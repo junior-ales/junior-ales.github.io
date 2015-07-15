@@ -3,29 +3,26 @@
 var post1 = {
   id: 0,
   title: 'Lunch by the Bay',
-  description: 'Four dollar toast High Life photo booth wayfarers direct trade. Retro fanny pack ennui mixtape Williamsburg.',
-  href: 'posts/2015/02/21/lunch-by-the-bay.html',
-  cover: 'posts/2015/02/21/lunch-by-the-bay.jpg',
+  href: 'posts/2015/05/22/lunch-by-the-bay.html',
+  cover: 'posts/2015/05/22/lunch-by-the-bay.jpg',
   location: 'San Francisco, USA',
-  pubdate: new Date('2015-02-21'),
-  viewsRanking: 3
+  pubdate: new Date('2015-05-23'),
+  viewsRanking: 1
 };
 
 var post2 = {
   id: 1,
   title: 'Origami Party',
-  description: 'Four dollar toast High Life photo booth wayfarers direct trade. Retro fanny pack ennui mixtape Williamsburg.',
   href: 'posts/2015/04/13/origami-party.html',
   cover: 'posts/2015/04/13/origami-party.jpg',
   location: 'Pune, India',
   pubdate: new Date('2015-04-13'),
-  viewsRanking: 1
+  viewsRanking: 3
 };
 
 var post3 = {
   id: 2,
   title: 'Flowers Fountain',
-  description: 'Four dollar toast High Life photo booth wayfarers direct trade. Retro fanny pack ennui mixtape Williamsburg.',
   href: 'posts/2015/07/17/flowers-fountain.html',
   cover: 'posts/2015/07/17/flowers-fountain.jpg',
   location: 'Amsterdam, Netherlands',
