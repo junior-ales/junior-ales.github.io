@@ -56,6 +56,10 @@ var PostList = React.createClass({
 });
 
 var SortingOptions = React.createClass({
+  handleClick: function(event) {
+    this.props.onSortingChange(event.target.dataset.sortingOption);
+  },
+
   render: function() {
     var classLatest = 'post-list__sorting';
     var classMostViewed = 'post-list__sorting';
@@ -68,9 +72,21 @@ var SortingOptions = React.createClass({
 
     return (
       <ul className='post-list'>
-        <li className={classMostViewed}>most viewed</li>
+        <li className={classMostViewed}>
+          <button onClick={this.handleClick}
+                  className='post-list__button'
+                  data-sorting-option='most-viewed'>
+            most viewed
+          </button>
+        </li>
         <li className='post-list__sorting--separator'>|</li>
-        <li className={classLatest}>latest</li>
+        <li className={classLatest}>
+          <button data-sorting-option='latest'
+                  onClick={this.handleClick}
+                  className='post-list__button'>
+            latest
+          </button>
+        </li>
       </ul>
     );
   }
@@ -78,15 +94,17 @@ var SortingOptions = React.createClass({
 
 var PostsContainer = React.createClass({
   getInitialState: function() {
-    return {
-      sortBy: 'latest'
-    };
+    return { sortBy: 'most-viewed' };
+  },
+
+  handleSortingChange: function(sortOption) {
+    this.setState({ sortBy: sortOption });
   },
 
   render: function() {
     return (
       <section className='posts-container'>
-        <SortingOptions sortBy={this.state.sortBy} />
+        <SortingOptions sortBy={this.state.sortBy} onSortingChange={this.handleSortingChange} />
         <PostList posts={this.props.posts} sortBy={this.state.sortBy} />
       </section>
     );

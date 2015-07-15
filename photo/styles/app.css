@@ -99,14 +99,14 @@ body {
   padding: 0;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
   text-align: center; }
 
 .post-list__sorting, .post-list__sorting--separator, .post-list__sorting--active {
   padding: 1em;
   padding-bottom: .5em;
   display: inline;
-  color: rgba(252, 252, 252, 0.4); }
+  color: rgba(252, 252, 252, 0.4);
+  text-transform: uppercase; }
 
 .post-list__sorting--separator {
   color: rgba(252, 252, 252, 0.1); }
@@ -114,6 +114,16 @@ body {
 .post-list__sorting--active {
   color: #fcfcfc;
   border-bottom: .125em solid #ff680a; }
+
+.post-list__button {
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer; }
 
 .post-list-wrapper {
   margin-top: 2em; }
