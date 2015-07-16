@@ -29,24 +29,10 @@ var Post = React.createClass({
 
 var PostList = React.createClass({
   render: function() {
-    var sortedByProperty = function(property, arr) {
-      return arr.slice().sort(function(a, b) {
-        if (a[property] > b[property]) { return 1; }
-        if (a[property] < b[property]) { return -1; }
-        return 0;
-      })
-    };
-
-    var posts = sortedByProperty('viewsRanking', this.props.posts);
-
-    if (this.props.sortBy === 'latest') {
-      posts = sortedByProperty('pubdate', this.props.posts).reverse();
-    }
-
     return (
       <section className='post-list-wrapper'>
-        {posts.map(function(post) {
-          return <Post key={post.pubdate.toDateString()+'-'+post.id} post={post} />;
+        {this.props.posts.map(function(post) {
+          return <Post key={post.title+'-'+post.id} post={post} />;
         })}
       </section>
     );
@@ -90,20 +76,28 @@ var SortingOptions = React.createClass({
   }
 });
 
+var Posts = require('model/posts');
+
 var PostsContainer = React.createClass({
   getInitialState: function() {
-    return { sortBy: 'latest' };
+    return {
+      sortBy: 'latest',
+      posts: Posts.getSortedBy('latest')
+    };
   },
 
   handleSortingChange: function(sortOption) {
-    this.setState({ sortBy: sortOption });
+    this.setState({
+      sortBy: sortOption,
+      posts: Posts.getSortedBy(sortOption)
+    });
   },
 
   render: function() {
     return (
       <section className='posts-container'>
         <SortingOptions sortBy={this.state.sortBy} onSortingChange={this.handleSortingChange} />
-        <PostList posts={this.props.posts} sortBy={this.state.sortBy} />
+        <PostList posts={this.state.posts} />
       </section>
     );
   }
