@@ -30,6 +30,7 @@ body {
 
 .main-header {
   background-color: $color-primary;
+  border-top: .25em solid $color-detail;
   color: $color-secondary;
   width: 100%;
   min-height: $size-header;
@@ -39,7 +40,6 @@ body {
   padding: 1em 0;
   text-align: center;
   text-transform: lowercase;
-  border-top: .5em solid $color-detail;
   z-index: 10;
 
   h1 {
@@ -195,4 +195,61 @@ body {
   font-size: 1.75em;
   text-transform: uppercase;
   margin: 0;
+}
+
+.main-footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  @include prefix(flex-wrap, wrap);
+  font-family: $font-subhead;
+  background-color: $color-primary;
+  border-top: .25em solid $color-detail;
+
+  a {
+    text-decoration: none;
+    color: transparentize($color-default-text, .6);
+  }
+}
+
+.main-footer__links {
+  -webkit-box-ordinal-group: 0;
+  -moz-box-ordinal-group: 0;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+  width: 35%;
+  text-align: center;
+  padding: 1em 0;
+  text-transform: uppercase;
+  margin: 0;
+
+  a {
+    display: block;
+    padding: .75em 0;
+    font-size: 1.25em;
+    margin: 1.25em;
+  }
+}
+
+.main-footer__social-media {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+  width: 65%;
+  padding: 1em;
+  text-align: center;
+}
+
+.social-media-link {
+  display: inline-block;
+  text-align: center;
+  width: 2em;
+  font-size: 2em;
+  padding: .25em 0;
 }
