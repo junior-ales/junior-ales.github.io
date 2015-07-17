@@ -3,7 +3,7 @@ module.exports = (function() {
     id: 0,
     title: 'Lunch by the Bay',
     href: 'posts/2015/05/22/lunch-by-the-bay.html',
-    cover: 'posts/2015/05/22/lunch-by-the-bay.jpg',
+    cover: 'posts/2015/05/22/lunch-by-the-bay__cover.jpg',
     location: 'San Francisco, USA',
     pubdate: new Date('2015-05-23'),
     viewsRanking: 1
@@ -13,19 +13,19 @@ module.exports = (function() {
     id: 1,
     title: 'Origami Party',
     href: 'posts/2015/04/13/origami-party.html',
-    cover: 'posts/2015/04/13/origami-party.jpg',
+    cover: 'posts/2015/04/13/origami-party__cover.jpg',
     location: 'Pune, India',
-    pubdate: new Date('2015-04-13'),
+    pubdate: new Date('2015-04-14'),
     viewsRanking: 3
   };
 
   var post3 = {
     id: 2,
-    title: 'Flowers Fountain',
-    href: 'posts/2015/07/17/flowers-fountain.html',
-    cover: 'posts/2015/07/17/flowers-fountain.jpg',
+    title: 'Floating Flowers',
+    href: 'posts/2015/07/17/floating-flowers.html',
+    cover: 'posts/2015/07/17/floating-flowers__cover.jpg',
     location: 'Amsterdam, Netherlands',
-    pubdate: new Date('2015-07-17'),
+    pubdate: new Date('2015-07-18'),
     viewsRanking: 2
   };
 
