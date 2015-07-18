@@ -1,9 +1,9 @@
 <footer class="main-footer">
-  <div class="main-footer__links">
+  <div class="main-footer__links{{#if isHome }}--home{{/if}}">
     <a href="http://juniorales.com/photo">home</a>
   </div>
 
-  <div class="main-footer__social-media">
+  <div class="main-footer__social-media{{#if isHome }}--home{{/if}}">
     <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
       <i class="fa fa-instagram"></i>
     </a>
@@ -16,3 +16,8 @@
     <p><a href="http://juniorales.com">juniorales.com</a></p>
   </div>
 </footer>
+<script src="{{#unless isHome }}../../../../{{/unless}}scripts/libs.js"></script>
+<script src="{{#unless isHome }}../../../../{{/unless}}scripts/app.js"></script>
+<script>require('application').init();</script>
+</body>
+</html>

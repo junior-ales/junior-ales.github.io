@@ -1,32 +1,14 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photographic Blog | Junior Ales</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="styles/libs.css">
-    <link rel="stylesheet" href="styles/app.css">
-  </head>
-  <body>
+{{partial "header" isHome=true }}
 
-    {{> header }}
+<section class="intro">
+  <p>
+    I like to think of photography beyond techniques, colors, focus, depth and patterns.
+    I'm fascinated about the story behind the lens. It's all about the unique way the
+    person sees and feels the world around herself/himself in that given moment.
+    <em>This blog is a way of telling my stories to everyone.</em>
+  </p>
+</section>
 
-    <section class="intro">
-      <p>
-        I like to think of photography beyond techniques, colors, focus, depth and patterns.
-        I'm fascinated about the story behind the lens. It's all about the unique way the
-        person sees and feels the world around herself/himself in that given moment.
-        <em>This blog is a way of telling my stories to everyone.</em>
-      </p>
-    </section>
+<div id="home-page-posts"></div>
 
-    <div id="home-page-posts"></div>
-
-    {{> footer }}
-
-    <script src="scripts/libs.js"></script>
-    <script src="scripts/app.js"></script>
-    <script>require('application').init();</script>
-  </body>
-</html>
+{{partial "footer" isHome=true }}
