@@ -78,20 +78,20 @@ var SortingOptions = React.createClass({
   }
 });
 
-var Posts = require('model/posts');
+var Posts = require('model/post');
 
 var PostsContainer = React.createClass({
   getInitialState: function() {
     return {
       sortBy: 'latest',
-      posts: Posts.getSortedBy('latest')
+      posts: Posts.getAllSortedBy('latest')
     };
   },
 
   handleSortingChange: function(sortOption) {
     this.setState({
       sortBy: sortOption,
-      posts: Posts.getSortedBy(sortOption)
+      posts: Posts.getAllSortedBy(sortOption)
     });
   },
 
