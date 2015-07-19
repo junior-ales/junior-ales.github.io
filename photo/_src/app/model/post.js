@@ -47,5 +47,10 @@ var sortedPostsObj = {
 };
 
 module.exports = {
-  getAllSortedBy: function (key) { return sortedPostsObj[key]; }
+  getAllSortedBy: function (key) { return sortedPostsObj[key]; },
+  getByName: function(name) {
+    return allPosts.filter(function(post) {
+      return post.name === name;
+    })[0];
+  }
 };
