@@ -1,6 +1,6 @@
 "use strict";
 
-var PostsContainer = require('templates/postsContainer');
+var PostsContainer = require('views/postsContainer');
 
 var App = {
   init: function init() {

@@ -1,3 +1,5 @@
+"use strict";
+
 var Post = React.createClass({
   render: function() {
     var monthNames = [

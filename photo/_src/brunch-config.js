@@ -1,4 +1,3 @@
-//http://www.colourlovers.com/palette/1396022/gray_matters
 module.exports = {
   config: {
     paths: {
@@ -7,14 +6,14 @@ module.exports = {
     files: {
       javascripts: {
         joinTo: {
-          'scripts/app.js': /^app/,
-          'scripts/libs.js': /^vendor\/scripts/
+          'scripts/app.js': /^app\//,
+          'scripts/libs.js': /^vendor\/scripts\//
         }
       },
       stylesheets: {
         joinTo: {
-          'styles/app.css': /^app/,
-          'styles/libs.css': /^vendor\/styles/
+          'styles/app.css': /^app\//,
+          'styles/libs.css': /^vendor\/styles\//
         }
       },
       templates: {
