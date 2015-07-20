@@ -10,8 +10,20 @@ var postName = (function() {
 
 var PostView = React.createClass({
   render: function() {
+    var post = this.props.post;
+    var postContent = function() { return { __html: post.htmlContent }; };
+
     return (
-      <h1>{this.props.post.title}</h1>
+      <div className="post-content">
+        <img className="post-content__image" src={post.name + '.jpg'} alt={post.title + ' photo'} />
+        <header className="post-content__header">
+          <h1>{post.title}</h1>
+          <time dateTime={post.pubdate.toString()}>
+            {moment(post.pubdate.toString()).format('LL')}
+          </time>
+        </header>
+        <section className='post-content__text' dangerouslySetInnerHTML={postContent()} />
+      </div>
     );
   }
 });

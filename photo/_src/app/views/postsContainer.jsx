@@ -2,24 +2,19 @@
 
 var Post = React.createClass({
   render: function() {
-    var monthNames = [
-      "Jan", "Feb", "Mar",
-      "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep",
-      "Oct", "Nov", "Dec"
-    ];
     var post = this.props.post;
+    var pubdate = moment(post.pubdate.toString());
 
     return (
-      <a className='post-wrapper' href={post.href}>
+      <a className='post-wrapper' href={post.dir + post.name + '.html'}>
         <article className='post'>
-          <img className='post__cover' src={post.cover} alt={post.title + ' photo'} />
+          <img className='post__cover' src={post.dir + post.name + '.jpg'} alt={post.title + ' photo'} />
           <p className='post__location'>{post.location}</p>
           <p className='post__pubdate'>
-            <time className='post_pubdate__time' dateTime={post.pubdate}>
-              <span className='post__pubdate__month'>{monthNames[post.pubdate.getMonth()]}</span>
+            <time className='post_pubdate__time' dateTime={pubdate.format()}>
+              <span className='post__pubdate__month'>{pubdate.format('MMM')}</span>
               <br />
-              <span className='post__pubdate__day'>{post.pubdate.getDate()}</span>
+              <span className='post__pubdate__day'>{pubdate.format('DD')}</span>
             </time>
           </p>
           <h1 className='post__title'>{post.title}</h1>

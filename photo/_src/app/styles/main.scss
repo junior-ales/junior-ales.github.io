@@ -50,7 +50,7 @@ body {
 
   p {
     margin: .25em;
-    font-family: $font-subhead;
+    font-family: $font-headline;
     font-size: 1em;
     font-weight: bold;
 
@@ -93,7 +93,7 @@ body {
 .post-list {
   list-style-type: none;
   padding: 0;
-  font-family: $font-subhead;
+  font-family: $font-headline;
   font-weight: bold;
   text-align: center;
 }
@@ -147,7 +147,7 @@ body {
   max-width: 35em;
   background-color: $color-primary;
   margin: 1em auto;
-  font-family: $font-subhead;
+  font-family: $font-headline;
 
   p { margin: 0; }
 }
@@ -205,7 +205,7 @@ body {
   display: flex;
 
   @include prefix(flex-wrap, wrap);
-  font-family: $font-subhead;
+  font-family: $font-headline;
   background-color: $color-primary;
   border-top: .25em solid $color-detail;
 
@@ -261,6 +261,30 @@ body {
   padding: .25em 0;
 }
 
-.post-container {
+.post-content {
+  background-color: $color-quaternery;
+  color: $color-secondary;
   margin-top: $size-header;
+}
+
+.post-content__header {
+  font-family: $font-headline;
+  text-transform: uppercase;
+  padding: 1em;
+  margin-top: 1em;
+
+  h1 {
+    margin: 0;
+    margin-bottom: .25em;
+    font-size: 2em;
+  }
+}
+
+.post-content__image { width: 100%; }
+
+.post-content__text {
+  padding: 1em;
+  padding-top: 0;
+  letter-spacing: .1em;
+  line-height: 1.5em;
 }

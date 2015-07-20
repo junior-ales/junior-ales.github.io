@@ -14,7 +14,7 @@ html {
 
 body {
   background-color: #636363;
-  color: #fcfcfc;
+  color: #e3e3e3;
   font-family: 'Lora', serif;
   font-size: 14px;
   margin: 0;
@@ -23,7 +23,7 @@ body {
 .main-header {
   background-color: #1a0f00;
   border-top: .25em solid #ff680a;
-  color: #fcfcfc;
+  color: #e3e3e3;
   width: 100%;
   min-height: 8em;
   position: fixed;
@@ -34,7 +34,7 @@ body {
   text-transform: lowercase;
   z-index: 10; }
   .main-header h1 {
-    font-family: 'Poiret One', cursive;
+    font-family: 'Quicksand', sans-serif;
     font-size: 3em;
     margin: 0; }
   .main-header p {
@@ -83,15 +83,15 @@ body {
 .post-list__sorting, .post-list__sorting--separator, .post-list__sorting--active {
   padding: 1em 0 .5em 0;
   display: inline;
-  color: rgba(252, 252, 252, 0.4);
+  color: rgba(227, 227, 227, 0.4);
   text-transform: uppercase; }
 
 .post-list__sorting--separator {
   padding: 1em;
-  color: rgba(252, 252, 252, 0.1); }
+  color: rgba(227, 227, 227, 0.1); }
 
 .post-list__sorting--active {
-  color: #fcfcfc;
+  color: #e3e3e3;
   border-bottom: .125em solid #ff680a; }
 
 .post-list__button {
@@ -183,7 +183,7 @@ body {
   border-top: .25em solid #ff680a; }
   .main-footer a {
     text-decoration: none;
-    color: rgba(252, 252, 252, 0.4); }
+    color: rgba(227, 227, 227, 0.4); }
 
 .main-footer__links {
   -webkit-box-ordinal-group: 0;
@@ -225,6 +225,27 @@ body {
   font-size: 2em;
   padding: .25em 0; }
 
-.post-container {
+.post-content {
+  background-color: #474747;
+  color: #e3e3e3;
   margin-top: 8em; }
+
+.post-content__header {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  padding: 1em;
+  margin-top: 1em; }
+  .post-content__header h1 {
+    margin: 0;
+    margin-bottom: .25em;
+    font-size: 2em; }
+
+.post-content__image {
+  width: 100%; }
+
+.post-content__text {
+  padding: 1em;
+  padding-top: 0;
+  letter-spacing: .1em;
+  line-height: 1.5em; }
 
