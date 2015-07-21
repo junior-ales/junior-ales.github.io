@@ -153,6 +153,7 @@ body {
   background-color: $color-primary;
   margin: 1em auto;
   font-family: $font-headline;
+  @include prefix(box-shadow, 2px 2px 3px $color-primary);
 
   p { margin: 0; }
 }
@@ -271,6 +272,10 @@ body {
   color: $color-secondary;
   margin: 1em;
   margin-top: $size-header + 1em;
+  // the rules below will be applied once
+  // bigger screen rules are created
+  //max-width: 34.5em;
+  //min-width: 13.75em;
 }
 
 .post-content__header {
@@ -286,7 +291,11 @@ body {
   }
 }
 
-.post-content__image { width: 100%; }
+.post-content__image {
+  width: 100%;
+  @include prefix(box-shadow, 2px 2px 3px $color-primary);
+  @include prefix(transform, scale(1.04));
+}
 
 .post-content__text {
   padding: 1em;
