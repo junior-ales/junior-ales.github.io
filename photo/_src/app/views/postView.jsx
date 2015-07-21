@@ -17,9 +17,12 @@ var PostView = React.createClass({
       <div className="post-content">
         <header className="post-content__header">
           <h1>{post.title}</h1>
-          <time dateTime={post.pubdate.toString()}>
-            {moment(post.pubdate.toString()).format('LL')}
-          </time>
+          <span className="post-content__detail">
+            {post.location}
+            <time dateTime={post.pubdate.toString()}>
+              {moment(post.pubdate.toString()).format('LL')}
+            </time>
+          </span>
         </header>
         <img className="post-content__image" src={post.name + '.jpg'} alt={post.title + ' photo'} />
         <section className='post-content__text' dangerouslySetInnerHTML={postContent()} />

@@ -291,6 +291,14 @@ body {
   }
 }
 
+.post-content__detail {
+  font-size: smaller;
+  display: inline-block;
+  width: 100%;
+
+  time { float: right; }
+}
+
 .post-content__image {
   width: 100%;
   @include prefix(box-shadow, 2px 2px 3px $color-primary);

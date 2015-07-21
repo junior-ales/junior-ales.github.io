@@ -253,6 +253,13 @@ body {
     margin-bottom: .25em;
     font-size: 2em; }
 
+.post-content__detail {
+  font-size: smaller;
+  display: inline-block;
+  width: 100%; }
+  .post-content__detail time {
+    float: right; }
+
 .post-content__image {
   width: 100%;
   -webkit-box-shadow: 2px 2px 3px #1a0f00;
