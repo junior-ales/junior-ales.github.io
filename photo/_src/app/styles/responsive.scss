@@ -1,0 +1,13 @@
+@media screen and (min-width: 415px) {
+  body { font-size: 16px;}
+
+  .intro {
+    min-height: 22em;
+    p { text-align: right; }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .intro { min-height: 28em; }
+}
+

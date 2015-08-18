@@ -10,6 +10,9 @@
 }
 
 $size-header: 6.25em;
+$post-max-width: 490px;
+$post-min-height: 119px;
+$post-min-width: 192.5px;
 
 html {
   @include prefix(box-sizing, border-box);
@@ -37,7 +40,6 @@ body {
   padding: 1em 0;
   text-align: center;
   text-transform: lowercase;
-
 }
 
 .main-header__title {
@@ -71,12 +73,13 @@ body {
   p {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     padding: 1em;
     text-align: justify;
     line-height: 1.5em;
     letter-spacing: .1em;
     margin: 0;
+    max-width: 650px;
 
     em {
       font-style: normal;
@@ -140,11 +143,11 @@ body {
 .post {
   display: block;
   position: relative;
-  width: 100%;
   height: auto;
-  min-height: 8.5em;
-  min-width: 13.75em;
-  max-width: 35em;
+  min-height: $post-min-height;
+  width: 100%;
+  max-width: $post-max-width;
+  min-width: $post-min-width;
   background-color: $color-primary;
   margin: 1em auto;
   font-family: $font-headline;

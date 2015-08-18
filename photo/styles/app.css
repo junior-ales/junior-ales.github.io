@@ -61,12 +61,13 @@ body {
   .intro p {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     padding: 1em;
     text-align: justify;
     line-height: 1.5em;
     letter-spacing: .1em;
-    margin: 0; }
+    margin: 0;
+    max-width: 650px; }
     .intro p em {
       font-style: normal;
       font-weight: bold; }
@@ -116,11 +117,11 @@ body {
 .post {
   display: block;
   position: relative;
-  width: 100%;
   height: auto;
-  min-height: 8.5em;
-  min-width: 13.75em;
-  max-width: 35em;
+  min-height: 119px;
+  width: 100%;
+  max-width: 490px;
+  min-width: 192.5px;
   background-color: #1a0f00;
   margin: 1em auto;
   font-family: 'Quicksand', sans-serif;
@@ -273,4 +274,16 @@ body {
   padding-top: 0;
   letter-spacing: .1em;
   line-height: 1.5em; }
+
+@media screen and (min-width: 415px) {
+  body {
+    font-size: 16px; }
+  .intro {
+    min-height: 22em; }
+    .intro p {
+      text-align: right; } }
+
+@media screen and (min-width: 650px) {
+  .intro {
+    min-height: 28em; } }
 

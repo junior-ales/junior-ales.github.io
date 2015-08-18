@@ -6,8 +6,8 @@ var Post = React.createClass({
     var pubdate = moment(post.pubdate.toString());
 
     return (
-      <a className='post-wrapper' href={post.dir + post.name + '.html'}>
-        <article className='post'>
+      <article className='post'>
+        <a className='post-wrapper' href={post.dir + post.name + '.html'}>
           <img className='post__cover' src={post.dir + post.name + '.jpg'} alt={post.title + ' photo'} />
           <p className='post__location'>{post.location}</p>
           <p className='post__pubdate'>
@@ -18,8 +18,8 @@ var Post = React.createClass({
             </time>
           </p>
           <h1 className='post__title'>{post.title}</h1>
-        </article>
-      </a>
+        </a>
+      </article>
     );
   }
 });
