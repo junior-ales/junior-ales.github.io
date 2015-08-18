@@ -32,15 +32,11 @@ body {
   background-color: $color-primary;
   border-top: .25em solid $color-detail;
   color: $color-secondary;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   max-height: $size-header;
   padding: 1em 0;
   text-align: center;
   text-transform: lowercase;
-  z-index: 10;
 
 }
 
@@ -71,7 +67,6 @@ body {
   min-height: 15em;
   @include prefix(background-size, cover);
   background-image: url(../img/main-selfie-small.jpg);
-  margin-top: $size-header;
 
   p {
     position: absolute;
@@ -271,7 +266,7 @@ body {
   background-color: $color-quaternery;
   color: $color-secondary;
   margin: 1em;
-  margin-top: $size-header + 1em;
+  margin-top: 1em;
   // the rules below will be applied once
   // bigger screen rules are created
   //max-width: 34.5em;

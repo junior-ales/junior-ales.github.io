@@ -26,12 +26,12 @@ var Post = React.createClass({
 
 var PostList = React.createClass({
   render: function() {
+    var posts = this.props.posts.map(function(post) {
+      return <Post key={post.title+'-'+post.id} post={post} />;
+    });
+
     return (
-      <section className='post-list-wrapper'>
-        {this.props.posts.map(function(post) {
-          return <Post key={post.title+'-'+post.id} post={post} />;
-        })}
-      </section>
+      <section className='post-list-wrapper'>{posts}</section>
     );
   }
 });
