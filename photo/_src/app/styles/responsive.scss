@@ -9,5 +9,13 @@
 
 @media screen and (min-width: 650px) {
   .intro { min-height: 28em; }
+
+  .main-header {
+    text-align: left;
+    padding: 1em;
+    font-size: larger;
+  }
+
+  .main-header__title, .main-header__subhead { display: inline; }
 }
 
