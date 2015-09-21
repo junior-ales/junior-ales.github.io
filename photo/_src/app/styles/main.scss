@@ -42,6 +42,8 @@ body {
   text-transform: lowercase;
 }
 
+.sub-header { display: none; }
+
 .main-header__title {
   font-family: $font-headline;
   font-size: 2em;
@@ -89,6 +91,8 @@ body {
   min-height: 15em;
   @include prefix(background-size, cover);
   background-image: url(../img/main-selfie-small.jpg);
+
+  .author-image { display: none; }
 
   p {
     position: absolute;

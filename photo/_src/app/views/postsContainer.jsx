@@ -31,7 +31,10 @@ var PostList = React.createClass({
     });
 
     return (
-      <section className='post-list-wrapper'>{posts}</section>
+      <section className='post-list-wrapper'>
+        <h2 className="sub-header">Latest photos</h2>
+        {posts}
+      </section>
     );
   }
 });

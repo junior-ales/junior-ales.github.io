@@ -30,6 +30,9 @@ body {
   text-align: center;
   text-transform: lowercase; }
 
+.sub-header {
+  display: none; }
+
 .main-header__title {
   font-family: 'Quicksand', sans-serif;
   font-size: 2em;
@@ -75,6 +78,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-image: url(../img/main-selfie-small.jpg); }
+  .intro .author-image {
+    display: none; }
   .intro p {
     position: absolute;
     bottom: 0;
@@ -303,4 +308,81 @@ body {
     font-size: larger; }
   .main-header__title, .main-header__subhead {
     display: inline; } }
+
+@media screen and (min-width: 1025px) {
+  body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .main-header {
+    -webkit-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 0;
+    -ms-flex-order: 0;
+    -webkit-order: 0;
+    order: 0;
+    width: 100%; }
+  #home-page-posts {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    width: 62%; }
+  .post-list {
+    display: none; }
+  .post-list-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 0; }
+    .post-list-wrapper .sub-header {
+      margin-bottom: 0; }
+  .post:first-of-type {
+    max-width: none; }
+  .post {
+    max-width: 47%; }
+  .intro {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    width: 35%;
+    background: none;
+    background-color: #1a0f00;
+    margin: 1em; }
+    .intro .author-image {
+      display: block;
+      width: 100%; }
+    .intro p {
+      position: static;
+      text-align: left; }
+  .main-footer {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+    width: 100%; }
+  .sub-header {
+    display: block;
+    margin: .75em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: rgba(227, 227, 227, 0.4); } }
 
