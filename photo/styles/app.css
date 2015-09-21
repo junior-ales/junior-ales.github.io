@@ -62,7 +62,7 @@ body {
   text-align: center; }
 
 .main-header__social-media {
-  display: inline;
+  display: none;
   font-size: .5em;
   width: 150px;
   position: absolute;
@@ -306,7 +306,7 @@ body {
     text-align: left;
     padding: 1em;
     font-size: larger; }
-  .main-header__title, .main-header__subhead {
+  .main-header__title, .main-header__subhead, .main-header__social-media {
     display: inline; } }
 
 @media screen and (min-width: 1025px) {

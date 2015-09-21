@@ -78,7 +78,7 @@ body {
 
 .main-header__social-media {
   @extend %social-media-block;
-  display: inline;
+  display: none;
   font-size: .5em;
   width: 150px;
   position: absolute;

@@ -19,7 +19,11 @@
     font-size: larger;
   }
 
-  .main-header__title, .main-header__subhead { display: inline; }
+  .main-header__title,
+  .main-header__subhead,
+  .main-header__social-media {
+    display: inline;
+  }
 }
 
 @media screen and (min-width: 1025px) {
