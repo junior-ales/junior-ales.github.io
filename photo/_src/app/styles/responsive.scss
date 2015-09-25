@@ -78,7 +78,10 @@
 
   .post:first-of-type { max-width: none; }
 
-  .post { max-width: 47%; }
+  .post {
+    width: initial;
+    max-width: 355px;
+  }
 
   .intro {
     -webkit-box-ordinal-group: 2;
@@ -100,6 +103,8 @@
       position: static;
       text-align: left;
     }
+
+    .sub-header { padding-bottom: 1.75em; }
   }
 
   .main-footer {
@@ -113,11 +118,13 @@
 
   .sub-header {
     display: block;
-    margin: .75em;
+    margin: 0;
+    padding: .75em;
     font-family: $font-headline;
     font-size: 1em;
     text-transform: uppercase;
     color: transparentize($color-default-text, .6);
+    background-color: $color-tertiary;
   }
 
 }
