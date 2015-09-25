@@ -179,6 +179,8 @@ body {
   @include prefix(transition, opacity .3s ease-in-out);
 }
 
+.post-wrapper:hover .post__cover { opacity: 1; }
+
 .post__location {
   padding: .75em;
   position: absolute;
@@ -242,6 +244,7 @@ body {
   text-decoration: none;
   color: transparentize($color-default-text, .6);
   font-size: inherit;
+  @include prefix(transition, color .3s ease-in-out);
 }
 
 .main-footer__links--home { display: none; }
@@ -263,7 +266,10 @@ body {
   padding: .25em 0;
   text-decoration: none;
   color: transparentize($color-default-text, .6);
+  @include prefix(transition, color .3s ease-in-out);
 }
+
+.social-media-link:hover, .site-link:hover { color: $color-default-text; }
 
 .post-content {
   background-color: $color-quaternery;
