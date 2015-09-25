@@ -1,13 +1,6 @@
 @import "colors";
 @import "fonts";
-
-@mixin prefix($property, $value) {
-  -webkit-#{$property}: #{$value};
-  -ms-#{$property}: #{$value};
-  -moz-#{$property}: #{$value};
-  -o-#{$property}: #{$value};
-  #{$property}: #{$value};
-}
+@import "utils";
 
 $size-header: 6.25em;
 $post-max-width: 490px;
@@ -66,11 +59,7 @@ body {
 }
 
 %social-media-block {
-  -webkit-box-ordinal-group: 1;
-  -moz-box-ordinal-group: 1;
-  -ms-flex-order: 1;
-  -webkit-order: 1;
-  order: 1;
+  @include order(1);
   width: 65%;
   padding: 1em;
   text-align: center;
@@ -226,24 +215,14 @@ body {
 }
 
 .main-footer {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  @include prefix(flex-wrap, wrap);
+  @include display-flex-wrap();
   font-family: $font-headline;
   background-color: $color-primary;
   border-top: .25em solid $color-detail;
 }
 
 .main-footer__links {
-  -webkit-box-ordinal-group: 0;
-  -moz-box-ordinal-group: 0;
-  -ms-flex-order: 0;
-  -webkit-order: 0;
-  order: 0;
+  @include order(0);
   width: 35%;
   text-align: center;
   padding: 1em 0;
@@ -290,10 +269,6 @@ body {
   color: $color-secondary;
   margin: 1em;
   margin-top: 1em;
-  // the rules below will be applied once
-  // bigger screen rules are created
-  //max-width: 34.5em;
-  //min-width: 13.75em;
 }
 
 .post-content__header {

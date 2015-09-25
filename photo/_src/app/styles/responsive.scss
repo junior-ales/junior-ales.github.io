@@ -1,5 +1,6 @@
 @import "colors";
 @import "fonts";
+@import "utils";
 
 @media screen and (min-width: 415px) {
   body { font-size: 16px;}
@@ -11,25 +12,10 @@
 }
 
 @media screen and (min-width: 650px) {
-  body {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -o-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
+  body { @include display-flex-wrap(); }
 
   .main-header {
-    -webkit-box-ordinal-group: 0;
-    -moz-box-ordinal-group: 0;
-    -ms-flex-order: 0;
-    -webkit-order: 0;
-    order: 0;
+    @include order(0);
     width: 100%;
     text-align: left;
     padding: 1em;
@@ -37,30 +23,18 @@
   }
 
   .intro {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1;
+    @include order(1);
     width: 100%;
     min-height: 28em;
   }
 
   #home-page-posts {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
+    @include order(2);
     width: 100%;
   }
 
   .main-footer {
-    -webkit-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -ms-flex-order: 3;
-    -webkit-order: 3;
-    order: 3;
+    @include order(3);
     width: 100%;
   }
 
@@ -73,27 +47,14 @@
 
 @media screen and (min-width: 1075px) {
   #home-page-posts {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -ms-flex-order: 1;
-    -webkit-order: 1;
-    order: 1;
+    @include order(1);
     width: 62%;
   }
 
   .post-list { display: none; }
 
   .post-list-wrapper {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -o-flex-wrap: wrap;
-    flex-wrap: wrap;
+    @include display-flex-wrap();
     margin-top: 0;
 
     .sub-header { margin-bottom: 0; }
@@ -107,11 +68,7 @@
   .post { width: 46%; }
 
   .intro {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
+    @include order(2);
     width: 35%;
     background: none;
     background-color: $color-primary;
