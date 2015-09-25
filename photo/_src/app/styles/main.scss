@@ -176,6 +176,7 @@ body {
   padding: 0;
   margin: 0;
   opacity: .3;
+  @include prefix(transition, opacity .3s ease-in-out);
 }
 
 .post__location {
