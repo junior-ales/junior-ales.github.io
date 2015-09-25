@@ -16,7 +16,7 @@ var PostView = React.createClass({
     return (
       <div className="post-content">
         <header className="post-content__header">
-          <h1>{post.title}</h1>
+          <h2>{post.title}</h2>
           <span className="post-content__detail">
             {post.location}
             <time dateTime={post.pubdate.toString()}>
