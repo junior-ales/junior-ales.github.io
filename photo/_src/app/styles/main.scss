@@ -153,6 +153,11 @@ body {
   color: inherit;
 }
 
+@include keyframes(fadeIn) {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .post {
   display: block;
   position: relative;
@@ -165,6 +170,7 @@ body {
   margin: 1em auto;
   font-family: $font-headline;
   @include prefix(box-shadow, 2px 2px 3px $color-primary);
+  @include prefix(animation, fadeIn 1s);
 
   p { margin: 0; }
 }
@@ -215,6 +221,7 @@ body {
   font-size: 1.75em;
   text-transform: uppercase;
   margin: 0;
+  @include prefix(transition, background-color .3s ease-in-out);
 }
 
 .main-footer {

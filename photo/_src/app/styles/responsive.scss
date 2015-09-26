@@ -63,12 +63,32 @@
   .post:first-of-type {
     width: 100%;
     max-width: none;
+
     .post__cover { opacity: 1; }
+
+    .post__title {
+      padding-bottom: 1.25em;
+      background-color: transparentize($color-primary, .5);
+      z-index: 0;
+    }
+
+    .post__pubdate {
+      top: inherit;
+      bottom: 0;
+      margin: .5em;
+      z-index: 1;
+    }
+
+    .post__location {
+      top: inherit;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    &:hover .post__title { background-color: initial; }
   }
 
-  .post {
-    width: 46%;
-  }
+  .post { width: 46%; }
 
   .intro {
     @include order(2);
@@ -101,4 +121,7 @@
     color: transparentize($color-default-text, .6);
     background-color: $color-tertiary;
   }
+
+  .main-footer { font-size: small; }
+
 }
