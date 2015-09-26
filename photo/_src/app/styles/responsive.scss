@@ -49,6 +49,7 @@
   #home-page-posts {
     @include order(1);
     width: 67%;
+    max-width: 965px;
   }
 
   .post-list { display: none; }
@@ -67,23 +68,20 @@
     .post__cover { opacity: 1; }
 
     .post__title {
-      padding-bottom: 1.25em;
+      padding-left: .75em;
+      padding-bottom: 1.75em;
       background-color: transparentize($color-primary, .5);
       z-index: 0;
     }
 
-    .post__pubdate {
+    .post__pubdate, .post__location {
       top: inherit;
       bottom: 0;
       margin: .5em;
       z-index: 1;
     }
 
-    .post__location {
-      top: inherit;
-      bottom: 0;
-      z-index: 1;
-    }
+    .post__pubdate { font-size: larger; }
 
     &:hover .post__title { background-color: initial; }
   }
@@ -93,6 +91,7 @@
   .intro {
     @include order(2);
     width: 30%;
+    max-width: 435px;
     background: none;
     background-color: $color-primary;
     margin: 1em;
@@ -124,4 +123,9 @@
 
   .main-footer { font-size: small; }
 
+}
+
+@media screen and (min-width: 1441px) {
+  .intro { margin-right: auto; }
+  #home-page-posts { margin-left: auto; }
 }
