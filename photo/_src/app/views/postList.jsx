@@ -5,6 +5,10 @@ var Post = React.createClass({
     var post = this.props.post;
     var pubdate = moment(post.pubdate.toString());
 
+    if (this.props.pathNormalizer) {
+      post.dir = "../../../../".concat(post.dir);
+    }
+
     return (
       <article className='post'>
         <a className='post-wrapper' href={post.dir + post.name + '.html'}>
@@ -26,8 +30,9 @@ var Post = React.createClass({
 
 var PostList = React.createClass({
   render: function() {
+    var self = this;
     var posts = this.props.posts.map(function(post) {
-      return <Post key={post.title+'-'+post.id} post={post} />;
+      return <Post pathNormalizer={self.props.pathNormalizer} key={post.title+'-'+post.id} post={post} />;
     });
 
     return (

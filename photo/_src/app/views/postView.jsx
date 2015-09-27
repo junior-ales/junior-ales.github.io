@@ -50,7 +50,7 @@ var MorePosts = React.createClass({
     return (
       <div className="more-photos">
         <button style={buttonStyle} className="more-photos__button" onClick={this.handleClick}>more photos</button>
-        <PostList listTitle={this.state.listTitle} posts={this.state.posts} />
+        <PostList pathNormalizer={true} listTitle={this.state.listTitle} posts={this.state.posts} />
       </div>
     );
   }
