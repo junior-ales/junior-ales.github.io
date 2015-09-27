@@ -33,28 +33,31 @@ var PostContent = React.createClass({
 });
 
 var MorePosts = React.createClass({
-  getInitialState: function() {
-    return { posts: [], listTitle: '' };
-  },
-  handleClick: function() {
+  loadedPostsState: function() {
     var removeCurrentPost = function(post) {
       return post.name !== postName;
     };
 
-    this.setState({
+    return {
       posts: Posts.getAllSortedBy('most-viewed').filter(removeCurrentPost),
       listTitle: 'most viewed photos'
-    });
+    };
+  },
+  getInitialState: function() {
+    return this.props.autoLoad ? this.loadedPostsState() : { posts: [], listTitle: '' };
+  },
+  handleClick: function() {
+    this.setState(this.loadedPostsState());
   },
   render: function() {
-    var shouldDisplayButton = this.state.posts.length === 0;
-    var buttonStyle = {};
-    buttonStyle.display = shouldDisplayButton ? "inline-block" : "none";
+    var arePostsLoaded = this.state.posts.length !== 0;
+    var morePostsButton = <button className="more-photos__button" onClick={this.handleClick}>more photos</button>;
+    var postList = <PostList pathNormalizer={true} listTitle={this.state.listTitle} posts={this.state.posts} />;
 
     return (
       <div className="more-photos">
-        <button style={buttonStyle} className="more-photos__button" onClick={this.handleClick}>more photos</button>
-        <PostList pathNormalizer={true} listTitle={this.state.listTitle} posts={this.state.posts} />
+        {arePostsLoaded ? null : morePostsButton }
+        {arePostsLoaded ? postList : null }
       </div>
     );
   }
@@ -62,10 +65,11 @@ var MorePosts = React.createClass({
 
 var PostView = React.createClass({
   render: function() {
+    var shouldAutoLoad = window.innerWidth > 1075;
     return(
       <div>
         <PostContent post={Posts.getByName(postName)} />
-        <MorePosts />
+        <MorePosts autoLoad={shouldAutoLoad} />
       </div>
     );
   }
