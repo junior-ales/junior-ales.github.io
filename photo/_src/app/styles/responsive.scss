@@ -7,7 +7,7 @@
 
   .intro {
     min-height: 22em;
-    p { text-align: right; }
+    .description { text-align: right; }
   }
 }
 
@@ -77,6 +77,8 @@
     width: 67%;
     max-width: 965px;
 
+    .post { width: 46%; }
+
     .post:first-of-type {
       width: 100%;
       max-width: none;
@@ -115,9 +117,6 @@
     }
   }
 
-
-  .post { width: 46%; }
-
   .intro {
     @include order(2);
     width: 30%;
@@ -131,7 +130,7 @@
       width: 100%;
     }
 
-    p {
+    .description {
       position: static;
       text-align: left;
       font-size: smaller;
@@ -140,7 +139,11 @@
     .sub-header { padding-bottom: 1.75em; }
   }
 
-  .sub-header { display: block; }
+  .sub-header {
+    display: block;
+    .most-viewed-posts & { background-color: initial; }
+  }
+
 
   .main-footer { font-size: small; }
 

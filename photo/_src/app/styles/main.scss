@@ -38,22 +38,24 @@ body {
 .sub-header {
   display: none;
   margin: 0;
+  margin-bottom: 1em;
   padding: .75em;
+  padding-left: 0;
   font-family: $font-headline;
   font-size: 1em;
   text-transform: uppercase;
-  color: transparentize($color-default-text, .6);
   background-color: $color-tertiary;
+  color: $color-default-text;
+
+  span {
+    border-bottom: .125em solid $color-detail;
+    padding-bottom: .5em;
+  }
 
   .post-container & {
     display: block;
-    margin-bottom: 1em;
-    color: $color-default-text;
-    span {
-      border-bottom: .125em solid $color-detail;
-      padding-bottom: .5em;
-      font-size: larger;
-    }
+    padding-left: .75em;
+    span { font-size: larger; }
   }
 }
 
@@ -103,7 +105,7 @@ body {
 
   .author-image { display: none; }
 
-  p {
+  .description {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -358,3 +360,5 @@ body {
 
   &:hover { color: $color-default-text; }
 }
+
+.most-viewed-posts { padding: 1em; }

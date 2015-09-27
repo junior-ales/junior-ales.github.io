@@ -65,9 +65,43 @@ var PostsContainer = React.createClass({
   }
 });
 
+var MostViewedPosts = React.createClass({
+  shouldLoadMostViewedPosts: function() {
+    return window.innerWidth > 1075;
+  },
+
+  getInitialState: function() {
+    return { visible: this.shouldLoadMostViewedPosts() };
+  },
+
+  loadMostViewedPosts: function() {
+    return Posts.getAllSortedBy('most-viewed');
+  },
+
+  handleResize: function(e) {
+    this.setState({ visible: this.shouldLoadMostViewedPosts() });
+  },
+
+  componentDidMount: function() {
+    window.addEventListener('resize', this.handleResize);
+  },
+
+  componentWillUnmount: function() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+
+  render: function() {
+    if (this.state.visible) {
+      return <PostList listTitle="most viewed photos" posts={this.loadMostViewedPosts()} />;
+    }
+    return null;
+  }
+});
+
 var App = {
   init: function init() {
     React.render(<PostsContainer />, document.getElementById('home-page-posts'));
+    // React.render(<MostViewedPosts />, document.getElementById('most-viewed-posts')); // feature toggle
   }
 };
 
