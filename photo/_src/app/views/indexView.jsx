@@ -59,7 +59,7 @@ var PostsContainer = React.createClass({
     return (
       <section className='posts-container'>
         <SortingOptions sortBy={this.state.sortBy} onSortingChange={this.handleSortingChange} />
-        <PostList posts={this.state.posts} />
+        <PostList listTitle="latest photos" posts={this.state.posts} />
       </section>
     );
   }

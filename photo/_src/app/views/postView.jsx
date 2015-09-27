@@ -34,16 +34,23 @@ var PostContent = React.createClass({
 
 var MorePosts = React.createClass({
   getInitialState: function() {
-    return { posts: [] };
+    return { posts: [], listTitle: '' };
   },
   handleClick: function() {
-    this.setState({ posts: Posts.getAllSortedBy('most-viewed') });
+    this.setState({
+      posts: Posts.getAllSortedBy('most-viewed'),
+      listTitle: 'most viewed photos'
+    });
   },
   render: function() {
+    var shouldDisplayButton = this.state.posts.length === 0;
+    var buttonStyle = {};
+    buttonStyle.display = shouldDisplayButton ? "inline-block" : "none";
+
     return (
       <div className="more-photos">
-        <button className="more-photos__button" onClick={this.handleClick}>more photos</button>
-        <PostList posts={this.state.posts} />
+        <button style={buttonStyle} className="more-photos__button" onClick={this.handleClick}>more photos</button>
+        <PostList listTitle={this.state.listTitle} posts={this.state.posts} />
       </div>
     );
   }

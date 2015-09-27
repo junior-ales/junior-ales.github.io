@@ -32,7 +32,7 @@ var PostList = React.createClass({
 
     return (
       <section className='post-list-wrapper'>
-        <h2 className="sub-header">Latest photos</h2>
+        <h2 className="sub-header">{this.props.listTitle}</h2>
         {posts}
       </section>
     );

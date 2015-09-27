@@ -112,16 +112,7 @@
     .sub-header { padding-bottom: 1.75em; }
   }
 
-  .sub-header {
-    display: block;
-    margin: 0;
-    padding: .75em;
-    font-family: $font-headline;
-    font-size: 1em;
-    text-transform: uppercase;
-    color: transparentize($color-default-text, .6);
-    background-color: $color-tertiary;
-  }
+  .sub-header { display: block; }
 
   .main-footer { font-size: small; }
 
