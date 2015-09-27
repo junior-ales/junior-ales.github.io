@@ -37,8 +37,12 @@ var MorePosts = React.createClass({
     return { posts: [], listTitle: '' };
   },
   handleClick: function() {
+    var removeCurrentPost = function(post) {
+      return post.name !== postName;
+    };
+
     this.setState({
-      posts: Posts.getAllSortedBy('most-viewed'),
+      posts: Posts.getAllSortedBy('most-viewed').filter(removeCurrentPost),
       listTitle: 'most viewed photos'
     });
   },
