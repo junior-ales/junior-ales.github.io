@@ -1,6 +1,7 @@
 'use strict';
 
-var Post = require('model/post');
+var Posts = require('model/post');
+var PostList = require('./postList');
 
 var postName = (function() {
   var pathname = location.pathname;
@@ -8,7 +9,7 @@ var postName = (function() {
   return pathname.substring(fileNameIndex).split('.')[0];
 })();
 
-var PostView = React.createClass({
+var PostContent = React.createClass({
   render: function() {
     var post = this.props.post;
     var postContent = function() { return { __html: post.htmlContent }; };
@@ -31,10 +32,38 @@ var PostView = React.createClass({
   }
 });
 
+var MorePosts = React.createClass({
+  getInitialState: function() {
+    return { posts: [] };
+  },
+  handleClick: function() {
+    this.setState({ posts: Posts.getAllSortedBy('most-viewed') });
+  },
+  render: function() {
+    return (
+      <div className="more-photos">
+        <button className="more-photos__button" onClick={this.handleClick}>more photos</button>
+        <PostList posts={this.state.posts} />
+      </div>
+    );
+  }
+});
+
+var PostView = React.createClass({
+  render: function() {
+    return(
+      <div>
+        <PostContent post={Posts.getByName(postName)} />
+        <MorePosts />
+      </div>
+    );
+  }
+});
+
 module.exports = {
   init: function init() {
     React.render(
-      <PostView post={Post.getByName(postName)} />, document.getElementById('post-container')
+      <PostView />, document.getElementById('post-container')
     );
   }
 };

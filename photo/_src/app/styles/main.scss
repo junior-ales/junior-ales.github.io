@@ -101,6 +101,8 @@ body {
   }
 }
 
+.post-container { max-width: 945px; }
+
 .posts-container {
   display: block;
   padding: 1em;
@@ -317,4 +319,19 @@ body {
   padding-top: 0;
   letter-spacing: .1em;
   line-height: 1.5em;
+}
+
+.more-photos {
+  display: none; // feature toggle
+  padding: 1em;
+  text-align: center;
+}
+
+.more-photos__button {
+  @extend .post-list__button;
+  font-family: $font-headline;
+  color: transparentize($color-default-text, .6);
+  @include prefix(transition, color .3s ease-in-out);
+
+  &:hover { color: $color-default-text; }
 }
