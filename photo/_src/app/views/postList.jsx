@@ -29,18 +29,23 @@ var Post = React.createClass({
 });
 
 var PostList = React.createClass({
+  getInitialState: function() {
+    return { posts: this.props.posts };
+  },
+
   render: function() {
     var self = this;
-    var posts = this.props.posts.map(function(post) {
+    var listPosts = function(post) {
       return <Post pathNormalizer={self.props.pathNormalizer} key={post.title+'-'+post.id} post={post} />;
-    });
+    };
 
     return (
       <section className='post-list-wrapper'>
         <h2 className="sub-header">
           <span>{this.props.listTitle}</span>
         </h2>
-        {posts}
+
+        {this.props.posts.map(listPosts)}
       </section>
     );
   }

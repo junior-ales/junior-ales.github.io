@@ -2,6 +2,7 @@
 
 var Posts = require('model/post');
 var PostList = require('./postList');
+var POSTS_INC_VALUE = 3;
 
 var SortingOptions = React.createClass({
   handleClick: function(event) {
@@ -40,18 +41,48 @@ var SortingOptions = React.createClass({
   }
 });
 
+var LoadMorePosts = React.createClass({
+  handleClick: function() {
+    this.props.onLoadMoreClick();
+  },
+
+  render: function() {
+    return <button onClick={this.handleClick}>load more</button>;
+  }
+});
+
 var PostsContainer = React.createClass({
   getInitialState: function() {
+    var allPosts = Posts.getAllSortedBy('latest');
+    var postsLoaded = allPosts.length < POSTS_INC_VALUE ? allPosts.length : POSTS_INC_VALUE;
+
     return {
       sortBy: 'latest',
-      posts: Posts.getAllSortedBy('latest')
+      postsLoaded: postsLoaded,
+      posts: allPosts.slice(0, postsLoaded)
     };
   },
 
   handleSortingChange: function(sortOption) {
     this.setState({
       sortBy: sortOption,
-      posts: Posts.getAllSortedBy(sortOption)
+      posts: Posts.getAllSortedBy(sortOption).slice(0,this.state.postsLoaded)
+    });
+  },
+
+  handleLoadMorePosts: function() {
+    var allPosts = Posts.getAllSortedBy(this.state.sortBy);
+    var updatedPostsLoaded;
+
+    if (allPosts.length >= this.state.postsLoaded + POSTS_INC_VALUE) {
+      updatedPostsLoaded = this.state.postsLoaded + POSTS_INC_VALUE;
+    } else {
+      updatedPostsLoaded = allPosts.length;
+    }
+
+    this.setState({
+      postsLoaded: updatedPostsLoaded,
+      posts: Posts.getAllSortedBy(this.state.sortBy).slice(0, updatedPostsLoaded)
     });
   },
 
@@ -60,6 +91,7 @@ var PostsContainer = React.createClass({
       <section className='posts-container'>
         <SortingOptions sortBy={this.state.sortBy} onSortingChange={this.handleSortingChange} />
         <PostList listTitle="latest photos" posts={this.state.posts} />
+        {/*<LoadMorePosts onLoadMoreClick={this.handleLoadMorePosts} /> feature toggle */}
       </section>
     );
   }
@@ -72,10 +104,6 @@ var MostViewedPosts = React.createClass({
 
   getInitialState: function() {
     return { visible: this.shouldLoadMostViewedPosts() };
-  },
-
-  loadMostViewedPosts: function() {
-    return Posts.getAllSortedBy('most-viewed');
   },
 
   handleResize: function(e) {
@@ -92,7 +120,7 @@ var MostViewedPosts = React.createClass({
 
   render: function() {
     if (this.state.visible) {
-      return <PostList listTitle="most viewed photos" posts={this.loadMostViewedPosts()} />;
+      return <PostList listTitle="most viewed photos" posts={Posts.getAllSortedBy('most-viewed').slice(0,2)} />;
     }
     return null;
   }
@@ -101,7 +129,7 @@ var MostViewedPosts = React.createClass({
 var App = {
   init: function init() {
     React.render(<PostsContainer />, document.getElementById('home-page-posts'));
-    // React.render(<MostViewedPosts />, document.getElementById('most-viewed-posts')); // feature toggle
+    React.render(<MostViewedPosts />, document.getElementById('most-viewed-posts'));
   }
 };
 

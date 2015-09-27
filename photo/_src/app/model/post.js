@@ -31,6 +31,28 @@ var post3 = {
   viewsRanking: 2
 };
 
+var post4 = {
+  id: 3,
+  name: 'lunch-by-the-bay',
+  title: 'Lunch by the Bay',
+  dir: 'posts/2015/05/22/',
+  htmlContent: '<p>Não é difícil ver alguém que bate no peito e diz com maior orgulho Bitters health goth cardigan, vinyl listicle street art letterpress gastropub meggings Vice sartorial cred. Fap Shoreditch lumbersexual semiotics deep v mlkshk. Ethical sartorial pour-over artisan, chia typewriter cronut messenger bag single-origin coffee mlkshk Brooklyn. Raw denim cold-pressed McSweeney\'s cardigan, blog put a bird on it meditation forage freegan bitters High Life dreamcatcher whatever. Swag asymmetrical cronut keffiyeh. Umami Odd Future Bushwick, pop-up artisan mustache paleo migas irony organic tote bag sartorial slow-carb. Direct trade retro chillwave sustainable street art, Vice sartorial.</p>',
+  location: 'San Francisco, USA',
+  pubdate: new Date('2015-05-19'),
+  viewsRanking: 5
+};
+
+var post5 = {
+  id: 4,
+  name: 'origami-party',
+  title: 'Origami Party',
+  dir: 'posts/2015/04/13/',
+  htmlContent: '<p>Bitters health goth cardigan,</p> <p>vinyl listicle street art letterpress gastropub meggings Vice sartorial cred. Fap Shoreditch lumbersexual semiotics deep v mlkshk. Ethical sartorial pour-over artisan, chia typewriter cronut messenger bag single-origin coffee mlkshk Brooklyn. Raw denim cold-pressed McSweeney\'s cardigan, blog put a </p><p>bird on it meditation forage freegan bitters High Life dreamcatcher whatever. Swag asymmetrical cronut keffiyeh. Umami Odd Future Bushwick, pop-up artisan mustache paleo migas irony organic tote bag sartorial slow-carb. Direct trade retro chillwave sustainable street art, Vice sartorial.</p>',
+  location: 'Pune, India',
+  pubdate: new Date('2015-04-11'),
+  viewsRanking: 4
+};
+
 var sortedByProperty = function(property, arr) {
   return arr.slice().sort(function(a, b) {
     if (a[property] > b[property]) { return 1; }
@@ -39,15 +61,24 @@ var sortedByProperty = function(property, arr) {
   });
 };
 
-var allPosts = [post1, post2, post3];
+var allPosts = [post1, post2, post3, post4, post5];
 
-var sortedPostsObj = {
-  'most-viewed': sortedByProperty('viewsRanking', allPosts),
-  'latest': sortedByProperty('pubdate', allPosts).reverse()
-};
+var sortedPostsObj = function(posts) {
+  return {
+    'most-viewed': sortedByProperty('viewsRanking', posts),
+    'latest': sortedByProperty('pubdate', posts).reverse()
+  };
+}
 
 module.exports = {
-  getAllSortedBy: function (key) { return sortedPostsObj[key]; },
+  current: function(posts) {
+    return {
+      sortBy: function(sortOption) {
+        return sortedPostsObj(posts)[sortOption];
+      }
+    };
+  },
+  getAllSortedBy: function (sortOption) { return sortedPostsObj(allPosts)[sortOption]; },
   getByName: function(name) {
     return allPosts.filter(function(post) {
       return post.name === name;
