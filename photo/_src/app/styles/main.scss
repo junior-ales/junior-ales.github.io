@@ -346,6 +346,29 @@ body {
   line-height: 1.5em;
 }
 
+.most-viewed-posts { padding: 1em; }
+
+.load-more-posts {
+  text-align: center;
+  background-color: $color-quaternery;
+  width: 100%;
+  max-width: $post-max-width;
+  margin: auto;
+  margin-top: 1em;
+  @include prefix(box-shadow, 2px 2px 3px $color-primary);
+}
+
+.load-more-posts__button {
+  @extend .post-list__button;
+  font-family: $font-headline;
+  color: transparentize($color-default-text, .6);
+  width: 100%;
+  padding: 1em;
+  @include prefix(transition, color .3s ease-in-out);
+
+  &:hover { color: $color-default-text; }
+}
+
 .more-photos {
   padding: 1em;
   padding-bottom: 1.5em;
@@ -353,12 +376,7 @@ body {
 }
 
 .more-photos__button {
-  @extend .post-list__button;
-  font-family: $font-headline;
-  color: transparentize($color-default-text, .6);
-  @include prefix(transition, color .3s ease-in-out);
-
-  &:hover { color: $color-default-text; }
+  @extend .load-more-posts;
+  @extend .load-more-posts__button;
+  margin-top: 0;
 }
-
-.most-viewed-posts { padding: 1em; }

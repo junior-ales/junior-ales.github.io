@@ -47,7 +47,11 @@ var LoadMorePosts = React.createClass({
   },
 
   render: function() {
-    return <button onClick={this.handleClick}>load more</button>;
+    return (
+      <div className="load-more-posts">
+        <button className="load-more-posts__button" onClick={this.handleClick}>load more posts</button>
+      </div>
+    );
   }
 });
 
@@ -59,6 +63,7 @@ var PostsContainer = React.createClass({
     return {
       sortBy: 'latest',
       postsLoaded: postsLoaded,
+      allPostsLoaded: false,
       posts: allPosts.slice(0, postsLoaded)
     };
   },
@@ -71,27 +76,32 @@ var PostsContainer = React.createClass({
   },
 
   handleLoadMorePosts: function() {
+    if (this.state.allPostsLoaded) { return; }
     var allPosts = Posts.getAllSortedBy(this.state.sortBy);
-    var updatedPostsLoaded;
+    var updatedPostsLoaded, allPostsLoaded;
 
     if (allPosts.length >= this.state.postsLoaded + POSTS_INC_VALUE) {
       updatedPostsLoaded = this.state.postsLoaded + POSTS_INC_VALUE;
+      allPostsLoaded = false;
     } else {
       updatedPostsLoaded = allPosts.length;
+      allPostsLoaded = true;
     }
 
     this.setState({
       postsLoaded: updatedPostsLoaded,
-      posts: Posts.getAllSortedBy(this.state.sortBy).slice(0, updatedPostsLoaded)
+      posts: Posts.getAllSortedBy(this.state.sortBy).slice(0, updatedPostsLoaded),
+      allPostsLoaded: allPostsLoaded
     });
   },
 
   render: function() {
+    var loadMoreButton = this.state.allPostsLoaded ? null: <LoadMorePosts onLoadMoreClick={this.handleLoadMorePosts} />;
     return (
       <section className='posts-container'>
         <SortingOptions sortBy={this.state.sortBy} onSortingChange={this.handleSortingChange} />
         <PostList listTitle="latest photos" posts={this.state.posts} />
-        {/*<LoadMorePosts onLoadMoreClick={this.handleLoadMorePosts} /> feature toggle */}
+        {loadMoreButton}
       </section>
     );
   }
