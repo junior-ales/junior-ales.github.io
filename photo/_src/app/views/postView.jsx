@@ -12,6 +12,7 @@ var postName = (function() {
 var PostContent = React.createClass({
   render: function() {
     var post = this.props.post;
+    moment.locale('pt-BR');
     var postContent = function() { return { __html: post.htmlContent }; };
 
     return (
@@ -40,7 +41,7 @@ var MorePosts = React.createClass({
 
     return {
       posts: Posts.getAllSortedBy('most-viewed').slice(0,3).filter(removeCurrentPost),
-      listTitle: 'most viewed photos'
+      listTitle: 'fotos mais vistas'
     };
   },
   getInitialState: function() {
@@ -51,7 +52,7 @@ var MorePosts = React.createClass({
   },
   render: function() {
     var arePostsLoaded = this.state.posts.length !== 0;
-    var morePostsButton = <button className="more-photos__button" onClick={this.handleClick}>more photos</button>;
+    var morePostsButton = <button className="more-photos__button" onClick={this.handleClick}>mais fotos</button>;
     var postList = <PostList pathNormalizer={true} listTitle={this.state.listTitle} posts={this.state.posts} />;
 
     return (

@@ -1,9 +1,16 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photographic Blog |{{#unless title }} Junior Ales{{/unless}} {{title}}</title>
+    <title>Junior Ales |{{#unless title }} Fotografia{{/unless}} {{title}}</title>
+
+    <meta name="description" content="{{ description }} Esse blog é a maneira que eu encontrei de expressar minhas ideias através da minha fotografia.">
+    <meta name="keywords" content="foto, fotografia, fotógrafo, photo, photograpy, photographer">
+    <link rel="author" href="Junior Ales">
+    <link rel="canonical" href="http://www.juniorales.com/photo">
+
+
     <link rel="icon" type="image/png" href="{{#unless isHome }}../../../../{{/unless}}img/favicon.png">
     <link rel="stylesheet" href="{{#unless isHome }}../../../../{{/unless}}styles/libs.css">
     <link rel="stylesheet" href="{{#unless isHome }}../../../../{{/unless}}styles/app.css">
@@ -12,11 +19,11 @@
     <header class="main-header">
       <h1 class="main-header__title">
         <a class="main-header__link" href="{{#unless isHome}}http://www.juniorales.com/photo{{/unless}}#">
-          photography
+          fotografia
         </a>
       </h1>
 
-      <p class="main-header__subhead"><span> by</span> junior ales</p>
+      <p class="main-header__subhead"><span> por</span> junior ales</p>
 
       <div class="main-header__social-media">
         <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
@@ -35,7 +42,7 @@
 
     <footer class="main-footer">
       <div class="main-footer__links{{#if isHome }}--home{{/if}}">
-        <a class="site-link" href="http://juniorales.com/photo">home</a>
+        <a class="site-link" href="http://juniorales.com/photo">início</a>
       </div>
 
       <div class="main-footer__social-media{{#if isHome }}--home{{/if}}">

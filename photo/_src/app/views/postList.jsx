@@ -2,6 +2,7 @@
 
 var Post = React.createClass({
   render: function() {
+    moment.locale('pt-BR');
     var post = this.props.post;
     var pubdate = moment(post.pubdate.toString());
 

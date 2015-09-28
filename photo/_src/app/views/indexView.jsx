@@ -25,7 +25,7 @@ var SortingOptions = React.createClass({
           <button onClick={this.handleClick}
                   className='post-list__button'
                   data-sorting-option='most-viewed'>
-            most viewed
+            mais vistas
           </button>
         </li>
         <li className='post-list__sorting--separator'>|</li>
@@ -33,7 +33,7 @@ var SortingOptions = React.createClass({
           <button data-sorting-option='latest'
                   onClick={this.handleClick}
                   className='post-list__button'>
-            latest
+            últimas
           </button>
         </li>
       </ul>
@@ -49,7 +49,7 @@ var LoadMorePosts = React.createClass({
   render: function() {
     return (
       <div className="load-more-posts">
-        <button className="load-more-posts__button" onClick={this.handleClick}>load more posts</button>
+        <button className="load-more-posts__button" onClick={this.handleClick}>carregar mais fotos</button>
       </div>
     );
   }
@@ -100,7 +100,7 @@ var PostsContainer = React.createClass({
     return (
       <section className='posts-container'>
         <SortingOptions sortBy={this.state.sortBy} onSortingChange={this.handleSortingChange} />
-        <PostList listTitle="latest photos" posts={this.state.posts} />
+        <PostList listTitle="últimas fotos" posts={this.state.posts} />
         {loadMoreButton}
       </section>
     );
@@ -130,7 +130,7 @@ var MostViewedPosts = React.createClass({
 
   render: function() {
     if (this.state.visible) {
-      return <PostList listTitle="most viewed photos" posts={Posts.getAllSortedBy('most-viewed').slice(0,2)} />;
+      return <PostList listTitle="fotos mais vistas" posts={Posts.getAllSortedBy('most-viewed').slice(0,2)} />;
     }
     return null;
   }

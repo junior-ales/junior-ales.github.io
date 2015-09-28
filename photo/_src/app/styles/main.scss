@@ -340,10 +340,11 @@ body {
 }
 
 .post-content__text {
-  padding: 1em;
+  padding: 1.5em;
   padding-top: 0;
   letter-spacing: .1em;
-  line-height: 1.5em;
+  line-height: 1.75em;
+  p { padding: .5em 0; }
 }
 
 .most-viewed-posts { padding: 1em; }

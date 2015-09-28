@@ -60,6 +60,8 @@
   }
 
   .post-content__image { @include prefix(transform, scale(1.02)); }
+
+  .post-content__text { font-size: larger; }
 }
 
 @media screen and (min-width: 825px) {
