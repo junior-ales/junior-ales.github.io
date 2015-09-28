@@ -1,61 +1,69 @@
+
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photographic Blog | Junior Ales </title>
+    <title>Junior Ales | Lunch By The Bay</title>
+
+    <meta name="description" content=" Esse blog é a maneira que eu encontrei de expressar minhas ideias através da minha fotografia.">
+    <meta name="keywords" content="foto, fotografia, fotógrafo, photo, photograpy, photographer">
+    <link rel="author" href="Junior Ales">
+    <link rel="canonical" href="http://www.juniorales.com/photo">
+
+
     <link rel="icon" type="image/png" href="../../../../img/favicon.png">
     <link rel="stylesheet" href="../../../../styles/libs.css">
     <link rel="stylesheet" href="../../../../styles/app.css">
   </head>
   <body>
+    <header class="main-header">
+      <h1 class="main-header__title">
+        <a class="main-header__link" href="http://www.juniorales.com/photo#">
+          fotografia
+        </a>
+      </h1>
 
-  <header class="main-header">
-    <h1 class="main-header__title">
-      <a class="main-header__link" href="http://www.juniorales.com/photo#">
-        photography
-      </a>
-    </h1>
+      <p class="main-header__subhead"><span> por</span> junior ales</p>
 
-    <p class="main-header__subhead"><span> by</span> junior ales</p>
+      <div class="main-header__social-media">
+        <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a class="social-media-link" href="https://medium.com/@junior_ales" target="_blank">
+          <i class="fa fa-medium"></i>
+        </a>
+        <a class="social-media-link" href="https://twitter.com/junior_ales" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </div>
+    </header>
 
-    <div class="main-header__social-media">
-      <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a class="social-media-link" href="https://medium.com/@junior_ales" target="_blank">
-        <i class="fa fa-medium"></i>
-      </a>
-      <a class="social-media-link" href="https://twitter.com/junior_ales" target="_blank">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </div>
-  </header>
+    
+    <section id="post-container" class="post-container"></section>
+    
 
+    <footer class="main-footer">
+      <div class="main-footer__links">
+        <a class="site-link" href="http://juniorales.com/photo">início</a>
+      </div>
 
-<section id="post-container" class="post-container"></section>
+      <div class="main-footer__social-media">
+        <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a class="social-media-link" href="https://medium.com/@junior_ales" target="_blank">
+          <i class="fa fa-medium"></i>
+        </a>
+        <a class="social-media-link" href="https://twitter.com/junior_ales" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <p><a class="site-link" href="http://juniorales.com">juniorales.com</a></p>
+      </div>
+    </footer>
 
-<footer class="main-footer">
-  <div class="main-footer__links">
-    <a class="site-link" href="http://juniorales.com/photo">home</a>
-  </div>
-
-  <div class="main-footer__social-media">
-    <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
-      <i class="fa fa-instagram"></i>
-    </a>
-    <a class="social-media-link" href="https://medium.com/@junior_ales" target="_blank">
-      <i class="fa fa-medium"></i>
-    </a>
-    <a class="social-media-link" href="https://twitter.com/junior_ales" target="_blank">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <p><a class="site-link" href="http://juniorales.com">juniorales.com</a></p>
-  </div>
-</footer>
-<script src="../../../../scripts/libs.js"></script>
-<script src="../../../../scripts/app.js"></script>
-<script>require("views/postView").init();</script>
-</body>
+    <script src="../../../../scripts/libs.js"></script>
+    <script src="../../../../scripts/app.js"></script>
+    <script>require("views/postView").init();</script>
+  </body>
 </html>
-
