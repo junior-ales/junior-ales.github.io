@@ -1,18 +1,17 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photographic Blog | Junior Ales </title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="styles/libs.css">
-    <link rel="stylesheet" href="styles/app.css">
+    <title>Photographic Blog |{{#unless title }} Junior Ales{{/unless}} {{title}}</title>
+    <link rel="icon" type="image/png" href="{{#unless isHome }}../../../../{{/unless}}img/favicon.png">
+    <link rel="stylesheet" href="{{#unless isHome }}../../../../{{/unless}}styles/libs.css">
+    <link rel="stylesheet" href="{{#unless isHome }}../../../../{{/unless}}styles/app.css">
   </head>
   <body>
     <header class="main-header">
       <h1 class="main-header__title">
-        <a class="main-header__link" href="#">
+        <a class="main-header__link" href="{{#unless isHome}}http://www.juniorales.com/photo{{/unless}}#">
           photography
         </a>
       </h1>
@@ -32,28 +31,14 @@
       </div>
     </header>
 
-    
-    <section class="intro">
-      <h2 class="sub-header"><span>About me</span></h2>
-      <img class="author-image" src="img/main-selfie-small.jpg" alt="Author's Picture" />
-      <p class="description">
-        I like to think of photography beyond techniques, colors, focus, depth and patterns.
-        I'm fascinated about the story behind the lens. It's all about the unique way the
-        person sees and feels the world around herself/himself in that given moment.
-        <em>This blog is a way of telling my stories to everyone.</em>
-      </p>
-      <div id="most-viewed-posts" class="most-viewed-posts"></div>
-    </section>
-    
-    <div id="home-page-posts"></div>
-    
+    {{> @partial-block }}
 
     <footer class="main-footer">
-      <div class="main-footer__links--home">
+      <div class="main-footer__links{{#if isHome }}--home{{/if}}">
         <a class="site-link" href="http://juniorales.com/photo">home</a>
       </div>
 
-      <div class="main-footer__social-media--home">
+      <div class="main-footer__social-media{{#if isHome }}--home{{/if}}">
         <a class="social-media-link" href="https://instagram.com/junior_ales" target="_blank">
           <i class="fa fa-instagram"></i>
         </a>
@@ -67,8 +52,8 @@
       </div>
     </footer>
 
-    <script src="scripts/libs.js"></script>
-    <script src="scripts/app.js"></script>
-    <script>require("views/indexView").init();</script>
+    <script src="{{#unless isHome }}../../../../{{/unless}}scripts/libs.js"></script>
+    <script src="{{#unless isHome }}../../../../{{/unless}}scripts/app.js"></script>
+    <script>require("views/{{ viewComponent }}").init();</script>
   </body>
 </html>

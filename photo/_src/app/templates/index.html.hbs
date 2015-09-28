@@ -1,4 +1,9 @@
-{{partial "header" isHome=true }}
+---
+isHome: true
+viewComponent: indexView
+---
+
+{{#> layout }}
 
 <section class="intro">
   <h2 class="sub-header"><span>About me</span></h2>
@@ -14,4 +19,4 @@
 
 <div id="home-page-posts"></div>
 
-{{partial "footer" isHome=true viewComponent="indexView" }}
+{{/layout}}
