@@ -4,3 +4,8 @@
 .DS_Store
 node_modules/
 dist/
+
+# posts should be ignored and
+# its content should come only
+# from templates dir
+photo/_src/app/assets/posts/
