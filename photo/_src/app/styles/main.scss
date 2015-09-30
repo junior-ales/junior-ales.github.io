@@ -211,8 +211,6 @@ body {
   @include prefix(transition, opacity .3s ease-in-out);
 }
 
-.post-wrapper:hover .post__cover { opacity: 1; }
-
 .post__location {
   padding: .75em;
   position: absolute;
