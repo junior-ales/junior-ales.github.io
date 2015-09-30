@@ -105,6 +105,12 @@
 
       &:hover .post__title { background-color: initial; }
     }
+
+    .load-more-posts {
+      width: initial;
+      max-width: initial;
+      margin: 1em;
+    }
   }
 
   .post-list { display: none; }
@@ -149,7 +155,6 @@
 
 
   .main-footer { font-size: small; }
-
 }
 
 @media screen and (min-width: 1441px) {

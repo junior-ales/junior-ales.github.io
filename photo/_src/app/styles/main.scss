@@ -380,4 +380,5 @@ body {
   @extend .load-more-posts;
   @extend .load-more-posts__button;
   margin-top: 0;
+  max-width: initial;
 }
