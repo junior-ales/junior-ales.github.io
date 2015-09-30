@@ -4,11 +4,11 @@
   "description": "Photo blog of Junior Ales",
   "private": true,
   "scripts": {
-    "_clean": "rm -Rfv dist/*",
+    "_clean": "rm -Rfv app/assets/posts dist/*",
     "_clean:production": "rm -Rfv ../index.html ../scripts ../styles ../img ../posts ../fonts",
     "_browser-sync": "browser-sync start --startPath=dist/ --server --files='dist/**/*' &",
     "_watch": "brunch watch",
-    "_move-photos": "cp -vR app/templates/posts app/assets/ && find app/assets -name \"*.hbs\" -exec rm {} \\+",
+    "_move-photos": "cp -vR app/templates/posts app/assets/ && find app/assets -name \"*.hbs\" -exec rm -v {} \\+",
     "prebuild": "npm run _clean && npm run _move-photos",
     "build": "brunch build",
     "prebuild:production": "npm run _clean:production",
