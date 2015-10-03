@@ -7,7 +7,7 @@
     "_clean": "rm -Rfv app/assets/posts dist/*",
     "_clean:production": "rm -Rfv ../index.html ../scripts ../styles ../img ../posts ../fonts",
     "_browser-sync": "browser-sync start --startPath=dist/ --server --files='dist/**/*' &",
-    "_watch": "brunch watch",
+    "_watch": "npm run build && brunch watch",
     "_move-photos": "cp -vR app/templates/posts app/assets/ && find app/assets -name \"*.hbs\" -exec rm -v {} \\+",
     "prebuild": "npm run _clean && npm run _move-photos",
     "build": "brunch build",
