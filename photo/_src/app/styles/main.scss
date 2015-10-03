@@ -78,6 +78,11 @@ body {
   font-weight: bold;
 
   span { font-size: .6em; }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 %social-media-block {
