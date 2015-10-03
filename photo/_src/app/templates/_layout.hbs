@@ -4,14 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Junior Ales |{{#unless title }} Fotografia{{/unless}} {{title}}</title>
-
-    <meta name="description" content="{{ description }} Esse blog é a maneira que eu encontrei de expressar minhas ideias através da minha fotografia.">
+    <meta name="description" content="{{#unless description }}Esse blog é a maneira que eu encontrei de expressar minhas ideias através da minha fotografia.{{/unless}}{{ description }}">
     <meta name="keywords" content="foto, fotografia, fotógrafo, photo, photograpy, photographer">
-    <link rel="author" href="Junior Ales">
+    <link rel="author" href="http://www.juniorales.com/humans.txt">
     <link rel="canonical" href="http://www.juniorales.com/photo">
-
-
     <link rel="icon" type="image/png" href="{{#unless isHome }}../../../../{{/unless}}img/favicon.png">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:site_name" content="Fotografia por Junior Ales">
+    <meta property="og:title" content="{{#if title }} {{ title }} | {{/if}}Fotografia por Junior Ales">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://www.juniorales.com/photo/{{#if isHome }}img/main-selfie-small.jpg{{else}}posts/{{ postPath }}.jpg{{/if}}">
+    <meta property="og:url" content="http://www.juniorales.com/photo/{{#unless isHome }}posts/{{ postPath }}.html{{/unless}}">
+    <meta property="og:description" content="{{#unless description }}Esse blog é a maneira que eu encontrei de expressar minhas ideias através da minha fotografia.{{/unless}}{{ description }}">
+
+    <!-- Twitter Meta Info -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@junior_ales">
+    <meta name="twitter:creator" content="@junior_ales">
+    <meta name="twitter:url" content="http://www.juniorales.com/photo/{{#unless isHome }}posts/{{ postPath }}.html{{/unless}}">
+    <meta name="twitter:title" content="{{#if title }} {{ title }} | {{/if}}Fotografia por Junior Ales">
+    <meta name="twitter:description" content="{{#unless description }}Esse blog é a maneira que eu encontrei de expressar minhas ideias através da minha fotografia.{{/unless}}{{ description }}">
+    <meta name="twitter:image" content="http://www.juniorales.com/photo/{{#if isHome }}img/main-selfie-small.jpg{{else}}posts/{{ postPath }}.jpg{{/if}}">
+
+    <!-- Style Sheets -->
     <link rel="stylesheet" href="{{#unless isHome }}../../../../{{/unless}}styles/libs.css">
     <link rel="stylesheet" href="{{#unless isHome }}../../../../{{/unless}}styles/app.css">
   </head>
