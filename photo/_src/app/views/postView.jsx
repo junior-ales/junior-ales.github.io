@@ -26,7 +26,11 @@ var PostContent = React.createClass({
             </time>
           </span>
         </header>
-        <img className="post-content__image" src={post.name + '.jpg'} alt={post.title + ' photo'} />
+        <img className="post-content__image"
+             srcSet={post.name + '--large.jpg 1920w, ' +
+                     post.name + '--medium.jpg 1280w, ' +
+                     post.name + '--small.jpg 640w'}
+             src={post.name + '--medium.jpg'} alt={post.title + ' photo'} />
         <section className='post-content__text' dangerouslySetInnerHTML={postContent()} />
       </div>
     );

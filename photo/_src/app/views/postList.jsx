@@ -13,7 +13,11 @@ var Post = React.createClass({
     return (
       <article className='post'>
         <a className='post-wrapper' href={post.dir + post.name + '.html'}>
-          <img className='post__cover' src={post.dir + post.name + '.jpg'} alt={post.title + ' photo'} />
+          <img className='post__cover'
+               srcSet={post.dir + post.name + '--large.jpg 1920w, ' +
+                       post.dir + post.name + '--medium.jpg 1280w, ' +
+                       post.dir + post.name + '--small.jpg 640w'}
+               src={post.dir + post.name + '--medium.jpg'} alt={post.title + ' photo'} />
           <p className='post__location'>{post.location}</p>
           <p className='post__pubdate'>
             <time className='post_pubdate__time' dateTime={pubdate.format()}>
