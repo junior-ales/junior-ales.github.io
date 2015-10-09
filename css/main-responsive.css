@@ -31,9 +31,14 @@
 
 @media screen and (min-width: 641px) { #title { font-size: 1.5em; } }
 
-@media screen and (min-width: 901px) {
-  .hidden-large { display: none; }
+@media screen and (min-width: 751px) {
+  .content-block {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+}
 
+@media screen and (min-width: 1025px) {
   .content-block {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -61,27 +66,22 @@
     -ms-flex-order: 1;
     -webkit-order: 1;
     order: 1;
+    padding-bottom: 1em;
   }
 
-  .summary, .email-me { width: 35%; }
-
-  .personal-blog, .twitter-block { width: 65%; }
-
+  .summary,
+  .email-me,
+  .photo-blog,
+  .personal-blog,
   .twitter-block {
-    -webkit-box-ordinal-group: 3;
-    -moz-box-ordinal-group: 3;
-    -ms-flex-order: 3;
-    -webkit-order: 3;
-    order: 3;
+    width: 40%;
+    margin-right: 60%;
   }
 
-  .email-me {
-    -webkit-box-ordinal-group: 2;
-    -moz-box-ordinal-group: 2;
-    -ms-flex-order: 2;
-    -webkit-order: 2;
-    order: 2;
+  #view-less {
+    top: initial;
+    right: initial;
+    left: 41%;
+    bottom: 1em;
   }
-
-  .email-me-form { margin-top: 0; }
 }
