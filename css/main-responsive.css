@@ -36,6 +36,8 @@
     padding-left: 2.5em;
     padding-right: 2.5em;
   }
+
+  .fa-stack.small-hidden { display: inline-block; }
 }
 
 @media screen and (min-width: 1025px) {

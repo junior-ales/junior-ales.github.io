@@ -343,3 +343,5 @@ i.fa-stack-1x.dark {
 }
 
 .separator { margin: 0 .5em; }
+
+.small-hidden { display: none; }
