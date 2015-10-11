@@ -17,6 +17,7 @@ var Post = React.createClass({
                srcSet={post.dir + post.name + '--large.jpg 1920w, ' +
                        post.dir + post.name + '--medium.jpg 1280w, ' +
                        post.dir + post.name + '--small.jpg 640w'}
+               sizes="(max-width: 1075px) 490px, 930px"
                src={post.dir + post.name + '--medium.jpg'} alt={post.title + ' photo'} />
           <p className='post__location'>{post.location}</p>
           <p className='post__pubdate'>
