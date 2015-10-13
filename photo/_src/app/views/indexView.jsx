@@ -2,6 +2,7 @@
 
 var Posts = require('model/post');
 var PostList = require('./postList');
+var Tracker = require('model/tracker');
 var POSTS_INC_VALUE = 3;
 
 var SortingOptions = React.createClass({
@@ -24,15 +25,17 @@ var SortingOptions = React.createClass({
         <li className={classMostViewed}>
           <button onClick={this.handleClick}
                   className='post-list__button'
+                  data-track-identifier='sort:most-viewed'
                   data-sorting-option='most-viewed'>
             mais vistas
           </button>
         </li>
         <li className='post-list__sorting--separator'>|</li>
         <li className={classLatest}>
-          <button data-sorting-option='latest'
-                  onClick={this.handleClick}
-                  className='post-list__button'>
+          <button onClick={this.handleClick}
+                  className='post-list__button'
+                  data-track-identifier='sort:latest'
+                  data-sorting-option='latest'>
             últimas
           </button>
         </li>
@@ -49,7 +52,9 @@ var LoadMorePosts = React.createClass({
   render: function() {
     return (
       <div className="load-more-posts">
-        <button className="load-more-posts__button" onClick={this.handleClick}>carregar mais fotos</button>
+        <button className="load-more-posts__button" onClick={this.handleClick} data-track-identifier="load-more">
+          carregar mais fotos
+        </button>
       </div>
     );
   }
@@ -68,10 +73,10 @@ var PostsContainer = React.createClass({
     };
   },
 
-  handleSortingChange: function(sortOption) {
+  handleSortingChange: function(sortingOption) {
     this.setState({
-      sortBy: sortOption,
-      posts: Posts.getAllSortedBy(sortOption).slice(0,this.state.postsLoaded)
+      sortBy: sortingOption,
+      posts: Posts.getAllSortedBy(sortingOption).slice(0,this.state.postsLoaded)
     });
   },
 
@@ -137,9 +142,29 @@ var MostViewedPosts = React.createClass({
 });
 
 var App = {
+  trackEvents: function(tracker) {
+    tracker.track("photoblog:home:visit");
+
+    (function setTrackingRegularElements() {
+      var elems = document.querySelectorAll("*[data-track-identifier]");
+      tracker.trackElems(elems).as("photoblog:home:").andIds();
+    })();
+
+    (function setTrackingMainListPosts() {
+      var posts = document.querySelectorAll("#home-page-posts .post-wrapper");
+      tracker.trackElems(posts).as("photoblog:home:main-list:post");
+    })();
+
+    (function setTrackingMostViewedPosts() {
+      var posts = document.querySelectorAll("#most-viewed-posts .post-wrapper");
+      tracker.trackElems(posts).as("photoblog:home:aside-list:most-viewed:post");
+    })();
+  },
+
   init: function init() {
     React.render(<PostsContainer />, document.getElementById('home-page-posts'));
     React.render(<MostViewedPosts />, document.getElementById('most-viewed-posts'));
+    this.trackEvents(new Tracker(window.mixpanel));
   }
 };
 
