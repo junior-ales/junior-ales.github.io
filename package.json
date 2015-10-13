@@ -5,7 +5,7 @@
   "main": "start.js",
   "scripts": {
     "prestart": "npm run build:js",
-    "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/*.js'",
+    "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/**/*.js'",
     "mocha": "mocha --recursive -R spec specs/ -t 10000",
     "pretest": "npm run build:js && npm run server:up",
     "test": "npm run mocha",

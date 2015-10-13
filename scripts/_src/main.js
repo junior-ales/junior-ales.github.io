@@ -1,20 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
   var homePage = new HomePage(document, window);
   var emailSender = new EmailSender(homePage);
-  bindPageEvents(homePage, emailSender);
+  var tracker = new Tracker(window.mixpanel);
+  bindPageEvents(homePage, emailSender, tracker);
   initializeMainContent(homePage);
-  mixpanel.track('cover page visit');
+  tracker.track("coverpage:visit");
 });
 
-function bindPageEvents(page, emailSender) {
-  page.viewMoreElem.onclick = track('view more', showContent);
-  page.viewLessElem.onclick = track('view less', hideContent);
-  page.emailLink.onclick = track('email link', emailLinkClick);
+function bindPageEvents(page, emailSender, tracker) {
+  page.viewMoreElem.onclick = track('coverpage:expand-details', showContent);
+  page.viewLessElem.onclick = track('coverpage:collapse-details', hideContent);
+  page.emailLink.onclick = track('coverpage:header:email', emailLinkClick);
   page.senderEmail.onfocus = decreaseOpacityViewLess;
   page.senderMessage.onfocus = decreaseOpacityViewLess;
   page.senderEmail.onblur = increaseOpacityViewLess;
   page.senderMessage.onblur = increaseOpacityViewLess;
-  page.senderEmailButton.onclick = track('send email', emailSender.send);
+  page.senderEmailButton.onclick = track('coverpage:email-sender:send', emailSender.send);
+
+  (function setTrackingRegularElems() {
+    var elems = document.querySelectorAll("*[data-track-identifier]");
+    tracker.trackElems(elems).as("coverpage:").andIds();
+  })();
 
   function showContent() {
     page.socialMediaButtons.style.display = 'none';
@@ -46,7 +52,7 @@ function bindPageEvents(page, emailSender) {
 
   function track(eventName, fn) {
     return function() {
-      mixpanel.track(eventName);
+      tracker.track(eventName);
       fn.apply(this, arguments);
     };
   }

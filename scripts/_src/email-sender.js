@@ -6,7 +6,6 @@ function EmailSender(page) {
 
     if (!page.senderMessage.value || !validEmail(page.senderEmail.value)) {
       notify.error('Please add a valid email and a message');
-      mixpanel.track('email fields error');
       return;
     }
 
@@ -27,7 +26,6 @@ function EmailSender(page) {
     } catch(error) {
       notify.error();
       console.log(error);
-      mixpanel.track('excepetion sending email');
     }
   };
 
