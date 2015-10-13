@@ -142,7 +142,7 @@ var MostViewedPosts = React.createClass({
 });
 
 var App = {
-  trackEvents: function(tracker) {
+  trackEvents: function trackEvents(tracker) {
     tracker.track("photoblog:home:visit");
 
     (function setTrackingRegularElements() {

@@ -2,6 +2,7 @@
 
 var Posts = require('model/post');
 var PostList = require('./postList');
+var Tracker = require('model/tracker');
 
 var postName = (function() {
   var pathname = location.pathname;
@@ -56,7 +57,11 @@ var MorePosts = React.createClass({
   },
   render: function() {
     var arePostsLoaded = this.state.posts.length !== 0;
-    var morePostsButton = <button className="more-photos__button" onClick={this.handleClick}>mais fotos</button>;
+    var morePostsButton = (
+      <button className='more-photos__button' data-track-identifier='load-more' onClick={this.handleClick}>
+        mais fotos
+      </button>
+    );
     var postList = <PostList pathNormalizer={true} listTitle={this.state.listTitle} posts={this.state.posts} />;
 
     return (
@@ -81,9 +86,22 @@ var PostView = React.createClass({
 });
 
 module.exports = {
+  trackEvents: function trackEvents(tracker) {
+    tracker.track("photoblog:post:visit");
+
+    (function setTrackingRegularElements() {
+      var elems = document.querySelectorAll("*[data-track-identifier]");
+      tracker.trackElems(elems).as("photoblog:post:").andIds();
+    })();
+
+    (function setTrackingMostViewedPosts() {
+      var posts = document.querySelectorAll(".more-photos .post-wrapper");
+      tracker.trackElems(posts).as("photoblog:post:most-viewed:post");
+    })();
+  },
+
   init: function init() {
-    React.render(
-      <PostView />, document.getElementById('post-container')
-    );
+    React.render(<PostView />, document.getElementById('post-container'));
+    this.trackEvents(new Tracker(window.mixpanel));
   }
 };
