@@ -5,17 +5,17 @@
   "private": true,
   "scripts": {
     "_clean": "rm -Rfv app/assets/posts dist/*",
-    "_clean:production": "rm -Rfv ../index.html ../scripts ../styles ../img ../posts ../fonts",
+    "_clean:prod": "rm -Rfv ../index.html ../scripts ../styles ../img ../posts ../fonts",
     "_browser-sync": "browser-sync start --startPath=dist/ --server --files='dist/**/*' &",
     "_watch": "npm run build && brunch watch",
     "_move-photos": "cp -vR app/templates/posts app/assets/ && find app/assets -name \"*.hbs\" -exec rm -v {} \\+",
     "prebuild": "npm run _clean && npm run _move-photos",
     "build": "brunch build",
-    "prebuild:production": "npm run _clean:production",
-    "build:production": "npm run build -- -P && cp -Rv dist/* ../",
-    "postbuild:production": "find ../posts/ -name '*.html' -type f -exec wc -l {} +",
-    "preserver": "npm run _clean",
-    "server": "npm run _browser-sync && npm run _watch"
+    "prebuild:prod": "npm run _clean:prod",
+    "build:prod": "npm run build -- -P && cp -Rv dist/* ../",
+    "postbuild:prod": "find ../posts/ -name '*.html' -type f -exec wc -l {} +",
+    "prestart": "npm run _clean",
+    "start": "npm run _browser-sync && npm run _watch"
   },
   "repository": {
     "type": "git",
