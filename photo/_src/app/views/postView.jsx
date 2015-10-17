@@ -1,7 +1,7 @@
 'use strict';
 
 var Posts = require('model/post');
-var PostList = require('./postList');
+var PostList = require('./components/postList');
 var Tracker = require('model/tracker');
 
 var postName = (function() {
@@ -32,6 +32,11 @@ var PostContent = React.createClass({
                      post.name + '--medium.jpg 1280w, ' +
                      post.name + '--small.jpg 640w'}
              src={post.name + '--medium.jpg'} alt={post.title + ' photo'} />
+             <p className="post-content__copyright">
+               "<a href={post.name + '--medium.jpg'}>{post.title}</a>"
+               por <a href="http://www.juniorales.com">Junior Ales</a> /
+               <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR"> CC BY-SA 4.0</a>
+             </p>
         <section className='post-content__text' dangerouslySetInnerHTML={postContent()} />
       </div>
     );

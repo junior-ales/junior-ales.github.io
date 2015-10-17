@@ -1,7 +1,7 @@
 "use strict";
 
 var Posts = require('model/post');
-var PostList = require('./postList');
+var PostList = require('./components/postList');
 var Tracker = require('model/tracker');
 var POSTS_INC_VALUE = 3;
 

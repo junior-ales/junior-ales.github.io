@@ -385,3 +385,19 @@ body {
   margin-top: 0;
   max-width: initial;
 }
+
+.post-content__copyright {
+  font-family: $font-headline;
+  font-size: $font-smaller-size;
+  font-style: italic;
+  padding-top: 0.5em;
+  text-align: center;
+
+  a {
+    color: transparentize($color-default-text, .4);
+    text-decoration: none;
+    @include prefix(transition, color .3s ease-in-out);
+
+    &:hover { color: $color-default-text; }
+  }
+}
