@@ -11,26 +11,58 @@ module.exports = [
     "id": 0,
     "name": "o-almoco-e-a-baia",
     "title": "O Almoço e a baía",
-    "dir": "posts/2015/05/22/",
-    "htmlContent": "<p>Não é difícil ver alguém que bate no peito e diz com maior orgulho Bitters health goth cardigan, vinyl listicle street art letterpress gastropub meggings Vice sartorial cred. Fap Shoreditch lumbersexual semiotics deep v mlkshk. Ethical sartorial pour-over artisan, chia typewriter cronut messenger bag single-origin coffee mlkshk Brooklyn. Raw denim cold-pressed McSweeney\"s cardigan, blog put a bird on it meditation forage freegan bitters High Life dreamcatcher whatever. Swag asymmetrical cronut keffiyeh. Umami Odd Future Bushwick, pop-up artisan mustache paleo migas irony organic tote bag sartorial slow-carb. Direct trade retro chillwave sustainable street art, Vice sartorial.</p>",
+    "dir": "posts/2015/10/07/",
+    "htmlContent": "<p>\
+      São Francisco é uma cidade realmente impressionante. É uma amostra do que o trabalho humano \
+      <span class='post-content__text--strike'>e a exploração do mesmo muitas vezes</span> pode fazer em vários aspectos. \
+      A quantidade e a beleza de prédios, pontes e estradas dão uma ideia do que nós somos capazes de construir. \
+      </p><p> \
+      Talvez o cartão postal mais famoso da cidade seja a ponte \
+      <a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Ponte_Golden_Gate'><i>Golden Gate</i></a>. \
+      Muitas pessoas a conhece, seja ao vivo, por fotos ou por tê-la visto em algum filme americano. Mas o que muitas \
+      pessoas não sabem é que a <i>Golden Gate</i> tem uma ponte irmã, a \
+      <a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Ponte_S%C3%A3o_Francisco%E2%80%93Oakland_Bay'><i>Bay Bridge</i></a>. \
+      Comparando as duas pontes, a <i>Bay Bridge</i> é um pouco mais velha, foi inaugurada cerca de 6 meses antes da irmã. Ela além de \
+      mais velha também é maior, mais do que o dobro da extensão da outra e pode ser vista como plano de fundo da foto dessa postagem.\
+      </p><p> \
+      Mas não são só de concreto e aço as maiores construções dessa cidade. São Francisco é a referência do desenvolvimento \
+      de software estadounidense, quiçá do mundo e exatamente por isso essa foto foi possível. \
+      </p><p> \
+      Como consultor de desenvolvimento de software, fui até São Francisco começar um projeto com um cliente de longa \
+      data da empresa para qual trabalho. Por conta desse relacionamento longo, muitos outros colegas de trabalho \
+      também visitaram a cidade e por isso não era raro ver pessoas do escritório publicando fotos nas redes sociais \
+      com a <i>Bay Bridge</i> como plano de fundo. Na verdade era como uma tradição para todos que visitavam a cidade: \
+      vá a São Francisco, espere um dia de sol e faça pose para uma foto com a <i>Bay Bridge</i> ao fundo.\
+      </p><p> \
+      Obviamente eu também segui essa tradição e tenho minha foto com a ponte. Porém, a construção é tão imponente, \
+      tão desafiadora, que eu senti quase que a necessidade de retratá-la de uma forma diferente e foram nos intervalos de \
+      trabalho para o almoço que eu encontrei o que queria. \
+      </p><p> \
+      Para quem, assim como eu, visita São Francisco, a vista que essa varanda tem da ponte é hipnotizante. \
+      É quase impossível não parar por um momento para admirá-la. Porém, diferentemente de mim, as pessoas \
+      que conviviam com essa vista todos os dias já a deixava passar desapercebida. Toda a magia e imponência \
+      da construção se reduzia a nada e ter aquela obra gigantesca como plano de fundo dos almoços se tornava algo normal.\
+      </p><p> \
+      Nessa fotografia tentei registrar esse sentimento. Parecia que para quem se acostumou com a ponte, ter aquela vista todos \
+      os dias ou não era indiferente, o que para mim deixou uma lição muito grande a respeito da rotina e como lidar com ela.\
+      </p><p> \
+      Independentemente de quão grandioso, de quanto suor, sangue, lágrima se gaste para realizar algo, \
+      o tempo e a rotina vão tornar esse feito normal. Invariavelmente ele irá se tornar corriqueiro, de valor reduzido. \
+      Todavia, fica a nosso critério como vamos reagir a isso. Acredito que os engenheiros, arquitetos e \
+      todos os trabalhadores que investiram muito tempo de vida construindo a <i>Bay Bridge</i> ficariam \
+      aborrecidos com a indiferença que muitas pessoas tratam essa grande obra, mas quero acreditar que eles de alguma forma \
+      já esperassem por isso e que tenham partido para uma próxima grande obra logo em seguida. \
+      </p><p> \
+      Querer desafiar o poder da rotina não me parece algo que valha o esforço, por isso se manter sempre à \
+      procura da nossa próxima grande obra me parece a melhor maneira de lidar com os efeitos do tempo.\
+    </p>",
     "location": "São Francisco, EUA",
-    "pubdate": pubdate("2015-05-22"),
+    "pubdate": pubdate("2015-10-07"),
     "viewsRanking": 1
   },
 
   {
     "id": 1,
-    "name": "origami-party",
-    "title": "Origami Party",
-    "dir": "posts/2015/04/13/",
-    "htmlContent": "<p>Bitters health goth cardigan,</p> <p>vinyl listicle street art letterpress gastropub meggings Vice sartorial cred. Fap Shoreditch lumbersexual semiotics deep v mlkshk. Ethical sartorial pour-over artisan, chia typewriter cronut messenger bag single-origin coffee mlkshk Brooklyn. Raw denim cold-pressed McSweeney\"s cardigan, blog put a </p><p>bird on it meditation forage freegan bitters High Life dreamcatcher whatever. Swag asymmetrical cronut keffiyeh. Umami Odd Future Bushwick, pop-up artisan mustache paleo migas irony organic tote bag sartorial slow-carb. Direct trade retro chillwave sustainable street art, Vice sartorial.</p>",
-    "location": "Pune, India",
-    "pubdate": pubdate("2015-04-13"),
-    "viewsRanking": 3
-  },
-
-  {
-    "id": 2,
     "name": "flores-flutuantes",
     "title": "Flores Flutuantes",
     "dir": "posts/2015/10/17/",

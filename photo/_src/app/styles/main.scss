@@ -358,6 +358,12 @@ body {
   &:hover { color: $color-default-text; }
 }
 
+.post-content__text--strike {
+  text-decoration: line-through;
+  font-style: italic;
+  font-size: smaller;
+}
+
 .post-content__copyright {
   font-family: $font-headline;
   font-size: $font-smaller-size;
