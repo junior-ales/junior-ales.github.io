@@ -39,14 +39,14 @@ module.exports = [
       trabalho para o almoço que eu encontrei o que queria. \
       </p><p> \
       Para quem, assim como eu, visita São Francisco, a vista que essa varanda tem da ponte é hipnotizante. \
-      É quase impossível não parar por um momento para admirá-la. Porém, diferentemente de mim, as pessoas \
-      que conviviam com essa vista todos os dias já a deixava passar desapercebida. Toda a magia e imponência \
+      É quase impossível não parar por um momento para admirá-la. Porém, percebi que pessoas que conviviam com \
+      essa vista todos os dias, deixavam-la passar desapercebida. Toda a magia e imponência \
       da construção se reduzia a nada e ter aquela obra gigantesca como plano de fundo dos almoços se tornava algo normal.\
       </p><p> \
       Nessa fotografia tentei registrar esse sentimento. Parecia que para quem se acostumou com a ponte, ter aquela vista todos \
       os dias ou não era indiferente, o que para mim deixou uma lição muito grande a respeito da rotina e como lidar com ela.\
       </p><p> \
-      Independentemente de quão grandioso, de quanto suor, sangue, lágrima se gaste para realizar algo, \
+      Independentemente de quão grandioso, de quanto suor, sangue e lágrimas se gaste para realizar algo, \
       o tempo e a rotina vão tornar esse feito normal. Invariavelmente ele irá se tornar corriqueiro, de valor reduzido. \
       Todavia, fica a nosso critério como vamos reagir a isso. Acredito que os engenheiros, arquitetos e \
       todos os trabalhadores que investiram muito tempo de vida construindo a <i>Bay Bridge</i> ficariam \
@@ -63,6 +63,38 @@ module.exports = [
 
   {
     "id": 1,
+    "name": "uma-cor-que-grita",
+    "title": "Uma Cor que Grita",
+    "dir": "posts/2015/10/19/",
+    "htmlContent": "<p>\
+      O vermelho é uma cor que não se esconde. Não há como expressar neutralidade ou indecisão com essa cor; \
+      definitivamente a expressão 'em cima do muro' não cabe a ela e nem a nada que ela descreve. Mesmo assim \
+      eu a escolhi para um projeto fotográfico. O desafio era conseguir cinco fotos que tivessem a cor escolhida \
+      como personagem principal. \
+      </p><p>\
+      Vermelho. Logo de cara achei que seria fácil. Luz de freio, placa de pare, batom, catchup, sangue, esmalte... era \
+      só escolher. No final de uma semana consegui entregar apenas duas fotos, sendo a foto dessa postagem uma delas. \
+      A outra tinha um projeto muito bacana, mas a execução e o resultado não ficaram nem perto do que eu esperava. \
+      Tirei um tempo pra tentar entender porque não consegui completar a tarefa. Cinco fotos e uma cor primária, o que \
+      poderia dar errado? \
+      </p><p>\
+      Acontece que tudo que gira em torno do vermelho é, por natureza, complexo. \
+      Vermelho é a cor do 'proibido', 'pare', 'não entre' e também do 'eu te amo'. \
+      A cor da nobreza e a cor da luta popular. Da paixão que queima e da rosa que acalenta. Ela grita, não \
+      sussurra. Ela não <i>dá a entender</i>, ela se <i>faz entender</i>. Ela é direta, faz questão de ser clara. \
+      </p><p>\
+      O projeto passou, o resultado não foi bom, mas me fez olhar para essa cor e o que ela caracteriza de uma outra \
+      maneira. Hoje eu penso o vermelho como a cor da sinceridade, da verdade e me vejo querendo ser \
+      <i>mais vermelho</i> na vida. Por isso, só agradeço quem me pôs a fazer o projeto que falhei em concluir. \
+      Não vi a nota que recebi, mas provalemente ela foi vermelha.\
+    </p>",
+    "location": "Porto Alegre, Brasil",
+    "pubdate": pubdate("2015-10-19"),
+    "viewsRanking": 3
+  },
+
+  {
+    "id": 2,
     "name": "flores-flutuantes",
     "title": "Flores Flutuantes",
     "dir": "posts/2015/10/17/",
