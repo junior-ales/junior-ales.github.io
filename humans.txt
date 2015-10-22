@@ -5,7 +5,8 @@
   From:Campo Grande, MS, Brazil
 
 /* SITE */
-  Last update:2015/05/25
-  Language: English
+  Last update:2015/10/21
+  Language: English, Brazilian Portuguese
+  Components: HTML, Javascript, CSS, ReactJS, Handlebars.js, brunch.io, nodejs, browser-sync
   Doctype:HTML5
   IDE: vim
