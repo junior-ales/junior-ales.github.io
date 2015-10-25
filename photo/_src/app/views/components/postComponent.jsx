@@ -2,10 +2,21 @@
 
 var Post = React.createClass({
   detailedLayout: function(post) {
+    var pubdate = moment(post.pubdate.toString());
+
     return (
-      <a className='post-wrapper' href={post.dir + post.name + '.html'}>
-        <img className='post__cover--cropped'
-             src={post.dir + post.name + '--cropped.jpg'} alt={post.title + ' foto'} />
+      <a className='post-wrapper--cropped' href={post.dir + post.name + '.html'}>
+        <div className='small-column'>
+          <img className='post__cover--cropped'
+               src={post.dir + post.name + '--cropped.jpg'} alt={post.title + ' foto'} />
+        </div>
+        <div className='large-column'>
+           <h2 className='post__title--cropped'>{post.title}</h2>
+           <time dateTime={pubdate.format()}>
+             {pubdate.format('DD/MMM/YYYY')}
+           </time>
+           <p>{post.location}</p>
+        </div>
       </a>
     );
   },

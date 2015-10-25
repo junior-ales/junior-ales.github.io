@@ -184,6 +184,26 @@ body {
   color: inherit;
 }
 
+.post-wrapper--cropped {
+  @extend .post-wrapper;
+  @include display-flex-wrap();
+
+  opacity: .5;
+  @include prefix(transition, opacity .3s ease-in-out);
+  &:hover { opacity: 1; }
+
+  .small-column {
+    @include order(0);
+    width: 30%;
+  }
+
+  .large-column {
+    @include order(1);
+    width: 70%;
+    * { padding-left: .5em; }
+  }
+}
+
 @include keyframes(fadeIn) {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -257,6 +277,16 @@ body {
   text-align: left;
   margin: 0;
   @include prefix(transition, background-color .3s ease-in-out);
+}
+
+.post__title--cropped {
+  width: 100%;
+  margin-top: .25em;
+  margin-bottom: .5em;
+  font-size: 1.25em;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .main-footer {

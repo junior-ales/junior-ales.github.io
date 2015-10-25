@@ -139,9 +139,8 @@ var MostViewedPosts = React.createClass({
     if (this.state.visible) {
       return <PostList
               listTitle="fotos mais vistas"
-              //postLayout="detailed" FEATURE TOGGLE
-              //posts={Posts.getAllSortedBy('most-viewed').slice(0,3)} />;
-              posts={Posts.getAllSortedBy('most-viewed').slice(0,2)} />;
+              postLayout="detailed"
+              posts={Posts.getAllSortedBy('most-viewed').slice(0,3)} />;
     }
     return null;
   }
