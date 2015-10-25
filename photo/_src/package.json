@@ -1,7 +1,7 @@
 {
   "name": "juniorales-photoblog",
-  "version": "0.0.1",
-  "description": "Photo blog of Junior Ales",
+  "version": "1.0.0",
+  "description": "Fotografia de Junior Ales",
   "private": true,
   "scripts": {
     "_clean": "rm -Rfv app/assets/posts dist/*",

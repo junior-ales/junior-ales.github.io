@@ -11,6 +11,26 @@ var postName = (function() {
 })();
 
 var PostContent = React.createClass({
+  getDateFormat: function() {
+    return window.innerWidth > 650 ? 'LL' : 'DD/MMM/YYYY';
+  },
+
+  getInitialState: function() {
+    return { dateFormat: this.getDateFormat() };
+  },
+
+  handleResize: function(e) {
+    this.setState({ dateFormat: this.getDateFormat() });
+  },
+
+  componentDidMount: function() {
+    window.addEventListener('resize', this.handleResize);
+  },
+
+  componentWillUnmount: function() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+
   render: function() {
     var post = this.props.post;
     moment.locale('pt-BR');
@@ -23,7 +43,7 @@ var PostContent = React.createClass({
           <span className="post-content__detail">
             {post.location}
             <time dateTime={post.pubdate.toString()}>
-              {moment(post.pubdate.toString()).format('LL')}
+              {moment(post.pubdate.toString()).format(this.state.dateFormat)}
             </time>
           </span>
         </header>
