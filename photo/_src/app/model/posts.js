@@ -58,7 +58,7 @@ module.exports = [
     </p>",
     "location": "São Francisco, EUA",
     "pubdate": pubdate("2015-10-07"),
-    "viewsRanking": 1
+    "viewsRanking": 2
   },
 
   {
@@ -117,6 +117,6 @@ module.exports = [
       </p>",
     "location": "Amsterdã, Holanda",
     "pubdate": pubdate("2015-10-17"),
-    "viewsRanking": 2
+    "viewsRanking": 1
   }
 ];

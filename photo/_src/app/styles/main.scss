@@ -216,6 +216,11 @@ body {
   @include prefix(transition, opacity .3s ease-in-out);
 }
 
+.post__cover--cropped {
+  width: 100px;
+  height: 100px;
+}
+
 .post__location {
   padding: .75em;
   position: absolute;
