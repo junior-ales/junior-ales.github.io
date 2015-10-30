@@ -1,0 +1,35 @@
+{
+  "src_folders" : ["./test/functional-tests"],
+  "output_folder" : "./test/functional-tests/reports",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./node_modules/selenium-server/lib/runner/selenium-server-standalone-2.48.2.jar",
+    "log_path" : "./test/functional-tests/logs",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./node_modules/chromedriver/lib/chromedriver/chromedriver"
+    }
+  },
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "on_failure" : true,
+        "on_error" : false,
+        "path" : "./test/functional-tests/screenshots"
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    }
+  }
+}

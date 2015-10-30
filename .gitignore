@@ -4,6 +4,8 @@
 .DS_Store
 node_modules/
 dist/
+test/functional-tests/reports/*.xml
+test/functional-tests/screenshots/*.jpg
 
 # posts should be ignored and
 # its content should come only
