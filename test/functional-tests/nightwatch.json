@@ -1,5 +1,5 @@
 {
-  "src_folders" : ["./test/functional-tests"],
+  "src_folders" : ["./test/functional-tests/tests"],
   "output_folder" : "./test/functional-tests/reports",
 
   "selenium" : {

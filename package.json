@@ -15,7 +15,7 @@
     "postcrossbrowser": "npm run posttest",
     "build:js": "uglifyjs scripts/_src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
     "pretest:functional": "npm run server:up",
-    "test:functional": "./nightwatch",
+    "test:functional": "nightwatch -c test/functional-tests/nightwatch.json",
     "posttest:functional": "npm run server:down",
     "server:up": "node start.js &",
     "server:down": "pkill -SIGINT node"
