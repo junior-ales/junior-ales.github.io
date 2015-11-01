@@ -6,13 +6,8 @@
   "scripts": {
     "prestart": "npm run build:js",
     "start": "browser-sync  start --server --files='*.html, css/*.css, scripts/**/*.js'",
-    "mocha": "mocha --recursive -R spec specs/ -t 10000",
-    "pretest": "npm run build:js && npm run server:up",
-    "test": "npm run mocha",
-    "posttest": "npm run server:down",
-    "precrossbrowser": "npm run pretest",
-    "crossbrowser": "parallelshell 'SELENIUM_BROWSER=safari npm run mocha' 'SELENIUM_BROWSER=chrome npm run mocha' 'SELENIUM_BROWSER=firefox npm run mocha' 'npm run mocha'",
-    "postcrossbrowser": "npm run posttest",
+    "pretest": "npm run build:js",
+    "test": "npm run test:functional",
     "build:js": "uglifyjs scripts/_src/*.js  --compress --mangle --stats --lint -o scripts/main.min.js",
     "pretest:functional": "npm run server:up",
     "test:functional": "nightwatch -c test/functional-tests/nightwatch.json",
@@ -32,15 +27,12 @@
   "homepage": "http://juniorales.com",
   "devDependencies": {
     "browser-sync": "^2.7.13",
-    "chai": "^3.0.0",
     "chromedriver": "^2.19.0",
     "ejs": "^2.3.1",
     "express": "^4.12.4",
     "mocha": "^2.2.5",
     "nightwatch": "^0.8.6",
-    "parallelshell": "^1.2.0",
     "selenium-server": "^2.48.2",
-    "selenium-webdriver": "^2.46.1",
     "uglify-js": "^2.4.23"
   }
 }
