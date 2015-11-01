@@ -1,8 +1,12 @@
-var TIMEOUT = 10000;
+var TIMEOUT = 5000;
 
 var coverPageCommands = {
   expandDetails: function() {
     return this.click('@expandDetails').waitForElementVisible('@collapseDetails', TIMEOUT);
+  },
+
+  collapseDetails: function() {
+    return this.click('@collapseDetails').waitForElementVisible('@expandDetails', TIMEOUT);
   },
 
   sendEmail: function(emailAddress, emailContent) {
@@ -42,6 +46,7 @@ module.exports = {
     emailContent: { selector: '#sender-message' },
     sendEmailButton: { selector: '#send-email-button' },
     alertBox: { selector: '#alert-box' },
-    alertContent: { selector: '#alert-content' }
+    alertContent: { selector: '#alert-content' },
+    emailHeaderLink: { selector: '#email-link' }
   }
 };
