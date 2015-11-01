@@ -1,6 +1,8 @@
+var TIMEOUT = 10000;
+
 var coverPageCommands = {
   expandDetails: function() {
-    return this.click('@expandDetails').waitForElementVisible('@collapseDetails', 1000);
+    return this.click('@expandDetails').waitForElementVisible('@collapseDetails', TIMEOUT);
   },
 
   sendEmail: function(emailAddress, emailContent) {
@@ -10,9 +12,16 @@ var coverPageCommands = {
       click('@sendEmailButton');
   },
 
+  assertOpacity: function(elem, value) {
+    var self = this;
+    return self.getCssProperty(elem, 'opacity', function(result) {
+      self.assert.equal(parseFloat(result.value).toFixed(2), parseFloat(value));
+    });
+  },
+
   assertAlertMessage: function(message) {
     return this.
-      waitForElementVisible('@alertBox', 1000).
+      waitForElementVisible('@alertBox', TIMEOUT).
       assert.containsText('@alertContent', message);
   },
 

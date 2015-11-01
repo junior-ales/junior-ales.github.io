@@ -5,7 +5,11 @@ module.exports = {
     coverpage.
       navigate().
       expandDetails().
+      assertOpacity('@collapseDetails', '1').
+      click('@emailContent').
+      assertOpacity('@collapseDetails', '0.2').  // thanks to safari I can't use assert.cssProperty('opacity', '0.2')
       sendEmail('email@test.com', 'an email content').
+      assertOpacity('@collapseDetails', '1').
       assertAlertMessage('Email Sent Successfuly').
       assertEmailFieldsAreEmpty();
 
@@ -22,23 +26,6 @@ module.exports = {
       assertAlertMessage('Please add a valid email and a message').
       sendEmail('INVALID EMAIL ADDRESS', 'an email content').
       assertAlertMessage('Please add a valid email and a message');
-
-    browser.end();
-  },
-
-  'Transparentize View Less Button When Writing Email' : function (browser) {
-    var coverpage = browser.page.coverpage();
-
-    coverpage.
-      navigate().
-      expandDetails().
-      assert.cssProperty('@collapseDetails', 'opacity', '1').
-      click('@emailAddress').
-      assert.cssProperty('@collapseDetails', 'opacity', '0.2').
-      click('@emailContent').
-      assert.cssProperty('@collapseDetails', 'opacity', '0.2').
-      click('@sendEmailButton').
-      assert.cssProperty('@collapseDetails', 'opacity', '1');
 
     browser.end();
   }
