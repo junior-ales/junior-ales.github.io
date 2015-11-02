@@ -32,9 +32,6 @@
     },
 
     "ci": {
-      "selenium" : {
-        "start_process": false
-      },
       "cli_args" : {
         "webdriver.chrome.driver" : "/usr/local/bin/chromedriver"
       }
