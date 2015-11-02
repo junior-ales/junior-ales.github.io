@@ -9,10 +9,7 @@
     "server_path" : "./node_modules/selenium-server/lib/runner/selenium-server-standalone-2.48.2.jar",
     "log_path" : "./test/functional-tests/logs",
     "host" : "127.0.0.1",
-    "port" : 4444,
-    "cli_args" : {
-      "webdriver.chrome.driver" : "./node_modules/chromedriver/lib/chromedriver/chromedriver"
-    }
+    "port" : 4444
   },
 
   "test_settings" : {
@@ -24,8 +21,28 @@
         "on_error" : false,
         "path" : "./test/functional-tests/screenshots"
       },
+      "cli_args" : {
+        "webdriver.chrome.driver" : "./node_modules/chromedriver/lib/chromedriver/chromedriver"
+      },
       "desiredCapabilities": {
         "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+
+    "ci": {
+      "selenium" : {
+        "start_process": false
+      },
+      "cli_args" : {
+        "webdriver.chrome.driver" : "/usr/local/bin/chromedriver"
+      }
+    },
+
+    "safari": {
+      "desiredCapabilities": {
+        "browserName": "safari",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }

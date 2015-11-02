@@ -6,6 +6,7 @@ module.exports = {
     coverpage.navigate().assert.visible('@emailHeaderLink');
 
     browser.resizeWindow(320, 480);
+    browser.pause(500);
     coverpage.navigate().assert.hidden('@emailHeaderLink');
 
     browser.end();
