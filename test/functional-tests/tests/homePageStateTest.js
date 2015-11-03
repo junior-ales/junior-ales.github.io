@@ -2,11 +2,11 @@ module.exports = {
   'Hide Email Link in Small Screens' : function (browser) {
     var coverpage = browser.page.coverpage();
 
-    //browser.maximizeWindow();
-    //coverpage.navigate().assert.visible('@emailHeaderLink');
+    browser.maximizeWindow();
+    coverpage.navigate().assert.visible('@emailHeaderLink');
 
     browser.resizeWindow(320, 480);
-    browser.pause(1500);
+    browser.pause(500);
     coverpage.navigate().assert.hidden('@emailHeaderLink');
 
     browser.end();

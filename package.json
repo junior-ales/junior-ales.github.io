@@ -12,7 +12,7 @@
     "pretest:functional": "npm run server:up",
     "test:functional": "nightwatch -c test/functional-tests/nightwatch.json",
     "posttest:functional": "npm run server:down",
-    "test:ci": "npm run test:functional -- -e ci",
+    "test:ci": "npm run test:functional -- -e saucelabs",
     "server:up": "node start.js &",
     "server:down": "pkill -SIGINT node"
   },
