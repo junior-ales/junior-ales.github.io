@@ -14,7 +14,6 @@
     "prebuild:prod": "npm run _clean:prod",
     "build:prod": "npm run build -- -P && cp -Rv dist/* ../",
     "postbuild:prod": "find ../posts/ -name '*.html' -type f -exec wc -l {} +",
-    "prestart": "npm run _clean",
     "start": "npm run _browser-sync && npm run _watch"
   },
   "repository": {

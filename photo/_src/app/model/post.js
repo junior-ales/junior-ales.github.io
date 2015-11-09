@@ -1,6 +1,6 @@
 "use strict";
 
-var allPosts = require('./posts');
+var allPosts = require('./data/posts');
 
 var sortedByProperty = function(property, arr) {
   return arr.slice().sort(function(a, b) {

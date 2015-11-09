@@ -70,7 +70,7 @@ var MorePosts = React.createClass({
     };
 
     return {
-      posts: Posts.getAllSortedBy('most-viewed').slice(0,3).filter(removeCurrentPost),
+      posts: Posts.getAllSortedBy('most-viewed').filter(removeCurrentPost).slice(0,2),
       listTitle: 'fotos mais vistas'
     };
   },

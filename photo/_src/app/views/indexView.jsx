@@ -46,15 +46,14 @@ var SortingOptions = React.createClass({
 
 var LoadMorePosts = React.createClass({
   handleClick: function() {
-    //this.props.onLoadMoreClick();
+    this.props.onLoadMoreClick();
   },
 
   render: function() {
     return (
-      <div className="load-more-posts disabled">
+      <div className="load-more-posts">
         <button
-          title="Não há mais posts para carregar"
-          className="load-more-posts__button disabled"
+          className="load-more-posts__button"
           onClick={this.handleClick}
           data-track-identifier="load-more">carregar mais fotos</button>
       </div>

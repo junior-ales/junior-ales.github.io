@@ -421,12 +421,6 @@ body {
   @include prefix(box-shadow, 2px 2px 3px $color-primary);
 }
 
-.load-more-posts.disabled {
-  opacity: .5;
-  cursor: not-allowed;
-  @include prefix(box-shadow, none);
-}
-
 .load-more-posts__button {
   @extend .post-list__button;
   font-family: $font-headline;
@@ -436,11 +430,6 @@ body {
   @include prefix(transition, color .3s ease-in-out);
 
   &:hover { color: $color-default-text; }
-}
-
-.load-more-posts__button.disabled {
-  cursor: not-allowed;
-  &:hover { color: transparentize($color-default-text, .6); }
 }
 
 .more-photos {
