@@ -118,42 +118,42 @@ module.exports = [
     "location": "Amsterdã, Holanda",
     "pubdate": pubdate("2015-10-17"),
     "viewsRanking": 1
-//  },
-//
-//  {
-//    "id": 3,
-//    "name": "invisiveis",
-//    "title": "Invisíveis",
-//    "dir": "posts/2015/11/10/",
-//    "htmlContent": "<p> \
-//      Acho impressionante a nossa capacidade de ignorar as coisas que estão bem à frente de nós. Algo como <i>'se enxerga, mas não \
-//      se pode ver'</i> sabe? Foi exatamente isso que aconteceu comigo nessa fotografia. Antes de falar da fotografia em si, \
-//      deixe-me contar um pouco mais sobre o que estava acontecendo um pouco antes. \
-//      </p><p> \
-//      Berlim é uma cidade que por onde se anda se vê história. Era um tal de <i>'ah, era isso que meu professor de história falava nas aulas?'</i> \
-//      a todo tempo, o que me fez querer pegar um mapa e andar meio sem rumo pela cidade. Depois de algumas horas de andança, passando \
-//      pela impressionante <a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Catedral_de_Berlim'>Catedral de Berlim</a> \
-//      e o belo <i><a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Lustgarten'>Lustgarten</a></i>, \
-//      me deparo com um museu bem imponente. Na hora, nem sabia qual era o nome do mesmo, mas vim a descobrir depois que se tratava do \
-//      <i><a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Neues_Museum'>Neues Museum</a></i> ('Novo Museu' em \
-//      português).\
-//      </p><p> \
-//      Mesmo num dia nublado, o gramado era de um verde que parecia de cenário de filme. Duas fileiras de colunas que lembram \
-//      um estilo dórico cercam todo o lugar, chuto que deva ter mais de duzentas colunas lá, formando corredores hipnotizantes ao redor \
-//      do museu. Fiquei tão impressionado com a entrada do lugar que nem me prestei a entrar nele e é aí que entra essa fotografia. \
-//      </p><p> \
-//      Sou apaixonado por fotografar padrões. Postes enfileirados, construções em sequência, monitores de computador em linha... \
-//      esse tipo de fotografia realmente me fascina e nesse dia fotografei muito tudo que esses padrões de colunas enfileiradas poderiam me dar. \
-//      Meu foco era tão grande nas colunas que nem percebi que em algumas fotos haviam elementos externos, como o casal dessa postagem. \
-//      Para ser sincero, não recordo de ter tirado essa foto por exemplo, fui percebê-la depois, no hotel, revendo o que tinha conseguido \
-//      depois do dia inteiro de turismo.\
-//      </p><p> \
-//      No final, creio que a foto desse casal tenha sido na verdade a foto que mais gostei da visita à entrada do <i>'Novo Museu'</i>, \
-//      mas no momento em que eu estava com a câmera na mão, eles eram invisíveis para mim e isso me fez pensar em quanta coisa nós perdemos \
-//      no nosso dia a dia, que apesar de estarem bem na nossa frente, não conseguimos vê-las.\
-//      </p>",
-//    "location": "Berlim, Alemanha",
-//    "pubdate": pubdate("2015-11-10"),
-//    "viewsRanking": 4
+  },
+
+  {
+    "id": 3,
+    "name": "invisiveis",
+    "title": "Invisíveis",
+    "dir": "posts/2015/11/10/",
+    "htmlContent": "<p> \
+      Acho impressionante a nossa capacidade de ignorar as coisas que estão bem à frente de nós. Algo como <i>'se enxerga, mas não \
+      se pode ver'</i> sabe? Foi exatamente isso que aconteceu comigo nessa fotografia. Antes de falar da fotografia em si, \
+      deixe-me contar um pouco mais sobre o que estava acontecendo um pouco antes. \
+      </p><p> \
+      Berlim é uma cidade que por onde se anda se vê história. Era um tal de <i>'ah, era isso que meu professor de história falava nas aulas?'</i> \
+      a todo tempo, o que me fez querer pegar um mapa e andar meio sem rumo pela cidade. Depois de algumas horas de andança, passando \
+      pela impressionante <a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Catedral_de_Berlim'>Catedral de Berlim</a> \
+      e o belo <i><a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Lustgarten'>Lustgarten</a></i>, \
+      me deparo com um museu bem imponente. Na hora, nem sabia qual era o nome do mesmo, mas vim a descobrir depois que se tratava do \
+      <i><a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Neues_Museum'>Neues Museum</a></i> ('Novo Museu' em \
+      português).\
+      </p><p> \
+      Mesmo num dia nublado, o gramado era de um verde que parecia de cenário de filme. Duas fileiras de colunas que lembram \
+      um estilo dórico cercam todo o lugar, chuto que deva ter mais de duzentas colunas lá, formando corredores hipnotizantes ao redor \
+      do museu. Fiquei tão impressionado com a entrada do lugar que nem me prestei a entrar nele e é aí que entra essa fotografia. \
+      </p><p> \
+      Sou apaixonado por fotografar padrões. Postes enfileirados, construções em sequência, monitores de computador em linha... \
+      esse tipo de fotografia realmente me fascina e nesse dia fotografei muito tudo que esses padrões de colunas enfileiradas poderiam me dar. \
+      Meu foco era tão grande nas colunas que nem percebi que em algumas fotos haviam elementos externos, como o casal dessa postagem. \
+      Para ser sincero, não recordo de ter tirado essa foto por exemplo, fui percebê-la depois, no hotel, revendo o que tinha conseguido \
+      depois do dia inteiro de turismo.\
+      </p><p> \
+      No final, creio que a foto desse casal tenha sido na verdade a foto que mais gostei da visita à entrada do <i>'Novo Museu'</i>, \
+      mas no momento em que eu estava com a câmera na mão, eles eram invisíveis para mim e isso me fez pensar em quanta coisa nós perdemos \
+      no nosso dia a dia, que apesar de estarem bem na nossa frente, não conseguimos vê-las.\
+      </p>",
+    "location": "Berlim, Alemanha",
+    "pubdate": pubdate("2015-11-10"),
+    "viewsRanking": 4
   }
 ];
