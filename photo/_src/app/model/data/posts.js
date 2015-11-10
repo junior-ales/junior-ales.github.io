@@ -126,7 +126,7 @@ module.exports = [
     "title": "Invisíveis",
     "dir": "posts/2015/11/10/",
     "htmlContent": "<p> \
-      Acho impressionante a nossa capacidade de ignorar as coisas que estão bem à frente de nós. Algo como <i>'se enxerga, mas não \
+      Acho impressionante nossa capacidade de ignorar as coisas que estão bem na nosssa frente. Algo como <i>'se enxerga, mas não \
       se pode ver'</i> sabe? Foi exatamente isso que aconteceu comigo nessa fotografia. Antes de falar da fotografia em si, \
       deixe-me contar um pouco mais sobre o que estava acontecendo um pouco antes. \
       </p><p> \
