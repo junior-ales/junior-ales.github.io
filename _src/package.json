@@ -1,0 +1,45 @@
+{
+  "name": "junior-ales.github.io",
+  "version": "1.2.1",
+  "description": "My Web Cover Page",
+  "scripts": {
+    "pretest": "npm run build",
+    "test": "npm run test:functional -- -e default,safari",
+    "pretest:functional": "npm run server:up",
+    "test:functional": "nightwatch -c ./test/functional-tests/nightwatch.json",
+    "posttest:functional": "npm run server:down",
+    "server:up": "node ./test/start.js &",
+    "server:down": "pkill -SIGINT node",
+    "prebuild": "rm -Rv dist/*",
+    "build": "brunch build",
+    "prebuild:prod": "rm -Rv ../*.html ../*.txt ../*.xml ../*.md ../CNAME ../LICENSE ../fonts ../images ../scripts ../styles",
+    "build:prod": "npm run build -- -P && cp -Rv dist/* ../",
+    "start": "brunch watch --server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junior-ales/junior-ales.github.io.git"
+  },
+  "author": "@junior_ales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/junior-ales/junior-ales.github.io/issues"
+  },
+  "homepage": "http://www.juniorales.com",
+  "devDependencies": {
+    "chromedriver": "^2.19.0",
+    "ejs": "^2.3.1",
+    "express": "^4.12.4",
+    "mocha": "^2.2.5",
+    "nightwatch": "^0.8.6",
+    "selenium-server": "^2.48.2",
+    "auto-reload-brunch": ">= 1.0 < 1.9",
+    "clean-css-brunch": ">= 1.0 < 1.9",
+    "css-brunch": ">= 1.0 < 1.9",
+    "javascript-brunch": ">= 1.0 < 1.9",
+    "react-brunch": "^1.0.9",
+    "sass-brunch": "^1.9.1",
+    "static-site-brunch": "^0.1.2",
+    "uglify-js-brunch": ">= 1.0 < 1.9"
+  }
+}

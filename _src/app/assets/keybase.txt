@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/juniorales
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.juniorales.com
+  * I am juniorales (https://keybase.io/juniorales) on keybase.
+  * I have a public key with fingerprint 9CAA DF00 4862 AD85 9051  5F05 E28B BD43 6751 C159
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.23"
+        },
+        "key": {
+            "eldest_kid": "0101778b9ec2c4a08d67fee4fea14482b453cf8767040ecf1c4ab32ca85932d21b7a0a",
+            "fingerprint": "9caadf004862ad8590515f05e28bbd436751c159",
+            "host": "keybase.io",
+            "key_id": "e28bbd436751c159",
+            "kid": "0101778b9ec2c4a08d67fee4fea14482b453cf8767040ecf1c4ab32ca85932d21b7a0a",
+            "uid": "6f110cf682c957546038be169a947e19",
+            "username": "juniorales"
+        },
+        "service": {
+            "hostname": "www.juniorales.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1447178506,
+    "expire_in": 157680000,
+    "prev": "517098d71f832042828e988fcf6528224fffa7feece3fe5e29761a8ce0f88554",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Comment: GPGTools - https://gpgtools.org
+
+owGtkm1sFEUYx++grVohaYXUBKmUBWvQ4zKzr7NXy5mKVqV+QFvMScxlX2butnfd
+PXb3+kLtxTbSYgrRlKBpQCC1aMCDgkkNRBvTSiqIiKkkVml7iRqw1YYzVIRCwN2m
+Rk386Hza2fk9/+f/f2beXLzQk+/9oXPgicjGwZD37KTs2VQB85sp2VCbqEAzpcQ1
+rNvuly7VYSpAxXCTLFnYrxkluqFif61VMs/4qHpsWpqhOxTwIz/NUC0+l3ercVzF
+lh2Oaap7CgEUBCSLWKEVVgJI5QWCMUuwBFkW0TLLMQpBAi8AFmCFQAeSGVqRECcy
+tEpDWZCA5DQkmh7BZsLUXIuUqEiSSgBgEU9LqsMCDnIEcJhGsqyyDC9wUIGc6BRG
+Dcv+Vxhqzml4zt5/8P+z7+ScHE8gBArhEa2InMCxPGCQjCEvSiIrYOj2TVrYnB98
+bVLXDFOKY8sdq/O/XlOwO1o3yzzT0NDg/5vzK0ado5EwDdtQjLhzHrXtRMAtt5sS
+czyWw/NKYVnTVU3fH/nnPUIHVWzN1XYCClBAHOB9FG5MaCYOay7BCTwCznL74HpH
+k4MCEJEqQIIYGrA0ohEWESJOUM7Z0CwhRHLHpmCGYOdyRIGHElIwIAhxHEu54bbo
+BhVgHJ9SxJG0tIgu2UkTUy2ve/fmeLz5nrzcBe5D9eTfU/DX6+0/c++dZOyo1p7b
++0xR295ILbm7YnnZzZJkYllf++9Xp9nyY1/11IGZrRNU6q41lQuab69rnc28Xdxz
+4+YDn03cXsvfn1N98cCG7a1dLx9Kj37z0E576eQrL1V91DHTN5rKHYntGGOLwjuO
+XR3+aWJQncSVZ3eljpjL76vuLFtYnkoePr1k9K2ZRWOFK4s+vxjsPFNz+ctqf1sm
+c+FxvWrpzHfxqRcfHLoy+8c2vTy0YmWeOnU02r3/vXPTTcPdR75dE1riOz/BBc+X
+rq8Bvrw4W3an4ov3t2b6hoZ+q+/4Pl2cOzzwKrViX0HL7KHGrqrdxUGIYqWPoD1Z
+69aje7YfvMG3br7kb5+9Ffz1ylTXvtCq49dIcnjVrg96xtpOhwcKP303/dT4178U
+rBYvHCxfnPUGaP3Hd8z+nzPR1NrKxyavb0x/kuzvHf/4+WtWx2vBRVlf7YGne7uj
+0ezDY6c+LFtdODJ+bsPl9Tknn52mS69fygaqT4QOMzXbXtj5XMfIk8veWDe1pfvU
+5sHGdKH3Tw==
+=KcBO
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/juniorales
+
+==================================================================
+

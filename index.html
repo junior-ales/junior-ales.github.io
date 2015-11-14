@@ -1,22 +1,23 @@
+
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Junior Ales - A consultant passionate about technology</title>
-    <meta name="description" content="A Thoughtworks Brasil consultant solving people's problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let's talk.">
+    <meta name="description" content="A Thoughtworks Brasil consultant solving people&#x27;s problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let&#x27;s talk.">
     <meta name="keywords" content="consulting, thoughtworks, software development, photograpy, brazilian jiu jitsu, programming">
     <link rel="author" href="http://www.juniorales.com/humans.txt">
     <link rel="canonical" href="http://www.juniorales.com">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 
     <!-- Open Graph meta tags -->
     <meta property="og:site_name" content="Junior Ales' Cover Page">
-    <meta property="og:title" content="A consultant passionate about technology">
+    <meta property="og:title" content="Junior Ales - A consultant passionate about technology">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="http://www.juniorales.com/img/background-small.jpg">
+    <meta property="og:image" content="http://www.juniorales.com/images/background-small.jpg">
     <meta property="og:url" content="http://www.juniorales.com">
-    <meta property="og:description" content="A Thoughtworks Brasil consultant solving people's problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let's talk.">
+    <meta property="og:description" content="A Thoughtworks Brasil consultant solving people&#x27;s problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let&#x27;s talk.">
 
     <!-- Twitter Meta Info -->
     <meta name="twitter:card" content="summary_large_image">
@@ -24,186 +25,166 @@
     <meta name="twitter:creator" content="@junior_ales">
     <meta name="twitter:url" content="http://www.juniorales.com">
     <meta name="twitter:title" content="Junior Ales - A consultant passionate about technology">
-    <meta name="twitter:description" content="A Thoughtworks Brasil consultant solving people's problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let's talk.">
-    <meta name="twitter:image" content="http://www.juniorales.com/img/background-small.jpg">
+    <meta name="twitter:description" content="A Thoughtworks Brasil consultant solving people&#x27;s problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let&#x27;s talk.">
+    <meta name="twitter:image" content="http://www.juniorales.com/images/background-small.jpg">
 
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/google-fonts.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/main-responsive.css">
+    <link rel="stylesheet" href="styles/libs.css">
+    <link rel="stylesheet" href="styles/app.css">
 
-    <script src="scripts/modernizr.custom.93766.js"></script>
-
-    <script>
-      var isProduction = window.location.hostname.search("juniorales.com") > -1;
-
-      if (isProduction) {
-        // Google Analytics
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-63352663-1', 'auto');
-        ga('send', 'pageview');
-
-        // Mixpanel
-        (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-        mixpanel.init("bf6e887664512f35d17f89bee9e54bdc");
-      } else {
-        var mixpanel = { track: function(param) { console.log("tracked: ", param); } };
-      }
-    </script>
+    <script src="scripts/libs-header.js"></script>
   </head>
   <body>
-    <div id="alert-box" class="alert">
-      <p id="alert-content"></p>
-    </div>
 
-    <section id="social-media-buttons">
-      <a href="http://www.juniorales.com/photo" data-track-identifier="header:photoblog" target="_blank" class="fa-stack">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-camera fa-stack-1x dark"></i>
-      </a>
-      <a href="https://twitter.com/junior_ales" data-track-identifier="header:twitter" target="_blank" class="fa-stack">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-twitter fa-stack-1x dark"></i>
-      </a>
-      <a href="https://medium.com/@junior_ales" data-track-identifier="header:medium" target="_blank" class="fa-stack">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-medium fa-stack-1x dark"></i>
-      </a>
-      <a href="https://github.com/junior-ales" data-track-identifier="header:github" target="_blank" class="fa-stack">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-github-alt fa-stack-1x dark"></i>
-      </a>
-      <a id="email-link" href="#" target="_top" class="fa-stack small-hidden">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-envelope fa-stack-1x dark"></i>
-      </a>
-    </section>
-
-    <section id="title">
-      <h1>junior ales</h1>
-      <p>Consultant Developer</p>
-    </section>
-
-    <section id="content">
-      <article class="content-block summary">
-        <header class="block-header">
-          <h1>Summary</h1>
-          <p>brief description about me</p>
-        </header>
-        <section class="block-description">
-          <p class="description">A Thoughtworks Brasil consultant solving people's problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let's talk.</p>
-          <p class="avatar"><img src="img/avatar.jpg" alt="Junior Ales' avatar" /></p>
-        </section>
-      </article>
-
-      <article class="content-block photo-blog reverse-color">
-        <header class="block-header">
-          <h1>Photo Blog</h1>
-          <p>photography, blog, inspiration</p>
-        </header>
-        <section class="block-description">
-          <p class="description">
-          I like to think of photography beyond techniques, colors, focus, depth and patterns.
-          I'm fascinated about the story behind the lens. It's all about the unique way the
-          person sees and feels the world around herself/himself in that given moment.
-          This blog is a way of telling my stories to everyone. The content of the blog is (for now)
-          only in portuguese, but I believe non portuguese speakers will be able to
-          understand my ideas through my photos.
-          </p>
-          <p class="avatar">
-            <a class="link-wrapper reverse-color" data-track-identifier="details:photoblog" target="_blank" href="http://www.juniorales.com/photo">
-              <img class="reverse-color" src="img/photo-blog-icon.jpg" alt="Junior Ales photo blog's avatar" /><br>juniorales.com/photo
+      <div id="alert-box" class="alert">
+        <p id="alert-content"></p>
+      </div>
+    
+      <section id="social-media-buttons">
+        <a href="http://www.juniorales.com/photo" data-track-identifier="header:photoblog" target="_blank" class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-camera fa-stack-1x dark"></i>
+        </a>
+        <a href="https://twitter.com/junior_ales" data-track-identifier="header:twitter" target="_blank" class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x dark"></i>
+        </a>
+        <a href="https://medium.com/@junior_ales" data-track-identifier="header:medium" target="_blank" class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-medium fa-stack-1x dark"></i>
+        </a>
+        <a href="https://github.com/junior-ales" data-track-identifier="header:github" target="_blank" class="fa-stack">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-github-alt fa-stack-1x dark"></i>
+        </a>
+        <a id="email-link" href="#" target="_top" class="fa-stack small-hidden">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-envelope fa-stack-1x dark"></i>
+        </a>
+      </section>
+    
+      <section id="title">
+        <h1>junior ales</h1>
+        <p>Consultant Developer</p>
+      </section>
+    
+      <section id="content">
+        <article class="content-block summary">
+          <header class="block-header">
+            <h1>Summary</h1>
+            <p>brief description about me</p>
+          </header>
+          <section class="block-description">
+            <p class="description">A Thoughtworks Brasil consultant solving people's problems with code and ideas. Find here all the content I produce in the web and the ways to contact me. Do you like technology, software development, brazilian jiu jitsu or photography? Let's talk.</p>
+            <p class="avatar"><img src="images/avatar.jpg" alt="Junior Ales' avatar" /></p>
+          </section>
+        </article>
+    
+        <article class="content-block photo-blog reverse-color">
+          <header class="block-header">
+            <h1>Photo Blog</h1>
+            <p>photography, blog, inspiration</p>
+          </header>
+          <section class="block-description">
+            <p class="description">
+            I like to think of photography beyond techniques, colors, focus, depth and patterns.
+            I'm fascinated about the story behind the lens. It's all about the unique way the
+            person sees and feels the world around herself/himself in that given moment.
+            This blog is a way of telling my stories to everyone. The content of the blog is (for now)
+            only in portuguese, but I believe non portuguese speakers will be able to
+            understand my ideas through my photos.
+            </p>
+            <p class="avatar">
+              <a class="link-wrapper reverse-color" data-track-identifier="details:photoblog" target="_blank" href="http://www.juniorales.com/photo">
+                <img class="reverse-color" src="images/photo-blog-icon.jpg" alt="Junior Ales photo blog's avatar" /><br>juniorales.com/photo
+              </a>
+            </p>
+          </section>
+        </article>
+    
+        <article class="content-block twitter-block">
+          <header class="block-header">
+            <h1>Twitter</h1>
+            <p>software dev, technology, random stuff</p>
+          </header>
+    
+          <section class="block-description">
+            <p class="description">My twitter account is for sure the easiest way to contact me. It's the place where I share mostly technology and software development content, focusing on things that impressed me and I think can help other people in some way. As it's a personal microblog sometimes I share content not related to technology at all, instead things of personal interest like sports and politics.</p>
+            <p class="avatar">
+              <a class="link-wrapper" data-track-identifier="details:twitter" target="_blank" href="http://www.twitter.com/junior_ales">
+                <img src="images/twitter-icon.jpg" alt="Twitter's avatar" /><br/> twitter.com/junior_ales
+              </a>
+            </p>
+          </section>
+        </article>
+    
+        <article class="content-block personal-blog reverse-color">
+          <header class="block-header">
+            <h1>Personal Blog</h1>
+            <p>politics, society, brazil</p>
+          </header>
+          <section class="block-description">
+            <p class="description">In this blog I usually write about my view of the world and the Brazilian society. Politics is a subject which I really like and writing about it makes me understand better my beliefs, fostering the dialogue with people with different views and thus making me learn more and more. Due the nature of the content, all the posts are in portuguese.</p>
+            <p class="avatar">
+              <a class="link-wrapper reverse-color" data-track-identifier="details:medium" target="_blank" href="http://www.medium.com/@junior_ales">
+                <img class="reverse-color" src="images/medium-icon-new.jpg" alt="Medium blog's avatar" /><br>medium.com/@junior_ales
+              </a>
+            </p>
+          </section>
+        </article>
+    
+        <article id="email-me" class="content-block email-me">
+          <header class="block-header">
+            <h1>Send me an email</h1>
+            <p>let's talk</p>
+          </header>
+    
+          <section class="block-description">
+            <p class="description">If you feel like commenting, complimenting or complaining about a shared interest, drop me a message.</p>
+            <form class="email-me-form">
+              <input id="sender-email" type="email" name="_replyto" placeholder="your email" tabindex="1" required>
+              <textarea id="sender-message" name="message" rows="5" placeholder="your message" tabindex="2" required></textarea>
+              <input id="sender-gotcha" type="text" name="_gotcha" style="display:none">
+              <input type="hidden" name="_subject" value="New message from juniorales.com" />
+              <button id="send-email-button" type="submit" tabindex="3">Send Email</button>
+            </form>
+          </section>
+    
+          <footer>
+            <a href="https://br.linkedin.com/in/juniorales" data-track-identifier="details:footer:linkedin" target="_blank" class="fa-stack">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x dark"></i>
             </a>
-          </p>
-        </section>
-      </article>
-
-      <article class="content-block twitter-block">
-        <header class="block-header">
-          <h1>Twitter</h1>
-          <p>software dev, technology, random stuff</p>
-        </header>
-
-        <section class="block-description">
-          <p class="description">My twitter account is for sure the easiest way to contact me. It's the place where I share mostly technology and software development content, focusing on things that impressed me and I think can help other people in some way. As it's a personal microblog sometimes I share content not related to technology at all, instead things of personal interest like sports and politics.</p>
-          <p class="avatar">
-            <a class="link-wrapper" data-track-identifier="details:twitter" target="_blank" href="http://www.twitter.com/junior_ales">
-              <img src="img/twitter-icon.jpg" alt="Twitter's avatar" /><br/> twitter.com/junior_ales
+            <a href="https://github.com/junior-ales" data-track-identifier="details:footer:github" target="_blank" class="fa-stack">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-github-alt fa-stack-1x dark"></i>
             </a>
-          </p>
-        </section>
-      </article>
-
-      <article class="content-block personal-blog reverse-color">
-        <header class="block-header">
-          <h1>Personal Blog</h1>
-          <p>politics, society, brazil</p>
-        </header>
-        <section class="block-description">
-          <p class="description">In this blog I usually write about my view of the world and the Brazilian society. Politics is a subject which I really like and writing about it makes me understand better my beliefs, fostering the dialogue with people with different views and thus making me learn more and more. Due the nature of the content, all the posts are in portuguese.</p>
-          <p class="avatar">
-            <a class="link-wrapper reverse-color" data-track-identifier="details:medium" target="_blank" href="http://www.medium.com/@junior_ales">
-              <img class="reverse-color" src="img/medium-icon-new.jpg" alt="Medium blog's avatar" /><br>medium.com/@junior_ales
+            <a href="https://instagram.com/junior_ales" data-track-identifier="details:footer:instagram" target="_blank" class="fa-stack">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-instagram fa-stack-1x dark"></i>
             </a>
-          </p>
-        </section>
-      </article>
+            <a href="https://www.facebook.com/juniorales" data-track-identifier="details:footer:facebook" target="_blank" class="fa-stack">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x dark"></i>
+            </a>
+    
+            <ul>
+              <li>Junior Ales</li>
+              <li class="separator">&bull;</li>
+              <li>code at <a href="https://github.com/junior-ales/junior-ales.github.io/" data-track-identifier="details:footer:github-repo" target="_blank">github</a></li>
+            </ul>
+          </footer>
+        </article>
+      </section>
+    
+      <a id="view-less" class="highlighted-link" href="#">view less</a>
+    
+      <footer id="main-footer">
+        <p><a id="view-more" class="highlighted-link" href="#">view more</a></p>
+      </footer>
 
-      <article id="email-me" class="content-block email-me">
-        <header class="block-header">
-          <h1>Send me an email</h1>
-          <p>let's talk</p>
-        </header>
-
-        <section class="block-description">
-          <p class="description">If you feel like commenting, complimenting or complaining about a shared interest, drop me a message.</p>
-          <form class="email-me-form">
-            <input id="sender-email" type="email" name="_replyto" placeholder="your email" tabindex="1" required>
-            <textarea id="sender-message" name="message" rows="5" placeholder="your message" tabindex="2" required></textarea>
-            <input id="sender-gotcha" type="text" name="_gotcha" style="display:none">
-            <input type="hidden" name="_subject" value="New message from juniorales.com" />
-            <button id="send-email-button" type="submit" tabindex="3">Send Email</button>
-          </form>
-        </section>
-
-        <footer>
-          <a href="https://br.linkedin.com/in/juniorales" data-track-identifier="details:footer:linkedin" target="_blank" class="fa-stack">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-linkedin fa-stack-1x dark"></i>
-          </a>
-          <a href="https://github.com/junior-ales" data-track-identifier="details:footer:github" target="_blank" class="fa-stack">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-github-alt fa-stack-1x dark"></i>
-          </a>
-          <a href="https://instagram.com/junior_ales" data-track-identifier="details:footer:instagram" target="_blank" class="fa-stack">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x dark"></i>
-          </a>
-          <a href="https://www.facebook.com/juniorales" data-track-identifier="details:footer:facebook" target="_blank" class="fa-stack">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-facebook fa-stack-1x dark"></i>
-          </a>
-
-          <ul>
-            <li>Junior Ales</li>
-            <li class="separator">&bull;</li>
-            <li>code at <a href="https://github.com/junior-ales/junior-ales.github.io/" data-track-identifier="details:footer:github-repo" target="_blank">github</a></li>
-          </ul>
-        </footer>
-      </article>
-    </section>
-
-    <a id="view-less" class="highlighted-link" href="#">view less</a>
-
-    <footer id="main-footer">
-      <p><a id="view-more" class="highlighted-link" href="#">view more</a></p>
-    </footer>
-
-    <script src="scripts/main.min.js"></script>
+    <script src="scripts/libs.js"></script>
+    <script src="scripts/app.js"></script>
+    <script>require("views/index").init();</script>
   </body>
 </html>
