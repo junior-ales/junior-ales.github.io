@@ -58,7 +58,7 @@ module.exports = [
     </p>",
     "location": "São Francisco, EUA",
     "pubdate": pubdate("2015-10-07"),
-    "viewsRanking": 1
+    "viewsRanking": 2
   },
 
   {
@@ -90,7 +90,7 @@ module.exports = [
     </p>",
     "location": "Porto Alegre, Brasil",
     "pubdate": pubdate("2015-10-19"),
-    "viewsRanking": 2
+    "viewsRanking": 4
   },
 
   {
@@ -154,6 +154,51 @@ module.exports = [
       </p>",
     "location": "Berlim, Alemanha",
     "pubdate": pubdate("2015-11-10"),
-    "viewsRanking": 4
+    "viewsRanking": 1
+  },
+
+  {
+    "id": 4,
+    "name": "frieda-grita",
+    "title": "\"Frieda Grita\"",
+    "dir": "posts/2015/11/30/",
+    "htmlContent": "<p> \
+      É engraçado como planejamos coisas sob as quais não temos controle nenhum na vida. Essa fotografia foi um exemplo disso para mim.\
+      </p><p> \
+      Fotografar essa escultura foi muito legal, deu até um certo trabalho. Ela se encontra entre o \
+      <a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Port%C3%A3o_de_Brandemburgo'>Portão de Brandemburgo</a> \
+      e o <a class='post-content__link' target='_blank' href='https://pt.wikipedia.org/wiki/Port%C3%A3o_de_Brandemburgo'>Obelisco da Vitória</a> \
+      no centro do famoso parque <i><a class='post-content__link' target='_blank' href='https://duckduckgo.com/?q=tiergarten+berlin&t=ffab&iax=1&ia=images'>Tiergarten</a></i> \
+      de Berlim. Tive que atravessar uma via ou outra fora da faixa pra conseguir essa foto, mas o motivo pelo qual ela está aqui agora não foi esse. \
+      </p><p> \
+      Como já disse <a class='post-content__link' target='_blank' href='http://www.juniorales.com/photo/posts/2015/11/10/invisiveis.html'>uma vez</a>, \
+      sou apaixonado por perspectiva e sequências nas minhas fotos e por conta disso, o local aonde esta escultura \
+      está me chamou muito a atenção. As faixas na avenida, os postes, a calçada, as árvores... a estátua parece produzir todos esses \
+      padrões encontrados ali, é como se eles surgissem a partir dela. \
+      </p><p> \
+      Somente isso que descrevi faria essa fotografia estar nesse blog, mas <i>'Frieda Grita'</i> está agora aqui por outro motivo. \
+      </p><p> \
+      Escrevo essa postagem ao final de um dia que vai ficar guardado com carinho na minha memória por muito tempo. Pela primeira vez um \
+      trabalho meu foi escolhido para uma exposição e a abertura da mesma aconteceu na tarde que acabou há pouco. Ver essa fotografia \
+      impressa num quadro com meu nome e o título entre parênteses ao lado foi de um sentimento misto de orgulho e felicidade \
+      difícil de descrever. \
+      </p><p> \
+      Falando um pouco sobre a exposição, cada fotógrafo podia enviar até cinco fotos para se inscrever e eu perdi a data limite sem \
+      me importar muito por não participar do evento. Dois dias depois da tal data recebo um email falando que as inscrições haviam \
+      sido prorrogadas. Por conta disso houve uma pressão de amigos e namorada para que eu fizesse a inscrição e eu decidi enviar meu trabalho. \
+      Das cinco fotos que enviei, essa era mais a minha cara pelos motivos que já mencionei acima, mas foi a última a entrar na seleção. \
+      </p><p> \
+      Fiz um milhão de planos na minha cabeça, pensava nas várias maneiras que a banca iria julgar minhas fotografias e de todas, \
+      <i>'Frieda Grita'</i> era a única que eu tinha certeza que não seria escolhida.\
+      Ao final, ela foi a única fotografia minha selecionada, o que me deixou muito feliz e também me fez pensar no conjunto de \
+      eventos aleatórios que me fizeram chegar até esse momento. \
+      </p><p> \
+      Eu não havia planejado publicar essa foto no blog hoje e tão pouco havia planejado tê-la \
+      em uma exposição, mas vou dormir feliz, certo de que amanhã muita coisa acontecerá de maneiras muito diferentes do que \
+      as planejadas, mas que isso não será por fim algo ruim.\
+      </p>",
+    "location": "Berlim, Alemanha",
+    "pubdate": pubdate("2015-11-30"),
+    "viewsRanking": 5
   }
 ];

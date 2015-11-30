@@ -112,6 +112,7 @@ var PostView = React.createClass({
 
 module.exports = {
   trackEvents: function trackEvents(tracker) {
+    tracker.track("photoblog:post:visit");
     tracker.track("photoblog:post:visit:" + postName);
 
     (function setTrackingRegularElements() {
