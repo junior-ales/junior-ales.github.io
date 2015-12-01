@@ -180,7 +180,7 @@ module.exports = [
       </p><p> \
       Escrevo essa postagem ao final de um dia que vai ficar guardado com carinho na minha memória por muito tempo. Pela primeira vez um \
       trabalho meu foi escolhido para uma exposição e a abertura da mesma aconteceu na tarde que acabou há pouco. Ver essa fotografia \
-      impressa num quadro com meu nome e o título entre parênteses ao lado foi de um sentimento misto de orgulho e felicidade \
+      impressa num quadro com meu nome e título entre aspas ao lado foi de um sentimento misto de orgulho e felicidade \
       difícil de descrever. \
       </p><p> \
       Falando um pouco sobre a exposição, cada fotógrafo podia enviar até cinco fotos para se inscrever e eu perdi a data limite sem \
