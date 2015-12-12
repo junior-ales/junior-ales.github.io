@@ -1,3 +1,5 @@
+'use strict';
+
 var TIMEOUT = 5000;
 
 var coverPageCommands = {

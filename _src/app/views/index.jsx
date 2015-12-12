@@ -3,6 +3,7 @@
 var HomePage = require('./components/homePage');
 var EmailSender = require('./components/emailSender');
 var Tracker = require('./components/tracker');
+var APPEARING_DELAY = 550;
 
 function bindPageEvents(page, emailSender, tracker) {
   page.viewMoreElem.onclick = track('coverpage:expand-details', showContent);
@@ -15,8 +16,8 @@ function bindPageEvents(page, emailSender, tracker) {
   page.senderEmailButton.onclick = track('coverpage:email-sender:send', emailSender.send);
 
   (function setTrackingRegularElems() {
-    var elems = document.querySelectorAll("*[data-track-identifier]");
-    tracker.trackElems(elems).as("coverpage:").andIds();
+    var elems = document.querySelectorAll('*[data-track-identifier]');
+    tracker.trackElems(elems).as('coverpage:').andIds();
   })();
 
   function showContent() {
@@ -31,7 +32,7 @@ function bindPageEvents(page, emailSender, tracker) {
     page.contentElem.style.transform = 'translateY(0)';
     setTimeout(function() {
       page.viewLessElem.style.display = 'block';
-    }, 550);
+    }, APPEARING_DELAY);
   }
 
   function hideContent() {
@@ -59,7 +60,7 @@ function bindPageEvents(page, emailSender, tracker) {
 
     setTimeout(function() {
       page.emailMeSection.scrollIntoView();
-    }, 550);
+    }, APPEARING_DELAY);
   }
 
   function increaseOpacityViewLess() {
@@ -79,7 +80,7 @@ function initializeMainContent(page) {
   page.contentElem.style.transform = 'translateY('+ page.largestDimension + 'px)';
   setTimeout(function() {
     page.contentElem.style.visibility = 'visible';
-  }, 550);
+  }, APPEARING_DELAY);
 }
 
 var app = {
@@ -90,7 +91,7 @@ var app = {
       var tracker = new Tracker(window.mixpanel);
       bindPageEvents(homePage, emailSender, tracker);
       initializeMainContent(homePage);
-      tracker.track("coverpage:visit");
+      tracker.track('coverpage:visit');
     });
   }
 };

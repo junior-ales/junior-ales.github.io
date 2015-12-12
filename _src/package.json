@@ -1,8 +1,9 @@
 {
   "name": "junior-ales.github.io",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "My Web Cover Page",
   "scripts": {
+    "lint": "esw app/ test/ --ext .js --ext .jsx",
     "pretest": "npm run build",
     "test": "npm run test:functional -- -e default,safari",
     "pretest:functional": "npm run server:up",
@@ -10,10 +11,10 @@
     "posttest:functional": "npm run server:down",
     "server:up": "node ./test/start.js &",
     "server:down": "pkill -SIGINT node",
-    "prebuild": "rm -Rv dist/*",
+    "prebuild": "rm -Rv dist/* | true",
     "build": "brunch build",
-    "prebuild:prod": "rm -Rv ../*.html ../*.txt ../*.xml ../*.md ../CNAME ../LICENSE ../fonts ../images ../scripts ../styles",
-    "build:prod": "npm run build -- -P && cp -Rv dist/* ../",
+    "prebuild:prod": "rm -Rv ../*.html ../*.txt ../*.xml ../*.md ../CNAME ../LICENSE ../fonts ../images ../scripts ../styles | true",
+    "build:prod": "npm run build -- -p && cp -Rv dist/* ../",
     "start": "brunch watch --server"
   },
   "repository": {
@@ -27,19 +28,96 @@
   },
   "homepage": "http://www.juniorales.com",
   "devDependencies": {
-    "chromedriver": "^2.19.0",
-    "ejs": "^2.3.1",
-    "express": "^4.12.4",
-    "mocha": "^2.2.5",
-    "nightwatch": "^0.8.6",
-    "selenium-server": "^2.48.2",
     "auto-reload-brunch": ">= 1.0 < 1.9",
+    "brunch": "^2.0.4",
+    "chromedriver": "^2.19.0",
     "clean-css-brunch": ">= 1.0 < 1.9",
     "css-brunch": ">= 1.0 < 1.9",
+    "ejs": "^2.3.1",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.11.3",
+    "eslint-watch": "^2.1.4",
+    "express": "^4.12.4",
     "javascript-brunch": ">= 1.0 < 1.9",
+    "mocha": "^2.2.5",
+    "nightwatch": "^0.8.6",
     "react-brunch": "^1.0.9",
     "sass-brunch": "^1.9.1",
+    "selenium-server": "^2.48.2",
     "static-site-brunch": "^0.1.2",
     "uglify-js-brunch": ">= 1.0 < 1.9"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "commonjs": true,
+      "jasmine": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": 0,
+      "strict": [
+        2,
+        "global"
+      ],
+      "camelcase": [
+        2,
+        {
+          "properties": "always"
+        }
+      ],
+      "linebreak-style": 2,
+      "block-scoped-var": 2,
+      "brace-style": [
+        2,
+        "1tbs",
+        {
+          "allowSingleLine": true
+        }
+      ],
+      "semi": [
+        2,
+        "always"
+      ],
+      "no-native-reassign": 2,
+      "eqeqeq": 2,
+      "no-eval": 2,
+      "no-extend-native": 2,
+      "radix": [
+        2,
+        "always"
+      ],
+      "no-loop-func": 2,
+      "wrap-iife": [
+        2,
+        "inside"
+      ],
+      "dot-location": [
+        2,
+        "object"
+      ],
+      "dot-notation": 1,
+      "no-magic-numbers": 1,
+      "no-else-return": 1,
+      "quotes": [
+        1,
+        "single"
+      ],
+      "jsx-quotes": 1,
+      "react/jsx-key": 1,
+      "react/jsx-pascal-case": 1,
+      "react/jsx-no-undef": 1,
+      "react/jsx-no-duplicate-props": 1,
+      "react/no-did-mount-set-state": 1,
+      "react/no-did-update-set-state": 1,
+      "react/no-direct-mutation-state": 1
+    }
   }
 }

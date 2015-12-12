@@ -16,13 +16,13 @@ function EmailSender(page) {
     var data = encodeJson({
       message: page.senderMessage.value,
       _replyto: page.senderEmail.value,
-      _subject: "New Message from Cover Page",
+      _subject: 'New Message from Cover Page',
       _gotcha: page.senderGotcha.value
     });
 
     var request = new XMLHttpRequest();
     request.open('POST', '//formspree.io/edilson.ales.jr@gmail.com', true);
-    request.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
+    request.setRequestHeader('Accept', 'application/json, text/javascript, */*; q=0.01');
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.onload = sendEmailHandler(request);
     try {
@@ -52,13 +52,13 @@ function EmailSender(page) {
   }
 
   function sendEmailHandler(req) {
+    var OK = 200;
     return function() {
-      if (req.status === 200) {
+      if (req.status === OK) {
         page.senderEmail.value = '';
         page.senderMessage.value = '';
         notify.success();
-      }
-      else {
+      } else {
         notify.error();
       }
     };

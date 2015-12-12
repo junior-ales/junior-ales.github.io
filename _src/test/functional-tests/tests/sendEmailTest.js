@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   'Transparentize Collapse Details Button' : function (browser) {
     var coverpage = browser.page.coverpage();

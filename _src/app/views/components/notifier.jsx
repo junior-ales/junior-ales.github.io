@@ -23,13 +23,14 @@ function Notifier(page) {
   };
 
   function showMessage() {
+    var ALERT_SHOW_DURATION = 5000;
     page.alertElem.style['z-index'] = 15;
     page.alertElem.style.opacity = 1;
 
     setTimeout(function() {
       page.alertElem.style.opacity = 0;
       page.alertElem.style['z-index'] = 0;
-    }, 5000);
+    }, ALERT_SHOW_DURATION);
   }
 }
 
