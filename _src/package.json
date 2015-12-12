@@ -3,6 +3,8 @@
   "version": "1.2.2",
   "description": "My Web Cover Page",
   "scripts": {
+    "_clean:dist": "rm -Rv dist/* | true",
+    "_clean:prod": "rm -Rv ../*.html ../*.txt ../*.xml ../*.md ../CNAME ../LICENSE ../fonts ../images ../scripts ../styles | true",
     "lint": "esw app/ test/ --ext .js --ext .jsx",
     "pretest": "npm run build",
     "test": "npm run test:functional -- -e default,safari",
@@ -11,10 +13,11 @@
     "posttest:functional": "npm run server:down",
     "server:up": "node ./test/start.js &",
     "server:down": "pkill -SIGINT node",
-    "prebuild": "rm -Rv dist/* | true",
+    "prebuild": "npm run _clean:dist && npm run lint",
     "build": "brunch build",
-    "prebuild:prod": "rm -Rv ../*.html ../*.txt ../*.xml ../*.md ../CNAME ../LICENSE ../fonts ../images ../scripts ../styles | true",
+    "prebuild:prod": "npm run _clean:prod",
     "build:prod": "npm run build -- -p && cp -Rv dist/* ../",
+    "prestart": "npm run prebuild",
     "start": "brunch watch --server"
   },
   "repository": {
