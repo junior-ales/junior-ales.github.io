@@ -16,6 +16,8 @@
     min-height: 22em;
     .description { text-align: right; }
   }
+
+  .post-content__header h2 { font-size: 2em; }
 }
 
 @media screen and (min-width: 650px) {
@@ -67,8 +69,8 @@
   }
 
   .post-content__image { @include prefix(transform, scale(1.02)); }
-
-  .post-content__text { font-size: larger; }
+  .post-content__text { padding: 0 3.5em 1.5em; }
+  .post-content__header { padding: 1.5em 1.75em 1em; }
 }
 
 @media screen and (min-width: 825px) {
