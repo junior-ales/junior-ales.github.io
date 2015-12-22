@@ -6,6 +6,10 @@ var pubdate = function pubdate(dateString) {
   return date;
 }
 
+var link = function link(label, url) {
+  return "<a class='post-content__link' target='_blank' href='" + url + "'>" + label + "</a>";
+};
+
 module.exports = [
   {
     "id": 0,
@@ -90,7 +94,7 @@ module.exports = [
     </p>",
     "location": "Porto Alegre, Brasil",
     "pubdate": pubdate("2015-10-19"),
-    "viewsRanking": 4
+    "viewsRanking": 1
   },
 
   {
@@ -154,7 +158,7 @@ module.exports = [
       </p>",
     "location": "Berlim, Alemanha",
     "pubdate": pubdate("2015-11-10"),
-    "viewsRanking": 1
+    "viewsRanking": 5
   },
 
   {
@@ -199,6 +203,46 @@ module.exports = [
       </p>",
     "location": "Berlim, Alemanha",
     "pubdate": pubdate("2015-11-30"),
-    "viewsRanking": 5
+    "viewsRanking": 4
+  },
+
+  {
+    "id": 5,
+    "name": "paciencia",
+    "title": "Paciência",
+    "dir": "posts/2015/12/23/",
+    "htmlContent": "<p> \
+      Já parou para pensar em quão valioso é o dito <i>'paciência é uma virtude'</i>? \
+      Virtude, " + link('segundo o Michaelis','http://michaelis.uol.com.br/moderno/portugues/index.php?lingua=portugues-portugues&palavra=virtude')+",\
+      se refere a qualidades morais, a valor e coragem dentre outras coisas. Logo se vê que essa frase, por relacionar paciência e \
+      virtude, enaltece e muito a qualidade de alguém paciente. \
+      </p><p> \
+      Existe aí também uma relação direta entre a nobreza do comportamento e a dificuldade de apresentá-lo no nosso dia-a-dia. Em outras \
+      palavras, ser paciente é súper difícil. Ainda mais num mundo aonde a informação é tão rápida que aflora no mais calmo indivíduo \
+      a inquietude infantil do <i>'quero tudo, aqui e agora'</i>. \
+      </p><p> \
+      O ano de 2015 me ensinou muito sobre ter paciência e essa fotografia descreve muito dessa minha jornada de aprendizado. \
+      A primeira coisa que ela ilustra é que na foto o sol está no lugar que está, exatamente entre as duas pontas da antena. Foi algo \
+      planejando, que me tomou algum tempo. Eu tive que antever aonde o sol iria estar, esperar o momento exato para então poder gravá-lo. \
+      Cinco minutos antes ou cinco minutos depois e estaríamos vendo uma foto completamente diferente dessa. \
+      </p><p> \
+      Mais do que um belo pôr do sol, esse dia foi um dos mais especiais do ano para mim. Foi meu último dia num projeto muito difícil, \
+      que levou quase quatro meses de muito trabalho, longe de casa, longe da minha rotina e das pessoas e coisas que amo. Por \
+      consequência, também foi o meu último dia na " + link('cidade de Pune', 'https://pt.wikipedia.org/wiki/Pune') + ", um lugar tão \
+      diferente de casa, mas que vou guardar em minhas memórias com muito carinho para o resto da minha vida. \
+      </p><p> \
+      Havia um mar de ansiedade em mim desde que botei os pés na Índia no início do ano. No começo por querer fazer um trabalho excelente, mas \
+      quanto mais chegava perto de datas importantes para o projeto, a ansiedade de acertar, de conseguir fazer o que eu estava lá para \
+      fazer, tomava conta de tudo. Com o projeto terminando a ansiedade era com relação à vontade de voltar para casa, de rever pessoas, \
+      comer minhas comidas favoritas, conversar no meu idioma, sair de férias, viajar, conhecer lugares diferentes... tudo estava \
+      convergindo para esse exato dia. O meu último dia em Pune. \
+      </p><p> \
+      Com a mesma paciência que o sol teve para se por nesse dia, eu fiz minhas malas. Fui para o aeroporto, olhei uma vez \
+      mais para a cidade antes de embarcar e com o sentimento de dever cumprido não voltei a olhar para fora do avião. Eu sabia \
+      que daquele momento em diante não veria mais o mundo da mesma maneira e hoje vejo que eu não poderia estar mais certo. \
+    </p>",
+    "location": "Pune, India",
+    "pubdate": pubdate("2015-12-23"),
+    "viewsRanking": 6
   }
 ];
