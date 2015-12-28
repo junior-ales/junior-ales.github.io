@@ -3,7 +3,6 @@
 var Posts = require('model/post');
 var PostList = require('./components/postList');
 var Tracker = require('model/tracker');
-var POSTS_INC_VALUE = 3;
 
 var SortingOptions = React.createClass({
   handleClick: function(event) {
@@ -63,8 +62,9 @@ var LoadMorePosts = React.createClass({
 
 var PostsContainer = React.createClass({
   getInitialState: function() {
+    var INITIAL_POST_QNT = 3;
     var allPosts = Posts.getAllSortedBy('latest');
-    var postsLoaded = allPosts.length < POSTS_INC_VALUE ? allPosts.length : POSTS_INC_VALUE;
+    var postsLoaded = allPosts.length < INITIAL_POST_QNT ? allPosts.length : INITIAL_POST_QNT;
 
     return {
       sortBy: 'latest',
@@ -83,6 +83,8 @@ var PostsContainer = React.createClass({
 
   handleLoadMorePosts: function() {
     if (this.state.allPostsLoaded) { return; }
+
+    var POSTS_INC_VALUE = 2;
     var allPosts = Posts.getAllSortedBy(this.state.sortBy);
     var updatedPostsLoaded, allPostsLoaded;
 
