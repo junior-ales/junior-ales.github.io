@@ -2,11 +2,13 @@
 *.swp
 *.log
 .DS_Store
+.nrepl-history
 node_modules/
 dist/
 _src/test/functional-tests/reports/**/*.xml
 _src/test/functional-tests/screenshots/**/*.png
 target/
+out/
 
 # posts should be ignored and
 # its content should come only
