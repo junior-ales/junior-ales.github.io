@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/Quicksand-300/Quicksand-300.eot');
+  src: url('../fonts/Quicksand-300/Quicksand-300.eot?#iefix') format('embedded-opentype'),
+       local('Quicksand Light'),
+       local('Quicksand-300'),
+       url('../fonts/Quicksand-300/Quicksand-300.woff2') format('woff2'),
+       url('../fonts/Quicksand-300/Quicksand-300.woff') format('woff'),
+       url('../fonts/Quicksand-300/Quicksand-300.ttf') format('truetype'),
+       url('../fonts/Quicksand-300/Quicksand-300.svg#Quicksand') format('svg');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Lora-regular/Lora-regular.eot');
+  src: url('../fonts/Lora-regular/Lora-regular.eot?#iefix') format('embedded-opentype'),
+       local('Lora'),
+       local('Lora-regular'),
+       url('../fonts/Lora-regular/Lora-regular.woff2') format('woff2'),
+       url('../fonts/Lora-regular/Lora-regular.woff') format('woff'),
+       url('../fonts/Lora-regular/Lora-regular.ttf') format('truetype'),
+       url('../fonts/Lora-regular/Lora-regular.svg#Lora') format('svg');
+}
+
+@font-face {
+  font-family: 'Poiret One';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Poiret-One-regular/Poiret-One-regular.eot');
+  src: url('../fonts/Poiret-One-regular/Poiret-One-regular.eot?#iefix') format('embedded-opentype'),
+       local('Poiret One'),
+       local('Poiret-One-regular'),
+       url('../fonts/Poiret-One-regular/Poiret-One-regular.woff2') format('woff2'),
+       url('../fonts/Poiret-One-regular/Poiret-One-regular.woff') format('woff'),
+       url('../fonts/Poiret-One-regular/Poiret-One-regular.ttf') format('truetype'),
+       url('../fonts/Poiret-One-regular/Poiret-One-regular.svg#PoiretOne') format('svg');
+}
+
+html {
+  background-image: url("../images/background-mobile.jpg");
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
+
+  background-color: rgb(99, 99, 108);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /* workaround for full image background */
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  color: rgb(248, 245, 233);
+  font-size: 12px;
+  font-family: 'Lora', serif;
+}
+
+.title-section {
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.title-section > .title {
+  font-size: 3em;
+  margin: 0;
+  font-family: 'Poiret One', cursive;
+}
+
+.title-section > .description { font-family: 'Quicksand', sans-serif; }
+
+@media screen and (min-width: 361px) {
+  html {
+    background-image: url("../images/background.jpg");
+  }
+}
+
+@media screen and (min-width: 641px) {
+  .title-section { font-size: 1.5em; }
+}
+

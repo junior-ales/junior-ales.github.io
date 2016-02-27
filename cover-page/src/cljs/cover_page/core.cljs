@@ -9,11 +9,10 @@
 
 (defn ^:export init []
   (when (and js/document
-             (aget js/document "getElementById"))
-    (titlelify)))
+             (aget js/document "getElementById"))))
 
 ;; TODO
-;; - bring all static html from the existing page
+;; - [DONE] bring all static html from the existing page
 ;; - creates the header dinamically
 ;; - creates the sections of content dinamically
 ;; - bind the event to the 'view more' button
