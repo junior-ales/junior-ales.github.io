@@ -89,7 +89,10 @@ body {
   font-family: 'Poiret One', cursive;
 }
 
-.title-section > .description { font-family: 'Quicksand', sans-serif; }
+.title-section > .description {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: capitalize;
+}
 
 .expand-wrapper {
   position: absolute;

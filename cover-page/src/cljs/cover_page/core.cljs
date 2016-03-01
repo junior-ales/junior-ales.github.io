@@ -1,6 +1,8 @@
 (ns cover-page.core
   (:require [reagent.core :as r]))
 
+(enable-console-print!)
+
 (def link-props
   [{:key 1 :target "_blank" :href "http://www.juniorales.com/photo" :icon-class "fa-camera"}
    {:key 2 :target "_blank" :href "https://twitter.com/junior_ales" :icon-class "fa-twitter"}
@@ -24,7 +26,7 @@
 
 (defn details-button []
   [:div.expand-wrapper
-   [:button.button "view more"]])
+   [:button.button {:on-click (fn [] (println "bla"))} "view more"]])
 
 (defn page []
   [:section [contact-links] [cover-title] [details-button]])
