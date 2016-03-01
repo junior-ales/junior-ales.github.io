@@ -17,15 +17,23 @@
 (defn contact-links []
   [:section.contact-links (map contact-link link-props)])
 
+(defn cover-title []
+  [:section.title-section
+   [:h1.title "junior ales"]
+   [:p.description "consultant developer"]])
+
+(defn page []
+  [:section [contact-links] [cover-title]])
+
 (defn ^:export init []
   (when (and js/document
              (aget js/document "getElementById"))
-    (r/render-component [contact-links]
-                        (js/document.querySelector "#content"))))
+    (r/render-component [page]
+                        (js/document.querySelector "#app"))))
 
 ;; TODO
 ;; - [DONE] bring all static html from the existing page
-;; - creates the header dinamically
+;; - [DONE] creates the header dinamically
 ;; - creates the sections of content dinamically
 ;; - [DONE] bind the event to the 'view more' button
 ;; - [DONE] make the 'view more' button visible
