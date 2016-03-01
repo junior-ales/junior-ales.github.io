@@ -22,8 +22,12 @@
    [:h1.title "junior ales"]
    [:p.description "consultant developer"]])
 
+(defn details-button []
+  [:div.expand-wrapper
+   [:button.button "view more"]])
+
 (defn page []
-  [:section [contact-links] [cover-title]])
+  [:section [contact-links] [cover-title] [details-button]])
 
 (defn ^:export init []
   (when (and js/document
