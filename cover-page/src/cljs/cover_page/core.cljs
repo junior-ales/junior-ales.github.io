@@ -3,6 +3,24 @@
 
 (enable-console-print!)
 
+(defonce lang (r/atom :en-us))
+
+(def content
+  {:pt-br {:title-description "consultor de desenvolvimento"
+           :lang-button "English?"
+           :details-button "ver mais"}
+   :en-us {:title-description "consultant developer"
+           :lang-button "Português?"
+           :details-button "view more"}})
+
+(defn label [id]
+  (id (@lang content)))
+
+(defn toggle-lang []
+  (if (= @lang :en-us)
+    (reset! lang :pt-br)
+    (reset! lang :en-us)))
+
 (def link-props
   [{:key 1 :target "_blank" :href "http://www.juniorales.com/photo" :icon-class "fa-camera"}
    {:key 2 :target "_blank" :href "https://twitter.com/junior_ales" :icon-class "fa-twitter"}
@@ -17,19 +35,27 @@
      [:i {:class (apply str default-classes (:icon-class props))}]]))
 
 (defn contact-links []
-  [:section.contact-links (map contact-link link-props)])
+  [:section.contact-links
+   (map contact-link link-props)
+   [:p
+    [:button.toggle-lang
+     {:on-click toggle-lang}
+     (label :lang-button)]]])
 
 (defn cover-title []
   [:section.title-section
    [:h1.title "junior ales"]
-   [:p.description "consultant developer"]])
+   [:p.description (label :title-description)]])
 
 (defn details-button []
   [:div.expand-wrapper
-   [:button.button {:on-click (fn [] (println "bla"))} "view more"]])
+   [:button.button (label :details-button)]])
 
 (defn page []
-  [:section [contact-links] [cover-title] [details-button]])
+  [:section
+   [contact-links]
+   [cover-title]
+   [details-button]])
 
 (defn ^:export init []
   (when (and js/document
@@ -40,8 +66,9 @@
 ;; TODO
 ;; - [DONE] bring all static html from the existing page
 ;; - [DONE] creates the header dinamically
-;; - creates the sections of content dinamically
 ;; - [DONE] bind the event to the 'view more' button
 ;; - [DONE] make the 'view more' button visible
-;; - use the prod version of cljs build
 ;; - [DONE] use SASS rather than CSS
+;; - [DONE] creates content in two languages using reagent atom
+;; - creates the sections of content dinamically
+;; - use the prod version of cljs build
