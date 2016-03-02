@@ -44,3 +44,4 @@
 ;; - [DONE] bind the event to the 'view more' button
 ;; - [DONE] make the 'view more' button visible
 ;; - use the prod version of cljs build
+;; - [DONE] use SASS rather than CSS
