@@ -3,11 +3,10 @@
   text-align: center;
 
   & > .link {
-    color: transparentize($light-text-color, .3);
     padding: 1em;
     text-decoration: none;
 
-    &:hover { color: $light-text-color; }
+    @extend %link-behavior;
   }
 
   & .icon {
@@ -19,12 +18,8 @@
 }
 
 .toggle-lang {
-  background: none;
   border: none;
-  outline: none;
   text-decoration: underline;
-  color: transparentize($light-text-color, .3);
-  cursor: pointer;
 
-  &:hover { color: $light-text-color; }
+  @extend %link-behavior;
 }

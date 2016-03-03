@@ -34,3 +34,15 @@
   @keyframes #{$name} { @content; }
 }
 
+%link-behavior {
+  background: none;
+  font-weight: bold;
+  font-family: $subtitle-font;
+  outline: none;
+  color: $light-text-color;
+  opacity: .7;
+  cursor: pointer;
+  &:hover { opacity: 1; }
+
+  @include prefix(transition, opacity .3s);
+}
