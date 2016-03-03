@@ -9,8 +9,8 @@
    {:key 5 :target "_top" :href "#" :icon-class "fa-envelope"}])
 
 (defn contact-link [props]
-  (let [default-classes "fa fa-stack-1x contacticon "]
-    [:a.fa-stack.contactlink props
+  (let [default-classes "fa fa-stack-1x icon "]
+    [:a.fa-stack.link props
      [:i.fa.fa-square.fa-stack-2x]
      [:i {:class (apply str default-classes (:icon-class props))}]]))
 
