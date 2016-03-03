@@ -6,19 +6,6 @@
   #{$property}: #{$value};
 }
 
-@mixin display-flex-wrap() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 @mixin order($value) {
   -webkit-box-ordinal-group: $value;
   -moz-box-ordinal-group: $value;
@@ -45,4 +32,14 @@
   &:hover { opacity: 1; }
 
   @include prefix(transition, opacity .3s);
+}
+
+%flex-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  @include prefix(flex-wrap, wrap);
 }
