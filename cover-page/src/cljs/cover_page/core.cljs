@@ -1,6 +1,7 @@
 (ns cover-page.core
   (:require [reagent.core :as r]
             [cover-page.components.core :as c]
+            [cover-page.components.sections :refer [sections]]
             [cover-page.components.contact-links :refer [contact-links]]
             [cover-page.utils.content :refer [label]]))
 
@@ -8,7 +9,8 @@
   [:section
    [contact-links]
    [c/cover-title]
-   [c/details-button]])
+   [c/details-button]
+   [sections]])
 
 (defn ^:export init []
   (when (and js/document
