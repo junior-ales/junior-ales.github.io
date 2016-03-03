@@ -1,0 +1,32 @@
+.contact-links {
+  padding: 1em;
+  text-align: center;
+}
+
+.contact-links > .contactlink {
+  color: rgba(248, 245, 233, 0.7);
+  padding: 1em;
+  text-decoration: none;
+}
+
+.contact-links > .contactlink:hover,
+.toggle-lang:hover {
+  color: rgba(248, 245, 233, 1);
+}
+
+.toggle-lang {
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  color: rgba(248, 245, 233, 0.7);
+  cursor: pointer;
+}
+
+.contactlink > .contacticon {
+  font-size: 1.25em;
+  color: rgb(99, 99, 108);
+  top: 1px;
+  position: relative;
+}
+
