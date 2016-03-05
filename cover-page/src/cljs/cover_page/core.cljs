@@ -9,7 +9,8 @@
   [:section
    [contact-links]
    [c/cover-title]
-   [c/details-button]
+   [c/show-sections-button]
+   [c/hide-sections-button]
    [sections]])
 
 (defn ^:export init []
@@ -25,5 +26,5 @@
 ;; - [DONE] make the 'view more' button visible
 ;; - [DONE] use SASS rather than CSS
 ;; - [DONE] creates content in two languages using reagent atom
-;; - creates the sections of content dinamically
+;; - [DONE] creates the sections of content dinamically
 ;; - use the prod version of cljs build

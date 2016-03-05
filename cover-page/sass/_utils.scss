@@ -25,6 +25,7 @@
   background: none;
   font-weight: bold;
   font-family: $subtitle-font;
+  border: none;
   outline: none;
   color: $light-text-color;
   opacity: .7;
@@ -43,3 +44,5 @@
 
   @include prefix(flex-wrap, wrap);
 }
+
+.hidden { display: none !important; }

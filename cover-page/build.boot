@@ -13,6 +13,7 @@
                   [mathias/boot-sassc        "0.1.5"     :scope "test"]
                   [org.clojure/clojurescript "1.7.228"]
                   [reagent                   "0.6.0-alpha"]
+                  [org.clojars.magomimmo/domina "2.0.0-SNAPSHOT"]
                   ])
 
 (require '[adzerk.boot-cljs :refer [cljs]]
@@ -25,7 +26,7 @@
   "Launch Immediate Feedback Development Environment"
   []
   (comp
-    (serve :dir "target" :reload true)
+    (serve :dir "target")
     (watch)
     (reload)
     (cljs-repl)

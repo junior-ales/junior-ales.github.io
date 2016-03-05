@@ -2,7 +2,7 @@
   (:require [cover-page.utils.content :refer [label]]))
 
 (defn sections []
-  [:section.sections-container
+  [:section.sections-container.hidden {:data-appear-order 2}
    [:article.summary-section
     [:header.section-header
      [:h1.title (label :sections-summary-title)]
