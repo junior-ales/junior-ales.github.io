@@ -85,9 +85,11 @@
   }
 
   & > .avatar-link {
-    font-family: $subtitle-font;
-    font-weight: bold;
-    color: $dark-text-color;
+    & > .text {
+      font-family: $subtitle-font;
+      font-weight: bold;
+      color: $dark-text-color;
+    }
 
     & > .avatar {
       margin-bottom: 1em;
@@ -129,5 +131,15 @@
 
   & .avatar {
     border-color: $dark-text-color;
+  }
+}
+
+.twitter-section {
+  @include order(2);
+  @extend %section-block;
+  background-color: $bg-color;
+
+  & .avatar-link, & .avatar-link > .text  {
+    color: $light-text-color;
   }
 }
