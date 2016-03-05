@@ -6,8 +6,11 @@ $large-break: "screen and (min-width: 751px)";
 $largest-break: "screen and (min-width: 1025px)";
 
 // colors
-$light-text-color: rgb(248, 245, 233);
 $dark-text-color: rgb(99, 99, 108);
+$light-text-color: rgb(248, 245, 233);
+$dark-bg-color: rgb(51, 52, 71);
+$bg-color: $dark-text-color;
+$light-bg-color: $light-text-color;
 
 // fonts
 $title-font: 'Poiret One', cursive;

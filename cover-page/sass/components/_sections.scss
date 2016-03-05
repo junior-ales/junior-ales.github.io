@@ -1,4 +1,5 @@
 %section-block {
+  @extend %flex-wrap;
   min-height: 500px;
   width: 100%;
   padding: 1em;
@@ -15,14 +16,15 @@
   }
 
   @media #{$largest-break} {
+    width: 40%;
+    margin-right: 60%;
     @include prefix(box-sizing, border-box);
   }
 }
 
 .sections-container {
-  z-index: -1;
-
   @extend %flex-wrap;
+  z-index: -1;
 }
 
 .section-header {
@@ -74,7 +76,7 @@
     padding: 2em 0;
   }
 
-  & > .avatar {
+  & .avatar {
     width: 150px;
     height: 150px;
     border: 3px solid $light-text-color;
@@ -82,38 +84,50 @@
     @include prefix(border-radius, 100%);
   }
 
-  & > .avatar-link > .avatar {
-    border: 3px solid $light-text-color;
-    margin-bottom: 1em;
-    opacity: .7;
+  & > .avatar-link {
+    font-family: $subtitle-font;
+    font-weight: bold;
+    color: $dark-text-color;
+
+    & > .avatar {
+      margin-bottom: 1em;
+    }
   }
 }
 
 .summary-section {
   @include order(0);
   @extend %section-block;
-  background-color: rgb(51, 52, 71);
+  background-color: $dark-bg-color;
 
-  @media #{$largest-break} {
-    width: 40%;
-    margin-right: 60%;
-  }
-
-  & > .description {
-    @include order(0);
-
-    @media #{$largest-break} {
-      @include order(1);
-      padding-bottom: 1em;
-    }
-  }
-
-  & > .avatar-wrapper {
-    @include order(1);
-
-    @media #{$largest-break} {
+  & > .section-description {
+    & > .description {
       @include order(0);
-      padding-top: 0;
+
+      @media #{$largest-break} {
+        @include order(1);
+        padding-bottom: 1em;
+      }
     }
+
+    & > .avatar-wrapper {
+      @include order(1);
+
+      @media #{$largest-break} {
+        @include order(0);
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.photoblog-section {
+  @include order(1);
+  @extend %section-block;
+  background-color: $light-bg-color;
+  color: $dark-text-color;
+
+  & .avatar {
+    border-color: $dark-text-color;
   }
 }
