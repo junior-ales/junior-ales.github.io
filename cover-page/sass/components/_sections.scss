@@ -1,6 +1,5 @@
 %section-block {
   @extend %flex-wrap;
-  min-height: 500px;
   width: 100%;
   padding: 1em;
   padding-bottom: 2em;
@@ -45,6 +44,8 @@
   line-height: 1.5em;
 
   & > .description {
+    @include order(0);
+
     width: 100%;
     margin: 0;
 
@@ -61,6 +62,8 @@
 }
 
 .avatar-wrapper {
+  @include order(1);
+
   width: 100%;
   margin: 0;
   text-align: center;
@@ -104,8 +107,6 @@
 
   & > .section-description {
     & > .description {
-      @include order(0);
-
       @media #{$largest-break} {
         @include order(1);
         padding-bottom: 1em;
@@ -113,8 +114,6 @@
     }
 
     & > .avatar-wrapper {
-      @include order(1);
-
       @media #{$largest-break} {
         @include order(0);
         padding-top: 0;
@@ -147,3 +146,9 @@
 }
 
 .medium-section { @include order(3); }
+
+.contact-me-section {
+  @include order(4);
+  @extend %section-block;
+  background-color: $dark-bg-color;
+}

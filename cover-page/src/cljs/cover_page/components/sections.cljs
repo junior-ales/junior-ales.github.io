@@ -20,7 +20,7 @@
        [link-avatar avatar-props]
        [:img.avatar avatar-props])]))
 
-(defn section-default [props]
+(defn section-commons [props & -avatar]
   (let [-key-for (partial key-for (:name props))]
     [:article {:key (:key props) :class (str (:name props) "-section")}
      [:header.section-header
@@ -28,7 +28,13 @@
       [:p.subtitle (label (-key-for "subtitle"))]]
      [:section.section-description
       [:p.description (label (-key-for "desc"))]
-      [avatar props]]]))
+      -avatar]]))
+
+(defn section-default [props]
+  (section-commons props [avatar props]))
+
+(defn contact-me []
+  (section-commons {:key 14 :name "contact-me"}))
 
 (def section-props
   [{:key 10 :name "summary"}
@@ -39,5 +45,6 @@
 (defn sections []
   [:section.sections-container.hidden
    {:data-appear-order 2}
-   (doall (map section-default section-props))])
+   (doall (map section-default section-props))
+   [contact-me]])
 
