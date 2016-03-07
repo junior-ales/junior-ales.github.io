@@ -22,6 +22,11 @@
            :sections-twitter-desc "Meu twitter é com certeza o jeito mais fácil de me contactar. É aonde eu compartilho na maioria das vezes conteúdo sobre tecnologia e desenvolvimento de software, focando em coisas que me impressionaram e que eu acredito que possam ajudar outras pessoas de alguma maneira. Como ele é um microblog, algumas vezes eu compartilho conteúdo não relacionado a tecnologia, mas sim sobre coisas de interesse pessoal como esportes e política."
            :sections-twitter-avatar-alt "Ícone do twitter"
 
+           :sections-medium-title "Blog Pessoal"
+           :sections-medium-subtitle "política, sociedade, Brasil"
+           :sections-medium-desc "Nesse blog eu geralmente escrevo sobre minha visão sobre o mundo e a sociedade brasileira. Política é um assunto o qual eu me interesso muito e escrever sobre isso faz com que eu entenda melhor o que acredito, buscando incentivar o diálogo com pessoas de opiniões diferentes e assim me fazendo aprender mais e mais. Devido a natureza do conteúdo, todos os posts são em português."
+           :sections-medium-avatar-alt "Ícone do medium"
+
            :back "voltar"
            :view-more "ver mais"}
 
@@ -42,6 +47,11 @@
            :sections-twitter-subtitle "software dev, IT, random stuff"
            :sections-twitter-desc "My twitter account is for sure the easiest way to contact me. It's the place where I share mostly technology and software development content, focusing on things that impressed me and I think can help other people in some way. As it's a personal microblog sometimes I share content not related to technology at all, instead things of personal interest like sports and politics."
            :sections-twitter-avatar-alt "Icon of twitter"
+
+           :sections-medium-title "Personal Blog"
+           :sections-medium-subtitle "politics, society, Brazil"
+           :sections-medium-desc "In this blog I usually write about my view of the world and the Brazilian society. Politics is a subject I really like and writing about it makes me understand better my beliefs, trying to foster the dialogue with people with different views and thus making me learn more and more. Due the nature of the content, all the posts are in portuguese."
+           :sections-medium-avatar-alt "Icon of medium"
 
            :back "back"
            :view-more "view more"}})

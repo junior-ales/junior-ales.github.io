@@ -123,8 +123,8 @@
   }
 }
 
-.photoblog-section {
-  @include order(1);
+.photoblog-section,
+.medium-section {
   @extend %section-block;
   background-color: $light-bg-color;
   color: $dark-text-color;
@@ -133,6 +133,8 @@
     border-color: $dark-text-color;
   }
 }
+
+.photoblog-section { @include order(1); }
 
 .twitter-section {
   @include order(2);
@@ -143,3 +145,5 @@
     color: $light-text-color;
   }
 }
+
+.medium-section { @include order(3); }

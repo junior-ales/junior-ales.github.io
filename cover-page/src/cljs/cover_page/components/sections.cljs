@@ -1,42 +1,43 @@
 (ns cover-page.components.sections
   (:require [cover-page.utils.content :refer [label]]))
 
-(def section-props
-  [{:key 12 :name "photoblog" :href "http://www.juniorales.com/photo"}
-   {:key 13 :name "twitter" :href "http://www.twitter.com/junior_ales"}])
+(defn key-for [context key-name]
+  (keyword (str "sections-" context "-" key-name)))
 
-(defn avatar [])
-(defn link-avatar [])
+(defn link-avatar[props]
+  [:a.avatar-link {:target "_blank" :href (:href props)}
+   [:img.avatar {:src (:src props) :alt (:alt props)}]
+   [:span.text (subs (:href props) 11)]])
 
-(defn section [props]
-  (let [avatar-path (str "images/" (:name props) "-icon.jpg")
-        key-for #(keyword (str "sections-" (:name props) "-" %))]
+(defn avatar[props]
+  (let [-key-for (partial key-for (:name props))
+        avatar-path (str "images/" (:name props) "-icon.jpg")
+        avatar-props {:src avatar-path
+                      :href (:href props)
+                      :alt (label (-key-for "avatar-alt"))}]
+    [:p.avatar-wrapper
+     (if (:href props)
+       [link-avatar avatar-props]
+       [:img.avatar avatar-props])]))
+
+(defn section-default [props]
+  (let [-key-for (partial key-for (:name props))]
     [:article {:key (:key props) :class (str (:name props) "-section")}
      [:header.section-header
-      [:h1.title (label (key-for "title"))]
-      [:p.subtitle (label (key-for "subtitle"))]]
+      [:h1.title (label (-key-for "title"))]
+      [:p.subtitle (label (-key-for "subtitle"))]]
      [:section.section-description
-      [:p.description (label (key-for "desc"))]
-      [:p.avatar-wrapper
-       [:a.avatar-link {:target "_blank" :href (:href props)}
-        [:img.avatar {:src avatar-path
-                      :alt (label (key-for "avatar-alt"))}]
-        [:span.text (subs (:href props) 11)]]]]]))
+      [:p.description (label (-key-for "desc"))]
+      [avatar props]]]))
 
-(defn summary []
-   [:article.summary-section
-    [:header.section-header
-     [:h1.title (label :sections-summary-title)]
-     [:p.subtitle (label :sections-summary-subtitle)]]
-    [:section.section-description
-     [:p.description (label :sections-summary-desc)]
-     [:p.avatar-wrapper
-      [:img.avatar {:src "images/avatar.jpg"
-                    :alt (label :sections-summary-avatar-alt)}]]]])
+(def section-props
+  [{:key 10 :name "summary"}
+   {:key 11 :name "photoblog" :href "http://www.juniorales.com/photo"}
+   {:key 12 :name "twitter" :href "http://www.twitter.com/junior_ales"}
+   {:key 13 :name "medium" :href "http://www.medium.com/@junior_ales"}])
 
 (defn sections []
   [:section.sections-container.hidden
    {:data-appear-order 2}
-   [summary]
-   (doall (map section section-props))])
+   (doall (map section-default section-props))])
 
