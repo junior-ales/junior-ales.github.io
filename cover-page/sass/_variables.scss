@@ -1,18 +1,19 @@
 // media query breaks
 $smallest-break: "screen and (min-width: 361px)";
-$small-break: "screen and (min-width: 590px)";
-$medium-break: "screen and (min-width: 641px)";
-$large-break: "screen and (min-width: 751px)";
-$largest-break: "screen and (min-width: 1025px)";
+$small-break:    "screen and (min-width: 590px)";
+$medium-break:   "screen and (min-width: 641px)";
+$large-break:    "screen and (min-width: 751px)";
+$largest-break:  "screen and (min-width: 1025px)";
 
 // colors
-$dark-text-color: rgb(99, 99, 108);
+$dark-text-color:  rgb(99, 99, 108);
 $light-text-color: rgb(248, 245, 233);
-$dark-bg-color: rgb(51, 52, 71);
-$bg-color: $dark-text-color;
-$light-bg-color: $light-text-color;
+$dark-bg-color:    rgb(51, 52, 71);
+$bg-color:         $dark-text-color;
+$light-bg-color:   $light-text-color;
+$success-color:    rgb(48, 93, 84);
 
 // fonts
-$title-font: 'Poiret One', cursive;
+$title-font:    'Poiret One', cursive;
 $subtitle-font: 'Quicksand', sans-serif;
-$text-font: 'Lora', serif;
+$text-font:     'Lora', serif;

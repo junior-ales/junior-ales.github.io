@@ -27,9 +27,13 @@
            :sections-medium-desc "Nesse blog eu geralmente escrevo sobre minha visão sobre o mundo e a sociedade brasileira. Política é um assunto o qual eu me interesso muito e escrever sobre isso faz com que eu entenda melhor o que acredito, buscando incentivar o diálogo com pessoas de opiniões diferentes e assim me fazendo aprender mais e mais. Devido a natureza do conteúdo, todos os posts são em português."
            :sections-medium-avatar-alt "Ícone do medium"
 
-           :sections-contact-me-title "Envie-me um email"
-           :sections-contact-me-subtitle "vamos conversar"
-           :sections-contact-me-desc "Se você gostaria de comentar, elogiar ou reclamar sobre um interesse em comum, me envie uma mensagem."
+           :sections-contact-title "Envie-me um email"
+           :sections-contact-subtitle "vamos conversar"
+           :sections-contact-desc "Se você gostaria de comentar, elogiar ou reclamar sobre um interesse em comum, me envie uma mensagem."
+
+           :email-form-address "seu email"
+           :email-form-message "sua mensagem"
+           :email-form-button "enviar email"
 
            :back "voltar"
            :view-more "ver mais"}
@@ -57,9 +61,13 @@
            :sections-medium-desc "In this blog I usually write about my view of the world and the Brazilian society. Politics is a subject I really like and writing about it makes me understand better my beliefs, trying to foster the dialogue with people with different views and thus making me learn more and more. Due the nature of the content, all the posts are in portuguese."
            :sections-medium-avatar-alt "Icon of medium"
 
-           :sections-contact-me-title "Send me an email"
-           :sections-contact-me-subtitle "let's talk"
-           :sections-contact-me-desc "If you feel like commenting, complimenting or complaining about a shared interest, drop me a message."
+           :sections-contact-title "Send me an email"
+           :sections-contact-subtitle "let's talk"
+           :sections-contact-desc "If you feel like commenting, complimenting or complaining about a shared interest, drop me a message."
+
+           :email-form-address "your email"
+           :email-form-message "your message"
+           :email-form-button "send email"
 
            :back "back"
            :view-more "view more"}})

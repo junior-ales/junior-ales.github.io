@@ -1,5 +1,6 @@
 (ns cover-page.components.sections
-  (:require [cover-page.utils.content :refer [label]]))
+  (:require [cover-page.utils.content :refer [label]]
+            [cover-page.components.contact-form :refer [contact-form]]))
 
 (defn key-for [context key-name]
   (keyword (str "sections-" context "-" key-name)))
@@ -20,7 +21,7 @@
        [link-avatar avatar-props]
        [:img.avatar avatar-props])]))
 
-(defn section-commons [props & -avatar]
+(defn section-commons [props & extra-component]
   (let [-key-for (partial key-for (:name props))]
     [:article {:key (:key props) :class (str (:name props) "-section")}
      [:header.section-header
@@ -28,13 +29,13 @@
       [:p.subtitle (label (-key-for "subtitle"))]]
      [:section.section-description
       [:p.description (label (-key-for "desc"))]
-      -avatar]]))
+      extra-component]]))
 
 (defn section-default [props]
   (section-commons props [avatar props]))
 
-(defn contact-me []
-  (section-commons {:key 14 :name "contact-me"}))
+(defn contact []
+  (section-commons {:name "contact"} [contact-form {:key 14}]))
 
 (def section-props
   [{:key 10 :name "summary"}
@@ -46,5 +47,5 @@
   [:section.sections-container.hidden
    {:data-appear-order 2}
    (doall (map section-default section-props))
-   [contact-me]])
+   [contact]])
 

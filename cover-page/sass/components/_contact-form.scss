@@ -1,0 +1,31 @@
+.contact-form {
+  @extend %flex-wrap;
+
+  margin: 3em 0;
+  width: 100%;
+  color: $light-text-color;
+
+  & > * {
+    width: 100%;
+    font-family: $subtitle-font;
+    font-size: 1em;
+    border: 0;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  & > .address, & > .message {
+    background-color: transparentize($light-bg-color, .9);
+  }
+
+  & > .submit {
+    background-color: $success-color;
+    color: $light-text-color;
+    text-transform: uppercase;
+    opacity: .7;
+    cursor: pointer;
+
+    &:hover { opacity: 1; }
+  }
+}
+

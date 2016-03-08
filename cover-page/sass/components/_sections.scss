@@ -147,7 +147,7 @@
 
 .medium-section { @include order(3); }
 
-.contact-me-section {
+.contact-section {
   @include order(4);
   @extend %section-block;
   background-color: $dark-bg-color;
