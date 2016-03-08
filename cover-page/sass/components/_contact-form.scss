@@ -3,20 +3,19 @@
 
   margin: 3em 0;
   width: 100%;
-  color: $light-text-color;
 
   & > * {
     width: 100%;
     font-family: $subtitle-font;
     font-size: 1em;
+    color: $light-text-color;
     border: 0;
     padding: 1em;
     margin-bottom: 1em;
-  }
-
-  & > .address, & > .message {
     background-color: transparentize($light-bg-color, .9);
   }
+
+  & > .message { min-height: 100px; }
 
   & > .submit {
     background-color: $success-color;

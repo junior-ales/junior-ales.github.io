@@ -1,5 +1,6 @@
 (ns cover-page.components.sections
   (:require [cover-page.utils.content :refer [label]]
+            [cover-page.components.contact-link :refer [contact-link]]
             [cover-page.components.contact-form :refer [contact-form]]))
 
 (defn key-for [context key-name]
@@ -34,11 +35,24 @@
 (defn section-default [props]
   (section-commons props [avatar props]))
 
+(def link-props
+  [{:key 1 :href "https://br.linkedin.com/in/juniorales" :icon-class "fa-linkedin"}
+   {:key 2 :href "https://github.com/junior-ales" :icon-class "fa-github-alt"}
+   {:key 3 :href "https://instagram.com/junior_ales" :icon-class "fa-instagram"}
+   {:key 4 :href "https://facebook.com/juniorales" :icon-class "fa-facebook"}])
+
 (defn contact []
   (section-commons {:name "contact"}
     [contact-form {:key 14}]
-    [:footer {:key 15}
-     [:p "as"]]))
+    [:footer.contact-footer {:key 15}
+     (map contact-link link-props)
+     [:ul.site-info
+      [:li.name "junior ales"]
+      [:li.separator "•"]
+      [:li (label :sections-contact-code-hosted)
+       [:a.link {:target "_blank"
+                 :href "https://github.com/junior-ales/junior-ales.github.io/"}
+        "github"]]]]))
 
 (def section-props
   [{:key 10 :name "summary"}

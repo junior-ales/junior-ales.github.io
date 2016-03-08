@@ -3,7 +3,7 @@
 
 (defn contact-form []
   [:form.contact-form
-   [:input#sender-email.address
+   [:input#sender-email
     {:type "email" :name "_replyto" :placeholder (label :email-form-address) :required true}]
    [:textarea#sender-message.message
     {:name "message" :placeholder (label :email-form-message) :required true}]

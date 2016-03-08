@@ -30,6 +30,7 @@
            :sections-contact-title "Envie-me um email"
            :sections-contact-subtitle "vamos conversar"
            :sections-contact-desc "Se você gostaria de comentar, elogiar ou reclamar sobre um interesse em comum, me envie uma mensagem."
+           :sections-contact-code-hosted "código em "
 
            :email-form-address "seu email"
            :email-form-message "sua mensagem"
@@ -64,6 +65,7 @@
            :sections-contact-title "Send me an email"
            :sections-contact-subtitle "let's talk"
            :sections-contact-desc "If you feel like commenting, complimenting or complaining about a shared interest, drop me a message."
+           :sections-contact-code-hosted "code at "
 
            :email-form-address "your email"
            :email-form-message "your message"

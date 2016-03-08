@@ -3,11 +3,12 @@
             [cover-page.utils.content :refer [label toggle-lang]]))
 
 (def link-props
-  [{:key 1 :target "_blank" :href "http://www.juniorales.com/photo" :icon-class "fa-camera"}
-   {:key 2 :target "_blank" :href "https://twitter.com/junior_ales" :icon-class "fa-twitter"}
-   {:key 3 :target "_blank" :href "https://medium.com/@junior_ales" :icon-class "fa-medium"}
-   {:key 4 :target "_blank" :href "https://github.com/junior-ales" :icon-class "fa-github-alt"}
-   {:key 5 :target "_top" :href "#" :icon-class "fa-envelope" :class "hidden"}])
+  [{:key 1 :href "http://www.juniorales.com/photo" :icon-class "fa-camera"}
+   {:key 2 :href "https://twitter.com/junior_ales" :icon-class "fa-twitter"}
+   {:key 3 :href "https://medium.com/@junior_ales" :icon-class "fa-medium"}
+   {:key 4 :href "https://github.com/junior-ales" :icon-class "fa-github-alt"}
+   {:key 5 :href "#" :icon-class "fa-envelope" :target "_top" :class "hidden"}])
+
 
 (defn toogle-lang-button []
   [:p
