@@ -28,6 +28,7 @@
   width: 100%;
   padding: 0;
   text-align: center;
+  @extend %fade-in;
 
   & > .button {
     @extend %link-behavior;
@@ -43,6 +44,7 @@
 
 .hide-sections-button {
   @extend %link-behavior;
+  @extend %fade-in;
 
   position: fixed;
   top: 0;

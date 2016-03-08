@@ -21,6 +21,15 @@
   @keyframes #{$name} { @content; }
 }
 
+%fade-in {
+  @include keyframes(fadeIn) {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @include prefix(animation, fadeIn 2s);
+}
+
 %link-behavior {
   background: none;
   font-weight: bold;

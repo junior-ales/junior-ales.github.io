@@ -1,6 +1,7 @@
 .contact-links {
   padding: 1em;
   text-align: center;
+  @extend %fade-in;
 }
 
 .toggle-lang {

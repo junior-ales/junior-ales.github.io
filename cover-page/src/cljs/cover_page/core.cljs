@@ -1,9 +1,8 @@
 (ns cover-page.core
-  (:require [reagent.core :as r]
+  (:require [reagent.core :refer [render-component]]
             [cover-page.components.core :as c]
             [cover-page.components.sections :refer [sections]]
-            [cover-page.components.contact-links :refer [contact-links]]
-            [cover-page.utils.content :refer [label]]))
+            [cover-page.components.contact-links :refer [contact-links]]))
 
 (defn page []
   [:section
@@ -16,8 +15,8 @@
 (defn ^:export init []
   (when (and js/document
              (aget js/document "getElementById"))
-    (r/render-component [page]
-                        (js/document.querySelector "#app"))))
+    (render-component [page]
+                      (js/document.querySelector "#app"))))
 
 ;; TODO
 ;; - [DONE] bring all static html from the existing page
