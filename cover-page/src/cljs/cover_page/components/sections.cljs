@@ -35,7 +35,10 @@
   (section-commons props [avatar props]))
 
 (defn contact []
-  (section-commons {:name "contact"} [contact-form {:key 14}]))
+  (section-commons {:name "contact"}
+    [contact-form {:key 14}]
+    [:footer {:key 15}
+     [:p "as"]]))
 
 (def section-props
   [{:key 10 :name "summary"}
