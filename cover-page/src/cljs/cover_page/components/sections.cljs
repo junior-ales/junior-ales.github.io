@@ -41,7 +41,7 @@
    {:key 3 :href "https://instagram.com/junior_ales" :icon-class "fa-instagram"}
    {:key 4 :href "https://facebook.com/juniorales" :icon-class "fa-facebook"}])
 
-(defn contact []
+(defn contact-with-form []
   (section-commons {:name "contact"}
     [contact-form {:key 14}]
     [:footer.contact-footer {:key 15}
@@ -53,6 +53,19 @@
        [:a.link {:target "_blank"
                  :href "https://github.com/junior-ales/junior-ales.github.io/"}
         "github"]]]]))
+
+;; TODO remove this once contact-with-form is implemented
+(defn contact []
+  [:section.contact-section
+    [:footer.contact-footer {:key 15}
+     (map contact-link link-props)
+     [:ul.site-info
+      [:li.name "junior ales"]
+      [:li.separator "•"]
+      [:li (label :sections-contact-code-hosted)
+       [:a.link {:target "_blank"
+                 :href "https://github.com/junior-ales/junior-ales.github.io/"}
+        "github"]]]]])
 
 (def section-props
   [{:key 10 :name "summary"}

@@ -26,4 +26,7 @@
 ;; - [DONE] use SASS rather than CSS
 ;; - [DONE] creates content in two languages using reagent atom
 ;; - [DONE] creates the sections of content dinamically
+;; - tracking with analytics and mixpanel
 ;; - use the prod version of cljs build
+;; - enable contact-me
+;; - alert when sending email
