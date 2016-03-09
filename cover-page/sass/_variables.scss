@@ -1,9 +1,16 @@
 // media query breaks
-$smallest-break: "screen and (min-width: 361px)";
-$small-break:    "screen and (min-width: 590px)";
-$medium-break:   "screen and (min-width: 641px)";
-$large-break:    "screen and (min-width: 751px)";
-$largest-break:  "screen and (min-width: 1025px)";
+$smallest-break:         "screen and (min-width: 361px)";
+$smallest-break-hd:      "screen and (min-width: 361px) and (-webkit-min-device-pixel-ratio: 3)";
+$smallest-break-landscape: "screen and (min-width: 361px) and (orientation: landscape)";
+
+$small-break:            "screen and (min-width: 590px)";
+
+$medium-break:           "screen and (min-width: 641px)";
+$medium-break-landscape: "screen and (min-width: 641px) and (orientation: landscape)";
+
+$large-break:            "screen and (min-width: 751px)";
+
+$largest-break:          "screen and (min-width: 1025px)";
 
 // colors
 $dark-text-color:  rgb(99, 99, 108);

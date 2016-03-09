@@ -9,6 +9,7 @@
 (defn link-avatar[props]
   [:a.avatar-link {:target "_blank" :href (:href props)}
    [:img.avatar {:src (:src props) :alt (:alt props)}]
+   [:br]
    [:span.text (subs (:href props) 11)]])
 
 (defn avatar[props]

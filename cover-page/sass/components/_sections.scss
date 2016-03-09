@@ -1,9 +1,13 @@
 %section-block {
   @extend %flex-wrap;
   width: 100%;
-  padding: 1em;
-  padding-bottom: 2em;
-  font-size: 1.25em;
+  padding: 2.5em 1em;
+  font-size: 1rem;
+
+  @media #{$smallest-break} {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 
   @media #{$small-break} {
     min-height: initial;
@@ -15,6 +19,7 @@
   }
 
   @media #{$largest-break} {
+    font-size: 1.25rem;
     width: 40%;
     margin-right: 60%;
     @include prefix(box-sizing, border-box);
@@ -64,7 +69,7 @@
   & > .title {
     font-family: $title-font;
     font-size: 2em;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   & > .subtitle {
@@ -105,7 +110,7 @@
 
   @media #{$small-break} {
     width: 40%;
-    padding-top: 0;
+    padding-top: 1em;
   }
 
   @media #{$largest-break} {
@@ -148,9 +153,12 @@
     }
 
     & > .avatar-wrapper {
+      @media #{$large-break} {
+        padding-top: 0;
+      }
+
       @media #{$largest-break} {
         @include order(0);
-        padding-top: 0;
       }
     }
   }

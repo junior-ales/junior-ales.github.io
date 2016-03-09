@@ -10,13 +10,14 @@
   @include prefix(transform, translate(-50%, -50%));
 
   & > .title {
-    font-size: 3em;
-    margin: 0;
     font-family: $title-font;
+    font-size: 4em;
+    margin: 0;
   }
 
   & > .description {
     font-family: $subtitle-font;
+    font-size: 1.5em;
     text-transform: capitalize;
   }
 }
