@@ -10,7 +10,8 @@
 
 (defn show-sections []
   (add-class! (sel "[data-appear-order=1]") "hidden")
-  (remove-class! (sel "[data-appear-order=2]") "hidden"))
+  (remove-class! (sel "[data-appear-order=2]") "hidden")
+  (remove-class! (sel ".hidden-once") "hidden-once"))
 
 (defn show-sections-button []
   [:div.expand-wrapper {:data-appear-order 1}

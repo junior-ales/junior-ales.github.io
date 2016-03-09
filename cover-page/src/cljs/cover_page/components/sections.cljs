@@ -61,7 +61,7 @@
    {:key 13 :name "medium" :href "http://www.medium.com/@junior_ales"}])
 
 (defn sections []
-  [:section.sections-container.hidden
+  [:section.sections-container.hidden-once
    {:data-appear-order 2}
    (doall (map section-default section-props))
    [contact]])

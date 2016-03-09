@@ -27,7 +27,7 @@
     to { opacity: 1; }
   }
 
-  @include prefix(animation, fadeIn 2s);
+  @include prefix(animation, fadeIn 2s forwards);
 }
 
 %link-behavior {
@@ -45,13 +45,13 @@
 }
 
 %flex-wrap {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
 
   @include prefix(flex-wrap, wrap);
 }
 
-.hidden { display: none !important; }
+.hidden, .hidden-once { display: none !important; }

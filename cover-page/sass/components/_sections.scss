@@ -23,7 +23,29 @@
 
 .sections-container {
   @extend %flex-wrap;
+  position: relative;
   z-index: -1;
+
+  @include keyframes(appearFromBottom) {
+    from { top: 3000px; }
+    to { top: 0; }
+  }
+
+  @include prefix(animation, appearFromBottom .5s forwards);
+
+  &.hidden {
+    @extend %flex-wrap;
+
+    @include keyframes(disappearFromTop) {
+      from { top: 0; }
+      to {
+        top: 3000px;
+        position: fixed;
+      }
+    }
+
+    @include prefix(animation, disappearFromTop 1.5s forwards);
+  }
 }
 
 .section-header {
