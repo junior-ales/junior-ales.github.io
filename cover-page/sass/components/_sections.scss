@@ -24,27 +24,39 @@
 .sections-container {
   @extend %flex-wrap;
   position: relative;
+  opacity: 1;
   z-index: -1;
 
   @include keyframes(appearFromBottom) {
-    from { top: 3000px; }
-    to { top: 0; }
+    0% { top: 2000px; }
+    80% { top: -100px; }
+    100% { top: 0; }
   }
 
-  @include prefix(animation, appearFromBottom .5s forwards);
+  @include prefix(animation, appearFromBottom .75s ease-in-out forwards);
 
   &.hidden {
     @extend %flex-wrap;
+    height: 0;
+    overflow: hidden;
 
     @include keyframes(disappearFromTop) {
-      from { top: 0; }
+      from {
+        top: 0;
+        opacity: 1;
+        height: 100%;
+      }
+
       to {
-        top: 3000px;
+        top: 2000px;
+        opacity: 0;
         position: fixed;
+        height: 0;
+        overflow: hidden;
       }
     }
 
-    @include prefix(animation, disappearFromTop 1.5s forwards);
+    @include prefix(animation, disappearFromTop .75s ease-in-out forwards);
   }
 }
 
