@@ -2,7 +2,7 @@
   @extend %flex-wrap;
   width: 100%;
   padding: 2.5em 1em;
-  font-size: 1rem;
+  font-size: 1.25em;
 
   @media #{$smallest-break} {
     padding-left: 2em;
@@ -19,7 +19,6 @@
   }
 
   @media #{$largest-break} {
-    font-size: 1.25rem;
     width: 40%;
     margin-right: 60%;
     @include prefix(box-sizing, border-box);
@@ -127,6 +126,8 @@
   }
 
   & > .avatar-link {
+    &:hover { cursor: pointer; }
+
     & > .text {
       font-family: $subtitle-font;
       font-weight: bold;

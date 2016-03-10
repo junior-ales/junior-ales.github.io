@@ -1,11 +1,11 @@
 html {
   background-image: url("../images/background-mobile.jpg");
-  background-position-x: 50%;
-  background-position-y: 50%;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
+  background-position: 50%;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: $bg-color;
+  background-origin: padding-box;
+  background-clip: border-box;
   @include prefix(background-size, cover);
 
   /* workaround for full image background */
@@ -29,7 +29,6 @@ body {
   font-size: 0.75rem;
   font-family: $text-font;
 
-  @media #{$smallest-break-hd} { font-size: 1rem; }
-  @media #{$medium-break-landscape} { font-size: 0.75rem; }
-  @media #{$largest-break} { font-size: 1rem; }
+  // hides scrollbar in chrome
+  &::-webkit-scrollbar { display: none; }
 }

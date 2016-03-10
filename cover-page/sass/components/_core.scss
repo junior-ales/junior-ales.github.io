@@ -7,17 +7,18 @@
   left: 50%;
   margin-right: -50%;
 
+  @media #{$large-break} { font-size: 1.5em; }
+
   @include prefix(transform, translate(-50%, -50%));
 
   & > .title {
     font-family: $title-font;
-    font-size: 4em;
+    font-size: 3em;
     margin: 0;
   }
 
   & > .description {
     font-family: $subtitle-font;
-    font-size: 1.5em;
     text-transform: capitalize;
   }
 }
@@ -58,4 +59,12 @@
   text-decoration: none;
   opacity: 1;
   min-width: 85px;
+
+  @media #{$largest-break} {
+    top: initial;
+    right: initial;
+    bottom: 0;
+    left: 40%;
+    margin: 1.5em;
+  }
 }
