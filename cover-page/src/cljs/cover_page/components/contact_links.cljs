@@ -1,19 +1,22 @@
 (ns cover-page.components.contact-links
   (:require [cover-page.components.contact-link :refer [contact-link]]
+            [cover-page.utils.tracker :refer [track]]
             [cover-page.utils.content :refer [label toggle-lang]]))
 
 (def link-props
-  [{:key 1 :href "http://www.juniorales.com/photo" :icon-class "fa-camera"}
-   {:key 2 :href "https://twitter.com/junior_ales" :icon-class "fa-twitter"}
-   {:key 3 :href "https://medium.com/@junior_ales" :icon-class "fa-medium"}
-   {:key 4 :href "https://github.com/junior-ales" :icon-class "fa-github-alt"}
-   {:key 5 :href "#" :icon-class "fa-envelope" :target "_top" :class "hidden"}])
+  [{:key "header:photoblog" :href "http://www.juniorales.com/photo" :icon-class "fa-camera"}
+   {:key "header:twitter" :href "https://twitter.com/junior_ales" :icon-class "fa-twitter"}
+   {:key "header:medium" :href "https://medium.com/@junior_ales" :icon-class "fa-medium"}
+   {:key "header:github" :href "https://github.com/junior-ales" :icon-class "fa-github-alt"}
+   {:key "header:email" :href "#" :icon-class "fa-envelope" :target "_top" :class "hidden"}])
 
 
 (defn toogle-lang-button []
   [:p
    [:button.toggle-lang
-    {:on-click toggle-lang}
+    {:on-click #(do
+                  (track "coverpage:toggle-lang")
+                  (toggle-lang))}
     (label :lang-button)]])
 
 (defn contact-links []

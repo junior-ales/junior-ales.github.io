@@ -1,6 +1,7 @@
 (ns cover-page.components.core
   (:require [domina.css :refer [sel]]
             [domina.core :refer [add-class! remove-class!]]
+            [cover-page.utils.tracker :refer [track]]
             [cover-page.utils.content :refer [label]]))
 
 (defn cover-title []
@@ -9,6 +10,7 @@
    [:p.description (label :title-description)]])
 
 (defn show-sections []
+  (track "coverpage:expand-details")
   (add-class! (sel "[data-appear-order=1]") "hidden")
   (remove-class! (sel "[data-appear-order=2]") "hidden")
   (remove-class! (sel ".hidden-once") "hidden-once"))
@@ -20,6 +22,7 @@
     (label :view-more)]])
 
 (defn hide-sections []
+  (track "coverpage:collapse-details")
   (add-class! (sel "[data-appear-order=2]") "hidden")
   (remove-class! (sel "[data-appear-order=1]") "hidden"))
 

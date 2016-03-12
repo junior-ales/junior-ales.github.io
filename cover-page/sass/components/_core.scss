@@ -59,6 +59,7 @@
   text-decoration: none;
   opacity: 1;
   min-width: 85px;
+  z-index: 10;
 
   @media #{$largest-break} {
     top: initial;

@@ -1,5 +1,4 @@
-(ns cover-page.utils.content
-  (:require [reagent.core :as r]))
+(ns cover-page.utils.content                                                                                                                                               (:require [reagent.core :as r]))
 
 (defonce lang (r/atom :en-us))
 
