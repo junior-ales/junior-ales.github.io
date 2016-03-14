@@ -49,18 +49,15 @@
         top: 0;
         opacity: 1;
         height: 100%;
-        position: fixed;
       }
 
-      20% {
-        top: -100px;
+      80% {
         opacity: 1;
         height: 100%;
-        position: fixed;
       }
 
       100% {
-        top: 2000px;
+        top: 3000px;
         opacity: 0;
         height: 0;
         position: fixed;
