@@ -1,0 +1,57 @@
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin order($value) {
+  -webkit-box-ordinal-group: $value;
+  -moz-box-ordinal-group: $value;
+  -ms-flex-order: $value;
+  -webkit-order: $value;
+  order: $value;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @-moz-keyframes #{$name} { @content; }
+  @-o-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
+
+%fade-in {
+  @include keyframes(fadeIn) {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @include prefix(animation, fadeIn 2s forwards);
+}
+
+%link-behavior {
+  background: none;
+  font-weight: bold;
+  font-family: $subtitle-font;
+  border: none;
+  outline: none;
+  color: $light-text-color;
+  opacity: .7;
+  cursor: pointer;
+  &:hover { opacity: 1; }
+
+  @include prefix(transition, opacity .3s);
+}
+
+%flex-wrap {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+
+  @include prefix(flex-wrap, wrap);
+}
+
+.hidden, .hidden-once { display: none !important; }
