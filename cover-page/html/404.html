@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
-<html {{#if not-found }} class="-not-found"{{/if}}>
+<html  class="-not-found">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
+    <title>Junior Ales - Page not found</title>
+    <meta name="description" content="Oops! Something went wrong. I&#x27;m sorry, you probably didn&#x27;t want to see this.">
     <meta name="keywords" content="consulting, thoughtworks, software development, photograpy, brazilian jiu jitsu, programming">
     <link rel="author" href="http://www.juniorales.com/humans.txt">
     <link rel="canonical" href="http://www.juniorales.com">
@@ -12,20 +13,20 @@
 
     <!-- Open Graph meta tags -->
     <meta property="og:site_name" content="Junior Ales' Cover Page">
-    <meta property="og:title" content="{{ title }}">
+    <meta property="og:title" content="Junior Ales - Page not found">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ background-image }}">
+    <meta property="og:image" content="http://www.juniorales.com/images/background-404.jpg">
     <meta property="og:url" content="http://www.juniorales.com">
-    <meta property="og:description" content="{{ description }}">
+    <meta property="og:description" content="Oops! Something went wrong. I&#x27;m sorry, you probably didn&#x27;t want to see this.">
 
     <!-- Twitter Meta Info -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@junior_ales">
     <meta name="twitter:creator" content="@junior_ales">
     <meta name="twitter:url" content="http://www.juniorales.com">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="{{ background-image }}">
+    <meta name="twitter:title" content="Junior Ales - Page not found">
+    <meta name="twitter:description" content="Oops! Something went wrong. I&#x27;m sorry, you probably didn&#x27;t want to see this.">
+    <meta name="twitter:image" content="http://www.juniorales.com/images/background-404.jpg">
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/libs.css">
@@ -35,7 +36,13 @@
   </head>
   <body>
 
-    {{> @partial-block }}
+      <section class="not-found-content">
+        <h1>Oops!</h1>
+      </section>
+    
+      <footer class="not-found-footer">
+        <p>Sorry, page not found. Please, visit <a href="http://www.juniorales.com">home page</a></p>
+      </footer>
 
     <script src="scripts/libs.js"></script>
     <script src="scripts/app.js"></script>

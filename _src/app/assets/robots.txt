@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /photo/_src/
-Disallow: /fonts/
-Disallow: /README.md
-Disallow: /CNAME

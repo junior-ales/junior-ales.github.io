@@ -31,7 +31,7 @@
 ;; - [DONE] add all static files (keybase.txt, robots.txt...)
 ;; - [DONE] tracking with analytics
 ;; - [DONE] tracking with mixpanel
-;; - use the prod version of cljs build
+;; - [DONE] use the prod version of cljs build
 ;; - enable contact-me
 ;; - alert when sending email
 ;; - fix 404
