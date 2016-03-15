@@ -10,14 +10,12 @@
 (defn alert-failure [error]
   (js/console.log "failure" error))
 
-(defn validate-input [email message] nil)
-
-(defn validate-input-done [email message]
+(defn validate-input [email message]
   (first (vals
            (validate {:email email :message message}
-                     [:email present? "falta email"]
-                     [:email email-address? "nao eh email"]
-                     [:message present? "falta message"]))))
+                     [:email present? (label :email-form-error-empty-address)]
+                     [:email email-address? (label :email-form-error-wrong-address)]
+                     [:message present? (label :email-form-error-empty-message)]))))
 
 (defn send-message [email message]
   (if-let [errors (validate-input @email @message)]

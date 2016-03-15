@@ -74,7 +74,7 @@
            :back "back"
            :view-more "view more"}})
 
-(defn label [id]
+(defn ^:dynamic label [id]
   (id (@lang content)))
 
 (defn toggle-lang []

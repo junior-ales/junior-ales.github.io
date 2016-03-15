@@ -73,13 +73,17 @@
 
 (ns-unmap 'boot.user 'test) ;; This prevents a name collision WARNING between the test task and clojure.core/test
 
-(deftask test []
+(deftask test
+  []
+  "Run all the tests once"
   (comp (testing)
-        (test-cljs :update-fs? true
-                   :js-env :phantom
+        (test-cljs :js-env :phantom
                    :exit?  true)))
 
-(deftask auto-test []
+(deftask auto-test
+  []
+  "Run all the tests and watch for file changes"
   (comp (testing)
         (watch)
-        (test-cljs :js-env :phantom)))
+        (test-cljs :js-env :phantom
+                   :update-fs? true)))
