@@ -1,6 +1,6 @@
 (ns cover-page.utils.tracker)
 
-(defonce mixpanel js/mixpanel)
-
 (defn track [event-name]
-  (.track mixpanel event-name))
+  (if js/mixpanel
+    (.track js/mixpanel event-name)
+    (js/console.log "tracked:" event-name)))
