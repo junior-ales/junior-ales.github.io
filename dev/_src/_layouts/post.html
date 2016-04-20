@@ -126,13 +126,13 @@
       </article>
     </main>
     <div class="bottom-closer">
-      <div class="background-closer-image" {%if site.cover %} style="background-image: url({{ site.cover }})"{% endif %}>
+      <div class="background-closer-image">
         Image
       </div>
       <div class="inner">
         <h1 class="blog-title">{{ site.title }}</h1>
         <h2 class="blog-description">{{ site.description }}</h2>
-        <a href="http://juniorales.com/dev" class="btn">Página Inicial</a>
+        <a class="blog-home" href="http://juniorales.com/dev">Página Inicial</a>
       </div>
     </div>
     {% include javascripts.html %}
