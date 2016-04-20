@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "6 Coisas Que Todo Mundo Que Trabalha Com Software Precisa Saber"
-date:   2016-04-18
+date:   2016-04-18 18:21:00
 ---
 
 Dos meus oito anos de experiência na área de desenvolvimento de software, quase metade deles trabalhei como consultor além de desenvolvedor. Durante esse tempo tive a oportunidade de aprender muita coisa sobre o desenvolvimento de carreira das pessoas.
