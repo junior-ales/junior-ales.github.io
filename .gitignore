@@ -15,3 +15,7 @@ out/
 # its content should come only
 # from templates dir
 photo/_src/app/assets/posts/
+
+# from dev posts
+_dist/
+.sass-cache/

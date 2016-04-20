@@ -1,0 +1,50 @@
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+
+# Site settings
+title: "juniorales/dev"
+description: > # this means to ignore newlines until "email:"
+  tecnologia e desenvolvimento de software
+
+email: edilson.ales.jr@gmail.com
+#blog logo
+logo: "/assets/images/main-logo.jpg"
+# blog cover
+cover: "/assets/images/main-cover.jpg"
+timezone: "Americas/Sao_Paulo"
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+destination: "_dist"
+
+name: 'Junior Ales'
+author: 'Junior Ales'
+author_bio: 'Um desenvolvedor resolvendo problemas de pessoas com código e ideias.'
+author_site: 'http://juniorales.com'
+author_image: "/assets/images/author.jpg"
+
+paginate: 5
+
+url: "http://juniorales.com/dev" # the base hostname & protocol for your site
+baseurl: ""
+#used to display twitter cards
+twitter_handle: '@junior_ales'
+
+#fill in disqus shortname to use disqus
+#disqus: disqus-shortname
+
+# social icons and sharing options
+social:
+  - icon: twitter
+    url: https://twitter.com/junior_ales
+    desc: Siga-me no twitter
+    #share_url: http://twitter.com/share
+    #share_title: ?text=
+    #share_link: "&amp;url="
+
+  - icon: github
+    url: https://github.com/junior-ales
+    desc: Código aberto que produzo
+    share_url:
+    share_title:
+    share_link:
