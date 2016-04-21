@@ -1,0 +1,11 @@
+<style>
+  .background-closer-image, .teaserimage .teaserimage-image {
+    background-image: url({{ site.cover_landscape | prepend: site.baseurl }});
+  }
+
+  @media only screen and (max-width: 800px) {
+    .background-closer-image, .teaserimage .teaserimage-image {
+      background-image: url({{ site.cover_portrait | prepend: site.baseurl }});
+    }
+  }
+</style>

@@ -3,14 +3,18 @@ layout: default
 ---
 
 <div class="teaserimage">
-    <div class="teaserimage-image">
-        Teaser Image
-    </div>
+  <div class="teaserimage-image">
+    Teaser Image
+  </div>
 </div>
 
 <header class="blog-header">
   {% if site.logo %}
-    <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
+    <a class="blog-logo"
+       href="{{ site.url | append: site.baseurl }}"
+       style="background-image: url('{{ site.logo | prepend: site.baseurl }}')">
+      {{ site.title }}
+    </a>
   {% endif %}
   <h1 class="blog-title">{{ site.title }}</h1>
   <h2 class="blog-description">{{ site.description }}</h2>
@@ -38,7 +42,9 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+              <h2 class="post-title" itemprop="name">
+                <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a>
+              </h2>
             </header>
             <section class="post-excerpt" itemprop="description">
               <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
@@ -60,7 +66,9 @@ layout: default
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
         <div class="article-item">
           <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+            <h2 class="post-title" itemprop="name">
+              <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a>
+            </h2>
           </header>
           <section class="post-excerpt" itemprop="description">
             <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>

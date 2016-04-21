@@ -169,7 +169,6 @@ body {
   overflow: hidden;
   z-index: 99; }
   .logo-readium .logo {
-    background-image: url("../assets/images/main-logo.jpg");
     display: block;
     position: absolute;
     top: 8px;
@@ -185,7 +184,6 @@ body {
   overflow: hidden;
   background-color: #000; }
   .teaserimage .teaserimage-image {
-    background-image: url("../assets/images/cover-landscape.jpg");
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -197,7 +195,6 @@ body {
     text-indent: -9999px; }
     @media only screen and (max-width: 800px) {
       .teaserimage .teaserimage-image {
-        background-image: url("../assets/images/cover-portrait.jpg");
         top: -75%; } }
 
 .blog-header {
@@ -423,7 +420,7 @@ body {
     margin-bottom: 16px;
     text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5); }
   .post .article-image .author-image {
-    background-image: url("../assets/images/author.jpg");
+    background-image: url("/dev/assets/images/author.jpg");
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -471,7 +468,7 @@ body {
   color: #333332;
   margin-bottom: 16px; }
 .post .noarticleimage .author-image {
-  background-image: url("../assets/images/author.jpg");
+  background-image: url("/dev/assets/images/author.jpg");
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -611,7 +608,7 @@ body {
         color: #333;
         text-decoration: underline; }
     .post .bottom-teaser .isLeft .author-image {
-      background-image: url("../assets/images/author.jpg");
+      background-image: url("/dev/assets/images/author.jpg");
       display: block;
       width: 80px;
       height: 80px;
@@ -688,7 +685,6 @@ body {
     .bottom-closer {
       display: none; } }
   .bottom-closer .background-closer-image {
-    background-image: url("../assets/images/cover-landscape.jpg");
     position: absolute;
     top: -50%;
     left: 0;
@@ -700,7 +696,6 @@ body {
     background-position: center; }
     @media only screen and (max-width: 800px) {
       .bottom-closer .background-closer-image {
-        background-image: url("../assets/images/cover-portrait.jpg");
         top: -75%; } }
   .bottom-closer .inner {
     width: 100%;

@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@junior_ales" />
     <meta name="twitter:title" content="juniorales/dev" />
-    <meta name="twitter:image" content="http://juniorales.com/dev./assets/images/main-logo.jpg" />
+    <meta name="twitter:image" content="http://juniorales.com/assets/images/main-logo.jpg" />
     
     <meta name="twitter:description" content="tecnologia e desenvolvimento de software" />
     
@@ -30,18 +30,155 @@
   
   <meta property="og:description" content="tecnologia e desenvolvimento de software" />
   
-  <meta property="og:image" content="http://juniorales.com/dev./assets/images/main-logo.jpg" />
+  <meta property="og:image" content="http://juniorales.com/assets/images/main-logo.jpg" />
   <meta property="og:url" content="http://juniorales.com/dev/" >
   <meta property="og:type" content="blog" />
   
 
   <link rel="canonical" href="http://juniorales.com/dev/"/>
-  <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png"/>
-  <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="./css/font-awesome.css" />
+  <link rel="shortcut icon" href="/dev/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" type="text/css" href="/dev/css/font-awesome.css" />
 
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-  <link rel="stylesheet" type="text/css" media="print" href="./css/print.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/dev/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/dev/css/print.css" />
+
+  <style>
+  @font-face {
+    font-family: 'FontAwesome';
+    src: url(/dev/assets/fonts/FontAwesome/fontawesome-webfont.eot?v=4.5.0);
+    src: url(/dev/assets/fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.5.0) format('embedded-opentype'),
+         url(/dev/assets/fonts/FontAwesome/fontawesome-webfont.woff2?v=4.5.0) format('woff2'),
+         url(/dev/assets/fonts/FontAwesome/fontawesome-webfont.woff?v=4.5.0) format('woff'),
+         url(/dev/assets/fonts/FontAwesome/fontawesome-webfont.ttf?v=4.5.0) format('truetype'),
+         url(/dev/assets/fonts/FontAwesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 300;
+    font-style: normal;
+    src: url(/dev/assets/fonts/Merriweather-300/Merriweather-300.eot);
+    src: url(/dev/assets/fonts/Merriweather-300/Merriweather-300.eot?#iefix) format('embedded-opentype'),
+         local('Merriweather Light'),
+         local('Merriweather-300'),
+         url(/dev/assets/fonts/Merriweather-300/Merriweather-300.woff2) format('woff2'),
+         url(/dev/assets/fonts/Merriweather-300/Merriweather-300.woff) format('woff'),
+         url(/dev/assets/fonts/Merriweather-300/Merriweather-300.ttf) format('truetype'),
+         url(/dev/assets/fonts/Merriweather-300/Merriweather-300.svg#Merriweather) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: normal;
+    src: url(/dev/assets/fonts/Merriweather-regular/Merriweather-regular.eot);
+    src: url(/dev/assets/fonts/Merriweather-regular/Merriweather-regular.eot?#iefix) format('embedded-opentype'),
+         local('Merriweather'),
+         local('Merriweather-regular'),
+         url(/dev/assets/fonts/Merriweather-regular/Merriweather-regular.woff2) format('woff2'),
+         url(/dev/assets/fonts/Merriweather-regular/Merriweather-regular.woff) format('woff'),
+         url(/dev/assets/fonts/Merriweather-regular/Merriweather-regular.ttf) format('truetype'),
+         url(/dev/assets/fonts/Merriweather-regular/Merriweather-regular.svg#Merriweather) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: normal;
+    src: url(/dev/assets/fonts/Merriweather-700/Merriweather-700.eot);
+    src: url(/dev/assets/fonts/Merriweather-700/Merriweather-700.eot?#iefix) format('embedded-opentype'),
+         local('Merriweather Bold'),
+         local('Merriweather-700'),
+         url(/dev/assets/fonts/Merriweather-700/Merriweather-700.woff2) format('woff2'),
+         url(/dev/assets/fonts/Merriweather-700/Merriweather-700.woff) format('woff'),
+         url(/dev/assets/fonts/Merriweather-700/Merriweather-700.ttf) format('truetype'),
+         url(/dev/assets/fonts/Merriweather-700/Merriweather-700.svg#Merriweather) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 300;
+    font-style: italic;
+    src: url(/dev/assets/fonts/Merriweather-300italic/Merriweather-300italic.eot);
+    src: url(/dev/assets/fonts/Merriweather-300italic/Merriweather-300italic.eot?#iefix) format('embedded-opentype'),
+         local('Merriweather Light Italic'),
+         local('Merriweather-300italic'),
+         url(/dev/assets/fonts/Merriweather-300italic/Merriweather-300italic.woff2) format('woff2'),
+         url(/dev/assets/fonts/Merriweather-300italic/Merriweather-300italic.woff) format('woff'),
+         url(/dev/assets/fonts/Merriweather-300italic/Merriweather-300italic.ttf) format('truetype'),
+         url(/dev/assets/fonts/Merriweather-300italic/Merriweather-300italic.svg#Merriweather) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-style: italic;
+    src: url(/dev/assets/fonts/Merriweather-italic/Merriweather-italic.eot);
+    src: url(/dev/assets/fonts/Merriweather-italic/Merriweather-italic.eot?#iefix) format('embedded-opentype'),
+         local('Merriweather Italic'),
+         local('Merriweather-italic'),
+         url(/dev/assets/fonts/Merriweather-italic/Merriweather-italic.woff2) format('woff2'),
+         url(/dev/assets/fonts/Merriweather-italic/Merriweather-italic.woff) format('woff'),
+         url(/dev/assets/fonts/Merriweather-italic/Merriweather-italic.ttf) format('truetype'),
+         url(/dev/assets/fonts/Merriweather-italic/Merriweather-italic.svg#Merriweather) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-style: italic;
+    src: url(/dev/assets/fonts/Merriweather-700italic/Merriweather-700italic.eot);
+    src: url(/dev/assets/fonts/Merriweather-700italic/Merriweather-700italic.eot?#iefix) format('embedded-opentype'),
+         local('Merriweather Bold Italic'),
+         local('Merriweather-700italic'),
+         url(/dev/assets/fonts/Merriweather-700italic/Merriweather-700italic.woff2) format('woff2'),
+         url(/dev/assets/fonts/Merriweather-700italic/Merriweather-700italic.woff) format('woff'),
+         url(/dev/assets/fonts/Merriweather-700italic/Merriweather-700italic.ttf) format('truetype'),
+         url(/dev/assets/fonts/Merriweather-700italic/Merriweather-700italic.svg#Merriweather) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url(/dev/assets/fonts/Open-Sans-regular/Open-Sans-regular.eot);
+    src: url(/dev/assets/fonts/Open-Sans-regular/Open-Sans-regular.eot?#iefix) format('embedded-opentype'),
+         local('Open Sans'),
+         local('Open-Sans-regular'),
+         url(/dev/assets/fonts/Open-Sans-regular/Open-Sans-regular.woff2) format('woff2'),
+         url(/dev/assets/fonts/Open-Sans-regular/Open-Sans-regular.woff) format('woff'),
+         url(/dev/assets/fonts/Open-Sans-regular/Open-Sans-regular.ttf) format('truetype'),
+         url(/dev/assets/fonts/Open-Sans-regular/Open-Sans-regular.svg#OpenSans) format('svg');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url(/dev/assets/fonts/Open-Sans-700/Open-Sans-700.eot);
+    src: url(/dev/assets/fonts/Open-Sans-700/Open-Sans-700.eot?#iefix) format('embedded-opentype'),
+         local('Open Sans Bold'),
+         local('Open-Sans-700'),
+         url(/dev/assets/fonts/Open-Sans-700/Open-Sans-700.woff2) format('woff2'),
+         url(/dev/assets/fonts/Open-Sans-700/Open-Sans-700.woff) format('woff'),
+         url(/dev/assets/fonts/Open-Sans-700/Open-Sans-700.ttf) format('truetype'),
+         url(/dev/assets/fonts/Open-Sans-700/Open-Sans-700.svg#OpenSans) format('svg');
+  }
+</style>
+
+  <style>
+  .background-closer-image, .teaserimage .teaserimage-image {
+    background-image: url(/dev/assets/images/cover-landscape.jpg);
+  }
+
+  @media only screen and (max-width: 800px) {
+    .background-closer-image, .teaserimage .teaserimage-image {
+      background-image: url(/dev/assets/images/cover-portrait.jpg);
+    }
+  }
+</style>
 
   <script>
   var isProduction = window.location.hostname.search("juniorales.com") > -1;
@@ -64,7 +201,9 @@
 
     <!-- header start -->
 
-<a href="http://juniorales.com/dev" class="logo-readium"><span class="logo"></span></a>
+<a href="http://juniorales.com/dev" class="logo-readium">
+  <span class="logo" style="background-image: url(/dev/assets/images/main-logo.jpg)"></span>
+</a>
 
 <!-- header end -->
 
@@ -74,14 +213,18 @@
     <div class="page-content">
       <div class="wrapper">
         <div class="teaserimage">
-    <div class="teaserimage-image">
-        Teaser Image
-    </div>
+  <div class="teaserimage-image">
+    Teaser Image
+  </div>
 </div>
 
 <header class="blog-header">
   
-    <a class="blog-logo" href="http://juniorales.com/dev" style="background-image: url('./assets/images/main-logo.jpg')">juniorales/dev</a>
+    <a class="blog-logo"
+       href="http://juniorales.com/dev"
+       style="background-image: url('/dev/assets/images/main-logo.jpg')">
+      juniorales/dev
+    </a>
   
   <h1 class="blog-title">juniorales/dev</h1>
   <h2 class="blog-description">tecnologia e desenvolvimento de software
@@ -117,7 +260,9 @@
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
         <div class="article-item">
           <header class="post-header">
-            <h2 class="post-title" itemprop="name"><a href="/2016/04/18/6-coisas-todos-devem-saber.html" itemprop="url">6 Coisas Que Todo Mundo Que Trabalha Com Software Precisa Saber</a></h2>
+            <h2 class="post-title" itemprop="name">
+              <a href="/dev/2016/04/18/6-coisas-todos-devem-saber.html" itemprop="url">6 Coisas Que Todo Mundo Que Trabalha Com Software Precisa Saber</a>
+            </h2>
           </header>
           <section class="post-excerpt" itemprop="description">
             <p>Dos meus oito anos de experiência na área de desenvolvimento de software, quase metade deles trabalhei como consultor além de desenvolvedor. Durante esse tempo tive a oportunidade de aprender muita coisa sobre o desenvolvimento de carreira das pessoas.
@@ -151,7 +296,7 @@
     <!-- footer start -->
 
 <footer class="site-footer">
-  <a class="subscribe" href="/feed.xml">
+  <a class="subscribe" href="/dev/feed.xml">
     <span class="tooltip"> <i class="fa fa-rss"></i> Inscreva-se</span>
   </a>
   <div class="inner">
@@ -167,9 +312,9 @@
 
 <!-- footer end -->
 
-    <script type="text/javascript" src="./assets/js/jquery.js"></script>
-<script type="text/javascript" src="./assets/js/jquery.fitvids.js"></script>
-<script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="text/javascript" src="/dev/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/dev/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/dev/assets/js/index.js"></script>
 <script>
 (function ($) {
   "use strict";

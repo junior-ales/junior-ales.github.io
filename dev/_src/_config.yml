@@ -9,7 +9,10 @@ description: > # this means to ignore newlines until "email:"
   tecnologia e desenvolvimento de software
 
 email: edilson.ales.jr@gmail.com
-logo: "./assets/images/main-logo.jpg"
+logo: "/assets/images/main-logo.jpg"
+cover: true
+cover_portrait: "/assets/images/cover-portrait.jpg"
+cover_landscape: "/assets/images/cover-landscape.jpg"
 timezone: "Americas/Sao_Paulo"
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 destination: "_dist"
@@ -18,11 +21,12 @@ name: 'Junior Ales'
 author: 'Junior Ales'
 author_bio: 'Um desenvolvedor resolvendo problemas de pessoas com código e ideias.'
 author_site: 'http://juniorales.com'
+author_image: "/assets/images/author.jpg"
 
 paginate: 5
 
-url: "http://juniorales.com/dev"
-baseurl: ""
+url: "http://juniorales.com"
+baseurl: "/dev"
 twitter_handle: '@junior_ales'
 
 #fill in disqus shortname to use disqus

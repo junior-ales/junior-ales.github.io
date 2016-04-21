@@ -48,7 +48,6 @@ body
   overflow: hidden
   z-index: 99
   .logo
-    background-image: url("../assets/images/main-logo.jpg")
     display: block
     position: absolute
     top: $rs/2
@@ -64,9 +63,7 @@ body
   overflow: hidden
   background-color: #000
   .teaserimage-image
-    background-image: url("../assets/images/cover-landscape.jpg")
     @include respond-to(800)
-      background-image: url("../assets/images/cover-portrait.jpg")
       top: -75%
     background-size: cover
     background-position: center
@@ -291,7 +288,7 @@ body
       margin-bottom: 16px
       text-shadow: 0px 1px 16px rgba(0,0,0,0.5), 0px 0px 1px rgba(0,0,0,0.5)
     .author-image
-      background-image: url("../assets/images/author.jpg")
+      background-image: url("/dev/assets/images/author.jpg")
       display: inline-block
       width: 30px
       height: 30px
@@ -340,7 +337,7 @@ body
       color: #333332
       margin-bottom: 16px
     .author-image
-      background-image: url("../assets/images/author.jpg")
+      background-image: url("/dev/assets/images/author.jpg")
       display: inline-block
       width: 30px
       height: 30px
@@ -477,7 +474,7 @@ body
           color: #333
           text-decoration: underline
       .author-image
-        background-image: url("../assets/images/author.jpg")
+        background-image: url("/dev/assets/images/author.jpg")
         display: block
         width: 80px
         height: 80px
@@ -548,9 +545,7 @@ body
   @include respond-to(800)
     display: none
   .background-closer-image
-    background-image: url("../assets/images/cover-landscape.jpg")
     @include respond-to(800)
-      background-image: url("../assets/images/cover-portrait.jpg")
       top: -75%
     position: absolute
     top: -50%
