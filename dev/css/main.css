@@ -466,7 +466,10 @@ body {
   font-size: 46px;
   line-height: 1.1;
   color: #333332;
-  margin-bottom: 16px; }
+  margin-bottom: 8px; }
+.post .noarticleimage .post-subtitle {
+  font-weight: normal;
+  margin: 0 0 32px; }
 .post .noarticleimage .author-image {
   background-image: url("/dev/assets/images/author.jpg");
   display: inline-block;
@@ -497,7 +500,7 @@ body {
   color: #333; }
   .post .post-content h1, .post .post-content h2, .post .post-content h3 {
     font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif; }
-  .post .post-content h3, .post .post-content h4, .post .post-content h5, .post .post-content h6 {
+  .post .post-content h3, .post .post-content h5, .post .post-content h6 {
     letter-spacing: -0.02em;
     font-weight: 700;
     font-style: normal;
@@ -506,6 +509,13 @@ body {
     margin: 0;
     font-family: Open Sans, MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin-bottom: 4px; }
+  .post .post-content h4 {
+    font-family: Merriweather;
+    font-style: italic;
+    font-weight: normal;
+    color: #bbb;
+    font-size: 22px;
+    padding-bottom: 30px; }
   .post .post-content h2, .post .post-content h1 {
     letter-spacing: -0.02em;
     font-weight: 700;

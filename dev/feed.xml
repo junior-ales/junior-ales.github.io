@@ -6,9 +6,48 @@
 </description>
     <link>http://juniorales.com/dev/</link>
     <atom:link href="http://juniorales.com/dev/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 Apr 2016 00:34:53 +0000</pubDate>
-    <lastBuildDate>Thu, 21 Apr 2016 00:34:53 +0000</lastBuildDate>
+    <pubDate>Thu, 21 Apr 2016 18:56:37 +0000</pubDate>
+    <lastBuildDate>Thu, 21 Apr 2016 18:56:37 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Digitação</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Essa postagem é parte de uma série chamada &lt;a href=&quot;/dev/2016/04/18/6-coisas-todos-devem-saber.html&quot;&gt;“6 Coisas Que Todo Mundo Que Trabalha Com Software Precisa Saber”&lt;/a&gt; que aborda pontos cruciais da nossa carreira e ramo de atividade.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Baseado em minha experiência posso dizer que é difícil encontrar alguém que veja aprender a digitar como algo a se desenvolver e por isso acredito que esse seja um dos pontos mais negligenciados da nossa profissão. Uma das causas pode ser porque uma grande parcela dos profissionais são de uma geração que teve contato muito cedo com o teclado, assim, acreditam que a maneira com que lidam com ele já esteja boa o suficiente.&lt;/p&gt;
+
+&lt;h4 id=&quot;o-que-eu-gostaria-de-dizer-a-essas-pessoas--que-no-no-est&quot;&gt;O que eu gostaria de dizer a essas pessoas é que &lt;strong&gt;não, não está&lt;/strong&gt;.&lt;/h4&gt;
+
+&lt;p&gt;Normalmente se utilizam 9 ou os 10 dedos da mão para alcançar um nível alto de digitação, mas esse não é o meu ponto aqui. Pouco importa se você digita o &lt;code class=&quot;highlighter-rouge&quot;&gt;B&lt;/code&gt; com o indicador direito ou esquerdo, o principal motivador para se preocupar com digitação deve ser evitar interrupções desnecessárias ao usar o teclado. Em inglês há um termo chamado &lt;em&gt;touch typing&lt;/em&gt; que é a técnica de digitar sem olhar para o teclado, mantendo o foco inteiramente na tela. É dominar essa técnica o que acredito que devamos buscar.&lt;/p&gt;
+
+&lt;p&gt;Faz uma diferença gigante de produtividade cada momento que se perde procurando uma tecla (&lt;em&gt;“aonde fica o ‘&lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;’ mesmo?”&lt;/em&gt;), sem falar no tempo que leva para concertar um erro de digitação. Pelo fato de estar olhando para o teclado e não para a tela, a pessoa só perceberá que errou a primeira letra de uma palavra quando parar de digitar e esse vai e vem de foco “tela-teclado” é um forte inimigo da produtividade de qualquer profissional.&lt;/p&gt;
+
+&lt;p&gt;Outro caso aonde &lt;em&gt;touch typing&lt;/em&gt; se mostra imprescindível é quando se adota técnicas de pareamento, como descrito em &lt;a href=&quot;https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_extrema&quot;&gt;&lt;em&gt;extreme programming&lt;/em&gt;&lt;/a&gt; (XP), por exemplo. O pareamento com alguém que não conhece o próprio teclado é difícil e toma bastante tempo e energia. A pessoa fica nervosa porque erra e erra mais por que fica nervosa. É um ciclo vicioso que devora a produtividade do par.&lt;/p&gt;
+
+&lt;p&gt;Lembre-se, você provavelmente passará mais tempo com o seu teclado que com seu travesseiro nessa carreira, por isso ter uma relação boa com ele é essencial. Se ponha na posição de uma pessoa indo ao dentista que ao se sentar na cadeira e abrir a boca, o vê manuseando os instrumentos de forma atrapalhada. Dificilmente você gostaria de ter um ciso extraído por essa pessoa.&lt;/p&gt;
+
+&lt;p&gt;A boa notícia é que é possível alcançar um nível de digitação satisfatório em pouco tempo. Com treinamento e disciplina, em no máximo dois meses os resultados serão grandiosos. Há uma grande quantidade de treinamentos grátis na internet e eu te incentivo a buscar o que mais te agradar, mas estes abaixo são alguns que já vi e já usei:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.typingclub.com&quot;&gt;Typing Club&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.typingstudy.com&quot;&gt;Typing Study&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://play.typeracer.com&quot;&gt;Type Racer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Esses treinamentos são focados para que aprendamos a utilizar todos os dedos para digitar, tanto alcançando a técnica de &lt;em&gt;touch typing&lt;/em&gt; quanto ganhando velocidade de digitação.&lt;/p&gt;
+
+&lt;p&gt;Para finalizar, é importante ter paciência e determinação nesse caso, principalmente no início quando será contra intuitivo teclar com todos os dedos. Lembre-se, você está reaprendendo algo que já está automático para o seu cérebro, reescrever essa memória muscular leva tempo e por isso é muito provável que sua velocidade de digitação diminua bastante nesse início. Mesmo assim é indispensável resistir à tentação de voltar a digitar como antes, somente dessa maneira será possível alcançar resultados satisfatórios.&lt;/p&gt;
+
+&lt;p&gt;Na próxima postagem dessa série falarei sobre nosso canivete suíço na área de programação, o &lt;a href=&quot;#&quot;&gt;editor de texto&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Apr 2016 22:01:34 +0000</pubDate>
+        <link>http://juniorales.com/dev/2016/04/20/digitacao.html</link>
+        <guid isPermaLink="true">http://juniorales.com/dev/2016/04/20/digitacao.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>6 Coisas Que Todo Mundo Que Trabalha Com Software Precisa Saber</title>
@@ -22,12 +61,12 @@
 
 &lt;p&gt;A minha ideia original para essa postagem era fazer a lista e descrições resumidas do que penso sobre os pontos. No final das contas, vi que os resumos que eu estava criando não tinham o contexto e as características que me levam a acreditar que esses pontos sejam cruciais na carreira de qualquer pessoa que queria trabalhar com software. Por conta disso decidi fazer uma coleção de postagens, sendo uma postagem por assunto. Outro fato é que com esse formato acredito que discussões sobre cada ponto possam ser mais produtivas, já que cada postagem acaba criando um escopo para discussão.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Uma última e muito relevante adição à essa introdução é a seguinte&lt;/em&gt;: entendo que estamos todos numa jornada de aprendizagem sem fim, por isso, ao mesmo tempo que é preciso que trabalhemos nosso desenvolvimento, também é preciso que pessoas com mais experiência trabalhem a empatia e tenham paciência com quem está começando na área. Isso não é nenhum ato de bondade, é nosso dever como profissionais que já passaram por essa fase e como pessoas comprometidas com o sucesso de nossa empresa, relação com clientes e área de atuação.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Uma última e muito relevante adição à essa introdução é a seguinte&lt;/em&gt;: entendo que estamos todos numa jornada de aprendizagem sem fim, por isso, ao mesmo tempo que é preciso que trabalhemos nosso desenvolvimento, também é preciso que pessoas com mais experiência trabalhem a própria empatia e tenham paciência com quem está começando na área. Isso não é nenhum ato de bondade, é nosso dever como profissionais que já passaram por essa fase e como pessoas comprometidas com o sucesso de nossa empresa, relação com clientes e área de atuação.&lt;/p&gt;
 
 &lt;p&gt;Sem mais introduções, segue a lista.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Digitação&lt;/a&gt; - &lt;em&gt;A importância de manter o foco no código&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/dev/2016/04/20/digitacao.html&quot;&gt;Digitação&lt;/a&gt; - &lt;em&gt;A importância de manter o foco no código&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Editor de Texto&lt;/a&gt; - &lt;em&gt;O seu canivete suíço&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Aprender Constantemente&lt;/a&gt; - &lt;em&gt;A nossa postura profissional esperada&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Comunicar-se bem&lt;/a&gt; - &lt;em&gt;Somos seres sociais acima de tudo&lt;/em&gt;&lt;/li&gt;
@@ -38,6 +77,8 @@
         <pubDate>Mon, 18 Apr 2016 18:21:00 +0000</pubDate>
         <link>http://juniorales.com/dev/2016/04/18/6-coisas-todos-devem-saber.html</link>
         <guid isPermaLink="true">http://juniorales.com/dev/2016/04/18/6-coisas-todos-devem-saber.html</guid>
+        
+        <category>featured</category>
         
         
       </item>
