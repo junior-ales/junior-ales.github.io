@@ -30,7 +30,7 @@ baseurl: "/dev"
 twitter_handle: '@junior_ales'
 
 #fill in disqus shortname to use disqus
-#disqus: disqus-shortname
+disqus: dev-juniorales
 
 # social icons and sharing options
 social:
