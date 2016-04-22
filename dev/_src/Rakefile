@@ -40,4 +40,9 @@ namespace :prod do
     cp_r STAGING_FILES, PROD_DIR
     puts "done!"
   end
+
+  desc "Starts a preview of the production website"
+  task :preview => "dev:clean" do
+    sh "jekyll serve"
+  end
 end

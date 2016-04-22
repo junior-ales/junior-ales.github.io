@@ -8,7 +8,7 @@ layout: default
   </div>
 </div>
 
-<header class="blog-header">
+<header id="blog-header" class="blog-header">
   {% if site.logo %}
     <a class="blog-logo"
        href="{{ site.url | append: site.baseurl }}"
@@ -92,20 +92,19 @@ layout: default
 
   <nav class="pagination" role="navigation">
     {% if paginator.next_page %}
-      <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <a class="newer-posts" href="/dev/page{{paginator.next_page}}#blog-header">&larr; Posts Anteriores</a>
+      <span class="page-number">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
     {% endif %}
     {% if paginator.previous_page %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <span class="page-number">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
       {% if paginator.page == 2 %}
-        <a class="older-posts" href="/">Newer posts &rarr;</a>
+        <a class="older-posts" href="/dev/#blog-header">Posts mais Recentes &rarr;</a>
       {% else %}
-        <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+        <a class="older-posts" href="/dev/page{{paginator.previous_page}}#blog-header">Posts mais Recentes &rarr;</a>
       {% endif %}
     {% endif %}
   </nav>
 
-  <!-- {{!! After all the posts, we have the previous/next pagination links }}
-  {{pagination}} -->
+  {{pagination}}
 
 </main>

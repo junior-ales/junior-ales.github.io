@@ -23,5 +23,5 @@ Sem mais introduções, segue a lista.
 * [Editor de Texto](/dev/2016/04/22/editor-de-texto.html) - _O seu canivete suíço_
 * [Aprender Constantemente](# "Em Construção") - _A nossa postura profissional esperada_
 * [Comunicar-se bem](# "Em Construção") - _Somos seres sociais acima de tudo_
-* [Linguagem de Programação](# "Em Construção") - _Nossa forma de expressar nosso trabalho_
+* [Linguagem de Programação](# "Em Construção") - _A forma de expressar nosso trabalho_
 * [Regras de Negócio](# "Em Construção") - _Não se constrói software sem saber o propósito_
