@@ -37,13 +37,11 @@ social:
   - icon: twitter
     url: https://twitter.com/junior_ales
     desc: Siga-me no twitter
-    #share_url: http://twitter.com/share
-    #share_title: ?text=
-    #share_link: "&amp;url="
+
+  - icon: linkedin
+    url: https://br.linkedin.com/in/juniorales
+    desc: Contacte-me no linkedin
 
   - icon: github
     url: https://github.com/junior-ales
-    desc: Código aberto que produzo
-    share_url:
-    share_title:
-    share_link:
+    desc: Confira código aberto que produzo
