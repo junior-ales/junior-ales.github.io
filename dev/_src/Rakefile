@@ -1,0 +1,43 @@
+PROD_DIR = "../"
+PROD_FILES = Rake::FileList["../2016", "../assets", "../css", "../favicon.ico", "../feed.xml", "../index.html"]
+STAGING_DIR = "./_dist"
+STAGING_FILES = Dir.glob("./_dist/*")
+
+desc "Runs 'dev:start'"
+task :default => "dev:start"
+
+namespace :dev do
+  desc "Clean staging directory"
+  task :clean do
+    puts "Deleting _dist directory..."
+    rm_rf STAGING_DIR
+    puts "done!"
+  end
+
+  desc "Starts jekyll server with drafts and future posts in a clean staging directory"
+  task :start => :clean do
+    puts "Starting jekyll server..."
+    sh "jekyll serve --drafts --future"
+  end
+end
+
+namespace :prod do
+  desc "Clean production files and directories"
+  task :clean do
+    puts "Deleting production files..."
+    PROD_FILES.each { |f| rm_rf f }
+    puts "done!"
+  end
+
+  desc "Build static website with jekyll in a clean staging directory"
+  task :build => "dev:clean" do
+    sh "jekyll build"
+  end
+
+  desc "Build a brand new version of the website and copy to production directory"
+  task :deploy => [:build, :clean] do
+    puts "Copying dist files to prod..."
+    cp_r STAGING_FILES, PROD_DIR
+    puts "done!"
+  end
+end

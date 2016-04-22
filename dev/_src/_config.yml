@@ -14,7 +14,7 @@ cover: true
 cover_portrait: "/assets/images/cover-portrait.jpg"
 cover_landscape: "/assets/images/cover-landscape.jpg"
 timezone: "Americas/Sao_Paulo"
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "Rakefile"]
 destination: "_dist"
 
 name: 'Junior Ales'
