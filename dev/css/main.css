@@ -759,3 +759,9 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0; }
+
+.twitter-tweet {
+  margin-left: 10%; }
+  @media only screen and (max-width: 800px) {
+    .twitter-tweet {
+      margin-left: 0; } }

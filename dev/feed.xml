@@ -6,9 +6,46 @@
 </description>
     <link>http://juniorales.com/dev/</link>
     <atom:link href="http://juniorales.com/dev/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 Apr 2016 18:56:37 +0000</pubDate>
-    <lastBuildDate>Thu, 21 Apr 2016 18:56:37 +0000</lastBuildDate>
+    <pubDate>Fri, 22 Apr 2016 20:55:51 +0000</pubDate>
+    <lastBuildDate>Fri, 22 Apr 2016 20:55:51 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>Editor de Texto</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Essa postagem é parte de uma série chamada &lt;a href=&quot;/dev/2016/04/18/6-coisas-todos-devem-saber.html&quot;&gt;“6 Coisas Que Todo Mundo Que Trabalha Com Software Precisa Saber”&lt;/a&gt; que aborda pontos cruciais da nossa carreira e ramo de atividade.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Esse é um tema que aflora as emoções das pessoas. Você facilmente acha discussões intermináveis na internet comparando VIM, Emacs, Sublime, Atom, Notepad++ e outros.&lt;/p&gt;
+
+&lt;p&gt;Porém, há algo nessas discussões que deve ser dita a quem está lendo. Não importa muito o que as pessoas ao seu redor falam sobre qual é o melhor editor de texto &lt;strong&gt;para elas&lt;/strong&gt;. O fato é que na hora de escrever código, estarão seu computador e você frente a frente e se você não souber como usar seu editor, as opiniões de &lt;a href=&quot;https://twitter.com/nelstrom&quot;&gt;Drew Neil&lt;/a&gt; e &lt;a href=&quot;https://twitter.com/tpope&quot;&gt;Tim Pope&lt;/a&gt; sobre as maravilhas do VIM não vão ajudar muito.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you spot a Vim user?&lt;br /&gt;&lt;br /&gt;Oh, don’t worry, they’ll let you know.&lt;/p&gt;&amp;mdash; Harry Roberts (@csswizardry) &lt;a href=&quot;https://twitter.com/csswizardry/status/481468881400528896&quot;&gt;June 24, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Pessoalmente utilizo o VIM para tudo (inclusive para escrever esse texto) só o deixo de lado quando tenho que trabalhar com código Java. Mas e o que isso quer dizer? Quer dizer que o VIM supre as &lt;em&gt;minhas&lt;/em&gt; necessidades e entendo que com essa ferramenta alcanço um nível de produtividade muito bom de escrita, edição e busca de código. Só isso. Agora, a melhor pessoa para descobrir quais ferramentas irão suprir as suas necessidades é você.&lt;/p&gt;
+
+&lt;p&gt;Manipular código é a questão primária da nossa profissão e acredito que qualquer profissional de desenvolvimento de software deva ter uma ferramenta que esteja pronta para ser usada a qualquer momento. Quando estamos desenvolvendo um produto, nosso foco principal deve ser sobre regras de negócio cobertas, a qualidade do código e a forma de distribuição do produto, por exemplo. Mas se a entrega de software está sendo afetada porque não sabemos utilizar as ferramentas para escrevê-lo, temos um problema gigantesco em mãos.&lt;/p&gt;
+
+&lt;p&gt;Meu ponto principal com esse texto é o seguinte: domine pelo menos um editor de texto e uma IDE se sua linguagem de programação prover uma boa (Java e C# por exemplo). Dominar nesse contexto significa conhecer comandos básicos de edição, navegar com rapidez entre arquivos, fazer buscas facilmente, compilar e empacotar (se for o caso da sua linguagem) seu código, tudo na velocidade de um comando, sem ter que buscar numa lista de atalhos ou clicar com o mouse. Dominar o seu editor de texto é usar seus comandos da mesma maneira que você já usa comandos como o &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl-C&lt;/code&gt; para copiar. Você já tem decorado isso, nem pensa mais ao executar esse comando, ele simplesmente acontece.&lt;/p&gt;
+
+&lt;p&gt;Para isso, você terá que memorizar tais comandos e ter uma boa &lt;a href=&quot;/dev/2016/04/20/digitacao.html&quot;&gt;digitação&lt;/a&gt; é imprescindível. Se para cada comando de desfazer (&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+Z&lt;/code&gt;) você precisar olhar para o seu teclado, um &lt;code class=&quot;highlighter-rouge&quot;&gt;Alt+F7&lt;/code&gt; para fazer busca de ocorrências no IntelliJ será desastroso todas as vezes.&lt;/p&gt;
+
+&lt;p&gt;Force-se a usar os comandos no seu dia-a-dia, mesmo que no começo pareça contra intuitivo já que o mouse está bem ao seu lado. O que te fará ter sucesso nessa tarefa é exatamente o fato de usar a ferramenta, criando assim memória muscular. Por esse mesmo fato eu não recomendo o uso de sites como &lt;a href=&quot;https://www.shortcutfoo.com&quot;&gt;&lt;em&gt;shortcutFoo&lt;/em&gt;&lt;/a&gt; e nenhum outro que te faça treinar uma ferramenta &lt;em&gt;fora da própria ferramenta&lt;/em&gt;. Por exemplo, treinar comandos do VIM fora do VIM faz com que você tenha na ponta da língua a resposta para &lt;em&gt;“Como faço para apagar toda linha que começa com ‘function Bla(foo)’?”&lt;/em&gt;, mas entre saber a resposta e executar com velocidade no dia a dia há uma diferença extremamente grande.&lt;/p&gt;
+
+&lt;p&gt;Há muito material na internet sobre VIM, Emacs, Atom e Sublime e por isso essas são as minhas indicações de editores de texto para você aprender, mas especialmente indico os editores que também são encontrados em servidores unix. Se seu interesse é em aprender VIM não tenho muitas indicações em português, mas elas seriam o livro &lt;a href=&quot;https://pragprog.com/book/dnvim/practical-vim&quot;&gt;&lt;em&gt;Practical VIM&lt;/em&gt;&lt;/a&gt; do &lt;a href=&quot;https://twitter.com/nelstrom&quot;&gt;Drew Neil&lt;/a&gt; e as séries de vídeos &lt;a href=&quot;http://vimcasts.org&quot;&gt;&lt;em&gt;Vimcasts&lt;/em&gt;&lt;/a&gt; e &lt;a href=&quot;http://derekwyatt.org/vim/tutorials/index.html&quot;&gt;&lt;em&gt;Vim Tutorials&lt;/em&gt;&lt;/a&gt;, de autoria do mesmo Drew Neil e do &lt;a href=&quot;https://twitter.com/derekwyatt&quot;&gt;Derek Wyatt&lt;/a&gt; respectivamente. Sempre há também o bom e velho &lt;em&gt;vimtutor&lt;/em&gt; que já está instalado junto com seu VIM, só bastando executar &lt;code class=&quot;highlighter-rouge&quot;&gt;vimtutor&lt;/code&gt; na sua linha de comando e pronto, você já estará aprendendo a usar o editor.&lt;/p&gt;
+
+&lt;p&gt;Dominar uma ferramenta leva tempo, paciência e esforço. Por isso o que eu disse na &lt;a href=&quot;/dev/2016/04/18/6-coisas-todos-devem-saber.html&quot;&gt;introdução dessa série&lt;/a&gt; se aplica muito nesse caso: para quem está começando é importante ter determinação e para quem já passou por isso, é importante ter empatia e dar o suporte necessário às pessoas que estão começando a trilhar esse caminho.&lt;/p&gt;
+
+&lt;p&gt;Na próxima postagem dessa série falarei sobre ter uma postura de &lt;a href=&quot;#&quot;&gt;aprendizagem constante&lt;/a&gt; na nossa carreira e tomar atitudes nessa linha como um padrão profissional.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Apr 2016 12:04:43 +0000</pubDate>
+        <link>http://juniorales.com/dev/2016/04/22/editor-de-texto.html</link>
+        <guid isPermaLink="true">http://juniorales.com/dev/2016/04/22/editor-de-texto.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Digitação</title>
@@ -38,9 +75,9 @@
 
 &lt;p&gt;Esses treinamentos são focados para que aprendamos a utilizar todos os dedos para digitar, tanto alcançando a técnica de &lt;em&gt;touch typing&lt;/em&gt; quanto ganhando velocidade de digitação.&lt;/p&gt;
 
-&lt;p&gt;Para finalizar, é importante ter paciência e determinação nesse caso, principalmente no início quando será contra intuitivo teclar com todos os dedos. Lembre-se, você está reaprendendo algo que já está automático para o seu cérebro, reescrever essa memória muscular leva tempo e por isso é muito provável que sua velocidade de digitação diminua bastante nesse início. Mesmo assim é indispensável resistir à tentação de voltar a digitar como antes, somente dessa maneira será possível alcançar resultados satisfatórios.&lt;/p&gt;
+&lt;p&gt;Para finalizar, é importante ter paciência e determinação caso você esteja fazendo um treinamento desse, principalmente no início quando será contra intuitivo teclar com todos os dedos. Lembre-se, você está reaprendendo algo que já está automático para o seu cérebro, reescrever essa memória muscular leva tempo e por isso é muito provável que sua velocidade de digitação diminua bastante nesse princípio. Mesmo assim é indispensável resistir à tentação de voltar a digitar como antes, somente dessa maneira será possível alcançar resultados satisfatórios.&lt;/p&gt;
 
-&lt;p&gt;Na próxima postagem dessa série falarei sobre nosso canivete suíço na área de programação, o &lt;a href=&quot;#&quot;&gt;editor de texto&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Na próxima postagem dessa série falarei sobre nosso canivete suíço na área de programação, o &lt;a href=&quot;/dev/2016/04/22/editor-de-texto.html&quot;&gt;editor de texto&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Apr 2016 22:01:34 +0000</pubDate>
         <link>http://juniorales.com/dev/2016/04/20/digitacao.html</link>
@@ -67,7 +104,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/dev/2016/04/20/digitacao.html&quot;&gt;Digitação&lt;/a&gt; - &lt;em&gt;A importância de manter o foco no código&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Editor de Texto&lt;/a&gt; - &lt;em&gt;O seu canivete suíço&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/dev/2016/04/22/editor-de-texto.html&quot;&gt;Editor de Texto&lt;/a&gt; - &lt;em&gt;O seu canivete suíço&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Aprender Constantemente&lt;/a&gt; - &lt;em&gt;A nossa postura profissional esperada&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Comunicar-se bem&lt;/a&gt; - &lt;em&gt;Somos seres sociais acima de tudo&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot; title=&quot;Em Construção&quot;&gt;Linguagem de Programação&lt;/a&gt; - &lt;em&gt;Nossa forma de expressar nosso trabalho&lt;/em&gt;&lt;/li&gt;

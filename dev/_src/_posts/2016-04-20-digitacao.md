@@ -27,6 +27,6 @@ A boa notícia é que é possível alcançar um nível de digitação satisfató
 
 Esses treinamentos são focados para que aprendamos a utilizar todos os dedos para digitar, tanto alcançando a técnica de _touch typing_ quanto ganhando velocidade de digitação.
 
-Para finalizar, é importante ter paciência e determinação nesse caso, principalmente no início quando será contra intuitivo teclar com todos os dedos. Lembre-se, você está reaprendendo algo que já está automático para o seu cérebro, reescrever essa memória muscular leva tempo e por isso é muito provável que sua velocidade de digitação diminua bastante nesse início. Mesmo assim é indispensável resistir à tentação de voltar a digitar como antes, somente dessa maneira será possível alcançar resultados satisfatórios.
+Para finalizar, é importante ter paciência e determinação caso você esteja fazendo um treinamento desse, principalmente no início quando será contra intuitivo teclar com todos os dedos. Lembre-se, você está reaprendendo algo que já está automático para o seu cérebro, reescrever essa memória muscular leva tempo e por isso é muito provável que sua velocidade de digitação diminua bastante nesse princípio. Mesmo assim é indispensável resistir à tentação de voltar a digitar como antes, somente dessa maneira será possível alcançar resultados satisfatórios.
 
-Na próxima postagem dessa série falarei sobre nosso canivete suíço na área de programação, o [editor de texto](#).
+Na próxima postagem dessa série falarei sobre nosso canivete suíço na área de programação, o [editor de texto](/dev/2016/04/22/editor-de-texto.html).
