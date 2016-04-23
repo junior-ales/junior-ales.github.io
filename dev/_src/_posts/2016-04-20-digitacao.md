@@ -9,7 +9,7 @@ date:   2016-04-20 22:01:34
 
 Baseado em minha experiência posso dizer que é difícil encontrar alguém que veja aprender a digitar como algo a se desenvolver e por isso acredito que esse seja um dos pontos mais negligenciados da nossa profissão. Uma das causas pode ser porque uma grande parcela dos profissionais são de uma geração que teve contato muito cedo com o teclado, assim, acreditam que a maneira com que lidam com ele já esteja boa o suficiente.
 
-####O que eu gostaria de dizer a essas pessoas é que **não, não está**.
+O que eu gostaria de dizer a essas pessoas é que **não, não está**.
 
 Normalmente se utilizam 9 ou os 10 dedos da mão para alcançar um nível alto de digitação, mas esse não é o meu ponto aqui. Pouco importa se você digita o `B` com o indicador direito ou esquerdo, o principal motivador para se preocupar com digitação deve ser evitar interrupções desnecessárias ao usar o teclado. Em inglês há um termo chamado _touch typing_ que é a técnica de digitar sem olhar para o teclado, mantendo o foco inteiramente na tela. É dominar essa técnica o que acredito que devamos buscar.
 
