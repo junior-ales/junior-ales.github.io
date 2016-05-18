@@ -75,7 +75,7 @@
            :view-more "view more"}})
 
 (defn ^:dynamic label [id]
-  (id (@lang content)))
+  (get (@lang content) id))
 
 (defn toggle-lang []
   (if (= @lang :en-us)

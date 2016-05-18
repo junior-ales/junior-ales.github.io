@@ -46,33 +46,21 @@
    {:key "details:footer:instagram" :href "https://instagram.com/junior_ales" :icon-class "fa-instagram"}
    {:key "details:footer:facebook" :href "https://facebook.com/juniorales" :icon-class "fa-facebook"}])
 
-(defn contact-with-form []
-  (section-commons {:name "contact"}
-    [contact-form {:key 14}]
-    [:footer.contact-footer {:key 15}
-     (map contact-link link-props)
-     [:ul.site-info
-      [:li.name "junior ales"]
-      [:li.separator "•"]
-      [:li (label :sections-contact-code-hosted)
-       [:a.link {:target "_blank"
-                 :on-click #(track "coverpage:details:footer:github-repo")
-                 :href "https://github.com/junior-ales/junior-ales.github.io/"}
-        "github"]]]]))
-
-;; TODO remove this once contact-with-form is implemented
-(defn contact []
+(defn footer []
   [:section.contact-section
-    [:footer.contact-footer {:key 15}
-     (map contact-link link-props)
-     [:ul.site-info
-      [:li.name "junior ales"]
-      [:li.separator "•"]
-      [:li (label :sections-contact-code-hosted)
-       [:a.link {:target "_blank"
-                 :on-click #(track "coverpage:details:footer:github-repo")
-                 :href "https://github.com/junior-ales/junior-ales.github.io/"}
-        "github"]]]]])
+   [:footer.contact-footer {:key 15}
+    (map contact-link link-props)
+    [:ul.site-info
+     [:li.name "junior ales"]
+     [:li.separator "•"]
+     [:li (label :sections-contact-code-hosted)
+      [:a.link {:target "_blank"
+                :on-click #(track "coverpage:details:footer:github-repo")
+                :href "https://github.com/junior-ales/junior-ales.github.io/"}
+       "github"]]]]])
+
+(defn contact-section []
+  (section-commons {:name "contact"} [contact-form {:key 14}]))
 
 (def section-props
   [{:key "details:summary" :name "summary"}
@@ -84,5 +72,6 @@
   [:section.sections-container.hidden-once
    {:data-appear-order 2}
    (doall (map section-default section-props))
-   [contact]])
+   ;;[contact-section]
+   [footer]])
 
