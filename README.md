@@ -37,12 +37,3 @@ tar -xvf phantomjs-2.1.1-linux-x86_64.tar.bz2
 cd /usr/local/bin
 sudo ln -s /opt/phantomjs-2.1.1-linux-x86_64/bin/phantomjs phantomjs
 ```
-
-
-
-
-
-
-
-
-
