@@ -18,31 +18,35 @@
                      [:message present? (label :email-form-error-empty-message)]))))
 
 (defn send-message [email message]
+  (alert-success)
+  (reset! email nil)
+  (reset! message nil))
+
+(defn process-message [email message]
   (if-let [errors (validate-input @email @message)]
     (alert-failure (first errors))
-    (do
-      (alert-success)
-      (reset! email nil)
-      (reset! message nil))))
+    (send-message email message)))
 
 (defn contact-form []
   (let [email (r/atom nil)
         message (r/atom nil)]
     (fn []
       [:form.contact-form
-       [:input#sender-email {:type "email"
-                             :name "_replyto"
-                             :value @email
-                             :on-change #(reset! email (-> % .-target .-value))
-                             :placeholder (label :email-form-address)}]
-       [:textarea#sender-message.message {:name "message"
-                                          :value @message
-                                          :on-change #(reset! message (-> % .-target .-value))
-                                          :placeholder (label :email-form-message)}]
+       [:input {:id "sender-email"
+                :type "email"
+                :name "_replyto"
+                :value @email
+                :on-change #(reset! email (-> % .-target .-value))
+                :placeholder (label :email-form-address)}]
+       [:textarea.message {:id "sender-message"
+                           :name "message"
+                           :value @message
+                           :on-change #(reset! message (-> % .-target .-value))
+                           :placeholder (label :email-form-message)}]
        [:input#sender-gotcha.hidden
         {:type "text" :name "_gotcha"}]
        [:input
         {:type "hidden" :name "_subject" :value "New message from juniorales.com"}]
        [:button#send-email-button.submit
-        {:type "button" :on-click #(send-message email message)}
+        {:type "button" :on-click #(process-message email message)}
         (label :email-form-button)]])))

@@ -36,6 +36,10 @@
            :email-form-message "sua mensagem"
            :email-form-button "enviar email"
 
+           :email-form-error-empty-address "Por favor adicione um endereço de email"
+           :email-form-error-wrong-address "Por favor verifique o formato do endereço de email"
+           :email-form-error-empty-message "Por favor adicione sua mensagem"
+
            :back "voltar"
            :view-more "ver mais"}
 
@@ -70,6 +74,10 @@
            :email-form-address "your email"
            :email-form-message "your message"
            :email-form-button "send email"
+
+           :email-form-error-empty-address "Please add an email address"
+           :email-form-error-wrong-address "Please verify the email address format"
+           :email-form-error-empty-message "Please add your message"
 
            :back "back"
            :view-more "view more"}})
