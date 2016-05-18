@@ -5,7 +5,7 @@ shopt -s extglob
 
 BASE_DIR=`dirname $BASH_SOURCE`
 
-rm -Rfv $BASE_DIR/../!(cover-page|photo|.git|.gitignore)
+rm -Rfv $BASE_DIR/../!(cover-page|dev|photo|.git|.gitignore)
 rm -Rf  $BASE_DIR/target/main.out
 cp -Rv  $BASE_DIR/target/* $BASE_DIR/../
 
